@@ -1,231 +1,80 @@
-% Template for PLoS
-% Version 3.3 June 2016
-%
-% % % % % % % % % % % % % % % % % % % % % %
-%
-% -- IMPORTANT NOTE
-%
-% This template contains comments intended 
-% to minimize problems and delays during our production 
-% process. Please follow the template instructions
-% whenever possible.
-%
-% % % % % % % % % % % % % % % % % % % % % % % 
-%
-% Once your paper is accepted for publication, 
-% PLEASE REMOVE ALL TRACKED CHANGES in this file 
-% and leave only the final text of your manuscript. 
-% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
-% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info or contact us at latex@plos.org.
-%
-%
-% There are no restrictions on package use within the LaTeX files except that 
-% no packages listed in the template may be deleted.
-%
-% Please do not include colors or graphics in the text.
-%
-% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
-%
-% % % % % % % % % % % % % % % % % % % % % % %
-%
-% -- FIGURES AND TABLES
-%
-% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
-%
-% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
-% - Figures should be uploaded separately from your manuscript file. 
-% - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
-% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
-% For figure citations, please use "Fig" instead of "Figure".
-% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
-%
-% Tables should be cell-based and may not contain:
-% - spacing/line breaks within cells to alter layout or alignment
-% - do not nest tabular environments (no tabular environments within tabular environments)
-% - no graphics or colored text (cell background color/shading OK)
-% See http://journals.plos.org/plosone/s/tables for table guidelines.
-%
-% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
-%
-% % % % % % % % % % % % % % % % % % % % % % % %
-%
-% -- EQUATIONS, MATH SYMBOLS, SUBSCRIPTS, AND SUPERSCRIPTS
-%
-% IMPORTANT
-% Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
-%
-% For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
-%
-% Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
-%
-% Please add line breaks to long display equations when possible in order to fit size of the column. 
-%
-% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
-%
-% When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
-%
-% Do not use \cal for caligraphic font.  Instead, use \mathcal{}
-%
-% % % % % % % % % % % % % % % % % % % % % % % % 
-%
-% Please contact latex@plos.org with any questions.
-%
-% % % % % % % % % % % % % % % % % % % % % % % %
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
 
-\documentclass[10pt,letterpaper]{article}
-\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
-
-% amsmath and amssymb packages, useful for mathematical formulas and symbols
-\usepackage{amsmath,amssymb}
-
-% Use adjustwidth environment to exceed column width (see example table in text)
-\usepackage{changepage}
-
-% Use Unicode characters when possible
-\usepackage[utf8x]{inputenc}
-
-% textcomp package and marvosym package for additional characters
-\usepackage{textcomp,marvosym}
-
-% cite package, to clean up citations in the main text. Do not remove.
-\usepackage{cite}
-
-% Use nameref to cite supporting information files (see Supporting Information section for more info)
-\usepackage{nameref,hyperref}
-
-% line numbers
-\usepackage[right]{lineno}
-
-% ligatures disabled
-\usepackage{microtype}
-\DisableLigatures[f]{encoding = *, family = * }
-
-% color can be used to apply background shading to table cells only
-\usepackage[table]{xcolor}
-
-% array package and thick rules for tables
-\usepackage{array}
-
-% create "+" rule type for thick vertical lines
-\newcolumntype{+}{!{\vrule width 2pt}}
-
-% create \thickcline for thick horizontal lines of variable length
-\newlength\savedwidth
-\newcommand\thickcline[1]{%
-  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
-  \cline{#1}%
-  \noalign{\vskip\arrayrulewidth}%
-  \noalign{\global\arrayrulewidth\savedwidth}%
-}
-
-% \thickhline command for thick horizontal lines that span the table
-\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
-\hline
-\noalign{\global\arrayrulewidth\savedwidth}}
+\documentclass[11pt]{article}
+\usepackage[round,semicolon]{natbib}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{kpfonts}
 
 \usepackage{seqsplit}
 
-% Remove comment for double spacing
-%\usepackage{setspace} 
-%\doublespacing
+\usepackage{newfloat}
+\usepackage[labelfont=bf]{caption}
+\usepackage{nameref}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{float}
 
-% Text layout
-\raggedright
-\setlength{\parindent}{0.5cm}
-\textwidth 5.25in 
-\textheight 8.75in
+\setcounter{topnumber}{8}
+\setcounter{bottomnumber}{8}
+\setcounter{totalnumber}{8}
 
-% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
-% Captions will be left justified
-\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
-\renewcommand{\figurename}{Fig}
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
 
-% Use the PLoS provided BiBTeX style
-\bibliographystyle{plos2015}
+\definecolor{darkblue}{rgb}{0, 0.0, 0.6}
 
-% Remove brackets from numbering in List of References
-\makeatletter
-\renewcommand{\@biblabel}[1]{\quad#1.}
-\makeatother
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=blue,linkcolor=darkblue,urlcolor=blue}
 
-% Leave date blank
-\date{}
+\usepackage{seqsplit}
 
-% Header and Footer with logo
-\usepackage{lastpage,fancyhdr,graphicx}
-\usepackage{epstopdf}
-\pagestyle{myheadings}
-\pagestyle{fancy}
-\fancyhf{}
-\setlength{\headheight}{27.023pt}
-\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
-\rfoot{\thepage/\pageref{LastPage}}
-\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
-\fancyheadoffset[L]{2.25in}
-\fancyfootoffset[L]{2.25in}
-\lfoot{\sf PLOS}
-
-%% Include all macros below
-
-\newcommand{\lorem}{{\bf LOREM}}
-\newcommand{\ipsum}{{\bf IPSUM}}
+\usepackage{array}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \newcommand{\comment}[1]{{\color{red}(\textsl{#1})}}
 
-%% END MACROS SECTION
+\usepackage{setspace}
+
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
+
+%\renewcommand{\abstractname}{\large SUMMARY}
+
+
+\title{Contrasting the potential for viral escape from broad and narrow antibodies by complete mapping of the antigenic effects of single amino-acid mutations to influenza hemagglutinin}
+
+\author
+{Michael B. Doud$^{1,2,3,\dagger}$, Juhye M. Lee$^{1,2,3,\dagger}$, and Jesse D. Bloom$^{1,2,*}$\\
+\\
+\scriptsize{$^1$Basic Sciences and Computational Biology Program, Fred Hutchinson Cancer Research Center}\\
+\scriptsize{$^2$Department of Genome Sciences and $^3$Medical Scientist Training Program, University of Washington} \\
+\scriptsize{Seattle, WA, USA} \\
+\scriptsize{$^{\dagger}$These authors contributed equally} \\
+\scriptsize{$^*$Correspondence: \href{jbloom@fredhutch.org}{jbloom@fredhutch.org}}
+}
+
+\date{}
 
 
 \begin{document}
-\vspace*{0.2in}
 
-% Title must be 250 characters or less.
-\begin{flushleft}
-{\Large
-\textbf\newline{Quantitative comparison of the potential for viral escape from broad and narrow anti-influenza antibodies} % Please use "title case" (capitalize all terms in the title except conjunctions, prepositions, and articles).
-}
-\newline
-% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
-\\
-Michael B. Doud\textsuperscript{1,2,3},
-Juhye M. Lee\textsuperscript{1,2,3},
-Jesse D. Bloom\textsuperscript{1,2*},
-\\
-\bigskip
-\textbf{1} Basic Sciences and Computational Biology Program, Fred Hutchinson Cancer Research Center, Seattle, WA, USA
-\\
-\textbf{2} Department of Genome Sciences, University of Washington, Seattle, WA,  USA
-\\
-\textbf{3} Medical Scientist Training Program, University of Washington, Seattle, WA, USA
-\\
-\bigskip
+\maketitle
+\onehalfspacing
 
-% Use the asterisk to denote corresponding authorship and provide email address in note below.
-* \href{mailto:jbloom@fredhutch.org}{jbloom@fredhutch.org}
+\begin{abstract}
+Broadly neutralizing antibodies are of great interest as therapeutics to treat influenza and are the desired products of future universal influenza vaccines. 
+It is important to understand viral potential for escape from antibodies and to develop ways to compare how easy or difficult it is for viral escape between various antibodies. 
+We previously demonstrated a method to measure the effects of all amino-acid mutations in influenza HA on viral escape from neutralizing antibodies. 
+Here we apply this technique to 'broadly neutralizing' antibodies with reactivity spanning multiple influenza subtypes, including antibodies targeting the HA receptor-binding site and stalk domain. We find quantitatively similar distributions of escape mutations to a relatively broad antibody targeting the receptor-binding site (s139) and to several narrow-specificity antibodies targeting nearby antigenic regions of the head domain (H17-L19, others?). 
+In contrast to the ease of escape from head-binding antibodies of various breadths, stalk-binding antibodies can only be evaded by a paucity of mutations with relatively small effects.  
+For the antibodies studied here, antibody breadth is not an indicator of difficulty for viral escape.  
+Instead, targeting a mutationally intolerant epitope in the stalk region seems to limit viral escape mutations to a few relatively ineffective options
+\end{abstract}
 
-\end{flushleft}
-% Please keep the abstract below 300 words
-\section*{Abstract}
-There is great interest in broad antibody-based immunity against influenza virus.
-Even for antibodies recognizing broad swaths of influenza strains, viral genetic variation can influence neutralization sensitivity.
-To better understand the potential for viral resistance to antibodies, there is a need to evaluate not just whether mutations can influence sensitivity to an antibody, but rather to comprehensively quantify how many mutations do this and by how much, and to make these comparisons across antibodies.
-Here we comprehensively map mutations that increase viral resistance to the broadly neutralizing anti-influenza antibodies FI6v3, C179, and S139/1, and compare the results to those previously obtained for narrow strain-specific antibodies.
-We find that although there are some mutations that enhance resistance to the stalk-binding antibody FI6v3 and C179, these mutations are both rare and modest in their effect sizes.
-\comment{..?... In contrast, viral escape from S139/1 ... looks more like the narrow head binders than the broad stalk binders?}
-We formalize these observations into a framework for quantitative comparison of viral escape potential between different antibodies.
-Overall, our work demonstrates that a virus's absolute capacity to escape an antibody can be quantified, and that influenza is in fact extremely limited in its ability to escape some antibodies \comment{targeting the stalk... and also extremely adept at escaping another broadly-reactive antibody targeting the head... }. 
-
-
-% Please keep the Author Summary between 150 and 200 words
-% Use first person. PLOS ONE authors please skip this step. 
-% Author Summary not valid for PLOS ONE submissions.   
-\section*{Author Summary}
-this is the author summary
-
-\linenumbers
-
-% Use "Eq" instead of "Equation" for equation citations.
-\section*{Introduction}
-
+\section*{INTRODUCTION}
 Broadly neutralizing antibodies against influenza virus are of great interest... \cite{corti2017tackling}. 
 
 % blurbs about the specific antibodies we use here:
@@ -238,34 +87,32 @@ S139/1 structure with Victoria75 H3 and binding/neutralization data: \cite{lee20
 Recently we have described new technologies... \cite{doud2017complete, dingens2017comprehensive}.
 
 
+\section*{RESULTS}
 
-\section*{Results}
+\subsection*{First subsection.}
+Some text
 
-\subsection*{Characterizing escape mutations from a broadly neutralizing receptor site binding antibody}
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/fig.png}}
+\caption{\label{fig:antibody_summary}
+CAPTION}
+\end{figure}
 
-\subsection*{Characterizing escape mutations from broadly neutralizing stalk-binding antibodies}
-
-\subsection*{Comparison of escape profiles with mutational tolerance}
-
-\subsection*{Quantitatively comparing escape from different neutralizing antibodies}
-
-\section*{Discussion}
-
-
+\section*{DISCUSSION}
+Some discussion
 
 \clearpage
 
-\section*{Materials and Methods}
-
-\subsubsection*{Antibodies}
+\section*{METHODS}
+\subsection*{Antibodies}
 FI6v3 was expressed and purified by the Fred Hutchinson Cancer Research Center protein expression core \comment{i think?}.
 C179 was purchased from Takara Bio Inc (Catalog \# M145).
 S139/1 heavy and light chain variable sequences were obtained from PDB ID 4GMS~\cite{lee2012heterosubtypic} and expressed and purified by the Fred Hutchinson Cancer Research Center protein expression core.
 
-\subsubsection*{Mutant virus selections with antibody}
+\subsection*{Mutant virus selections with antibody}
 Library selections, deep sequencing, and computation of mutation differential selection were performed as previously described~\cite{doud2017complete}. Briefly, ...
 
-\subsubsection*{Computation of the fraction $\phi_{r,a}$ of each mutation that escapes antibody neutralization}
+\subsection*{Computation of the fraction $\phi_{r,a}$ of each mutation that escapes antibody neutralization}
 \comment{depending on how much of paper focus is on this new metric, some of this rationale might be better placed in the results section}
 
 Mutation differential selection values $s_{r,a}$ reflect the enrichment of a mutation in an antibody-selected sample relative to a mock-selected control. 
@@ -291,39 +138,28 @@ By this definition, mutations with no effect on antibody escape will have $\phi_
 Care should be taken in interpreting the absolute values of $\phi$, however, since the choice of pseudocount affects the range of $\phi$ values (but not, importantly, the relationships of $\phi$ distributions across antibodies).
 We have found that a value of $P=5$ pseudocounts results in $\phi$ values that are roughly bounded from 0 to 1, and consistently use $P=5$ all analyses.
 
-\subsubsection*{Data availability and source code}
+\subsection*{Data availability and source code}
 Deep sequencing data has been deposited at the Sequence Read Archive under BioSample accession (\comment{should probably deposit all the new data into the existing biosample SAMN05789126 (Sample name: WSN/1933 HA mutant libraries selected by monoclonal antibodies), which is under bioproject PRJNA309339}).
 
 
 
-\section*{Acknowledgments}
 
+\clearpage
 
-\nolinenumbers
+\small
+\subsection*{ACKNOWLEDGMENTS}
+This work was supported by grants R01GM102198 and R01AI127893 from the NIGMS and NIAID of the NIH.
+MBD was supported in part by training grant T32AI083203 from the NIAID of the NIH.
+JML was supported in part by \comment{CIDID grant}.
+The research of JDB is supported in part by a Faculty Scholar Grant from the Howard Hughes Medical Institute and the Simons Foundation.
 
+\bibliographystyle{mbe}
 \bibliography{references.bib}
 
 \clearpage
+\normalsize
 
-\begin{figure}[!h]
-\caption{\label{fig:?}
-{\bf figure caption.} 
-{\bf (A)} 
-Libraries ...
-{\bf (B)} 
-Differential selection ...
-}
-\end{figure}
+\section*{Supplementary Material}
 
-\clearpage
-
-\section*{Supporting Information}
-
-% Include only the SI item label in the paragraph heading. Use the \nameref{label} command to cite SI items in the text.
-\paragraph*{S1 Fig.}
-\label{S1_Fig}
-{\bf S1 Figure title.} 
-Caption text.
 
 \end{document}
-
