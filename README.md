@@ -10,4 +10,6 @@ This repository is organized into a series of subdirectories as follows:
 
 * [./paper/](./paper/) contains the paper describing this analysis.
 
-* [./neutralization_assays/](./neutralization_assays/) contains experimental data from neutralization assays and it's analysis.
+* [./neutralization_assays/](./neutralization_assays/) contains experimental data from neutralization assays and its analysis.
+
+* [./lab_notes/]([./lab_notes/) contains lab notes and data from some of the experiments.
