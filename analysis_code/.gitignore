@@ -1,3 +1,4 @@
 results
 FASTQ_files
-!.gitignore
+run.sbatch
+slurm*
