@@ -8,13 +8,13 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   style="font-style:normal;font-weight:normal;font-size:12px;font-family:Dialog;color-interpolation:auto;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto"
-   width="1488"
-   viewBox="0 0 1395 830"
-   height="885.33331"
+   style="fill-opacity:1; color-rendering:auto; color-interpolation:auto; text-rendering:auto; stroke:black; stroke-linecap:square; stroke-miterlimit:10; shape-rendering:auto; stroke-opacity:1; fill:black; stroke-dasharray:none; font-weight:normal; stroke-width:1; font-family:'Dialog'; font-style:normal; stroke-linejoin:miter; font-size:12; stroke-dashoffset:0; image-rendering:auto;"
+   width="1395.0"
+   viewBox="0 0 1395.0 830.0"
+   height="830.0"
    id="svg3516"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="fig01_draft.svg">
   <metadata
      id="metadata3675">
@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -37,14 +37,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1721"
-     inkscape:window-height="1105"
+     inkscape:window-width="1717"
+     inkscape:window-height="1003"
      id="namedview3673"
      showgrid="false"
-     inkscape:zoom="0.32"
-     inkscape:cx="468.26586"
-     inkscape:cy="742.87387"
-     inkscape:window-x="1"
+     inkscape:zoom="0.63234634"
+     inkscape:cx="749.942"
+     inkscape:cy="559.10192"
+     inkscape:window-x="1511"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg3516"
@@ -68,7 +68,7 @@
        y2="800" />
     <text
        id="text3525"
-       style="line-height:0%;stroke:none"
+       style="stroke:none"
        y="815"
        xml:space="preserve"
        x="689.59473">0.3</text>
@@ -355,10 +355,11 @@
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0b16;fill-opacity:1;stroke:none;stroke-width:0.92871118px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:39.65699768px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0b16;fill-opacity:1;stroke:none;stroke-width:0.92871118px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
      x="734.11035"
      y="635.10083"
      id="text4757"
+     sodipodi:linespacing="125%"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
@@ -369,18 +370,18 @@
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:39.65699768px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0b16;stroke:none;stroke-width:0.92871118px;stroke-opacity:1">Group 2</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0074ef;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:39.65699768px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0074ef;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
      x="719.18811"
      y="-30.857397"
      id="text4761"
+     sodipodi:linespacing="125%"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan4763"
        x="719.18811"
-       y="-30.857397"
-       style="font-size:39.65699768px;line-height:1.25">Group 1</tspan></text>
+       y="-30.857397">Group 1</tspan></text>
   <circle
      style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
      id="path4767"
@@ -410,23 +411,24 @@
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28.49733353px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
      x="1305.9087"
      y="352.88248"
      id="text4793"
+     sodipodi:linespacing="125%"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan4795"
        x="1305.9087"
-       y="352.88248"
-       style="font-size:28.49733353px;line-height:1.25">S139/1</tspan></text>
+       y="352.88248">S139/1</tspan></text>
   <text
+     sodipodi:linespacing="125%"
      id="text4797"
      y="388.70584"
      x="1305.7661"
-     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28.49733353px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
      xml:space="preserve"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
@@ -434,22 +436,21 @@
        y="388.70584"
        x="1305.7661"
        id="tspan4799"
-       sodipodi:role="line"
-       style="font-size:28.49733353px;line-height:1.25">C179</tspan></text>
+       sodipodi:role="line">C179</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28.49733353px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
      x="1305.0251"
      y="423.44379"
      id="text4801"
+     sodipodi:linespacing="125%"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan4803"
        x="1305.0251"
-       y="423.44379"
-       style="font-size:28.49733353px;line-height:1.25">FI6v3</tspan></text>
+       y="423.44379">FI6v3</tspan></text>
   <circle
      r="10.448488"
      cy="-133.1057"
@@ -492,15 +493,6 @@
      cx="1155.0764"
      id="circle4254"
      style="fill:#00ffff;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
-     inkscape:export-xdpi="90"
-     inkscape:export-ydpi="90"
-     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
-  <circle
-     r="10.448488"
-     cy="-171.5412"
-     cx="1104.3267"
-     id="circle4256"
-     style="fill:#7056ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
@@ -586,18 +578,9 @@
      inkscape:export-ydpi="90"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
   <circle
-     r="10.448488"
-     cy="-265.95078"
-     cx="875.95264"
-     id="circle4284"
-     style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
-     inkscape:export-xdpi="90"
-     inkscape:export-ydpi="90"
-     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
-  <circle
      style="fill:#7056ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
      id="circle4286"
-     cx="901.32745"
+     cx="887.32745"
      cy="-265.95078"
      r="10.448488"
      inkscape:export-xdpi="90"
@@ -606,7 +589,7 @@
   <circle
      r="10.448488"
      cy="-265.95078"
-     cx="926.70233"
+     cx="912.70233"
      id="circle4288"
      style="fill:#00ffff;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
      inkscape:export-xdpi="90"
@@ -626,15 +609,6 @@
      id="circle4292"
      cx="1158.0618"
      cy="-25.635527"
-     r="10.448488"
-     inkscape:export-xdpi="90"
-     inkscape:export-ydpi="90"
-     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png" />
-  <circle
-     style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
-     id="circle4294"
-     cx="335.61642"
-     cy="57.9524"
      r="10.448488"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"
@@ -670,17 +644,17 @@
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text4248"
      y="459.67841"
      x="1304.8544"
-     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28.49733353px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-rendering:optimizeLegibility"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="459.67841"
        x="1304.8544"
        id="tspan4250"
-       sodipodi:role="line"
-       style="font-size:28.49733353px;line-height:1.25">H17-L19</tspan></text>
+       sodipodi:role="line">H17-L19</tspan></text>
   <rect
      y="-143.12721"
      x="1170.7493"
@@ -695,10 +669,11 @@
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="1038.2963"
      y="719.9231"
      id="text3756"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan3758"
@@ -709,10 +684,11 @@
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="988.61188"
      y="815.97949"
      id="text3781"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan3783"
@@ -723,10 +699,11 @@
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="927.33453"
      y="784.51257"
      id="text3806"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan3808"
@@ -737,226 +714,226 @@
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="649.10236"
      y="792.79352"
      id="text3810"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan3812"
        x="649.10236"
-       y="792.79352"
-       style="font-size:31.72613335px;line-height:1.25">H10</tspan></text>
+       y="792.79352">H10</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="566.29517"
      y="782.85663"
      id="text3814"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan3816"
        x="566.29517"
-       y="782.85663"
-       style="font-size:31.72613335px;line-height:1.25">H15</tspan></text>
+       y="782.85663">H15</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="506.67395"
      y="781.20044"
      id="text3818"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        sodipodi:role="line"
        id="tspan3820"
        x="506.67395"
-       y="781.20044"
-       style="font-size:31.72613335px;line-height:1.25">H7</tspan></text>
+       y="781.20044">H7</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3895"
      y="221.42389"
      x="332.77881"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="221.42389"
        x="332.77881"
        id="tspan3897"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H12</tspan></text>
+       sodipodi:role="line">H12</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3899"
      y="145.24121"
      x="380.80698"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="145.24121"
        x="380.80698"
        id="tspan3901"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H8</tspan></text>
+       sodipodi:role="line">H8</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3903"
      y="69.058594"
      x="402.33685"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="69.058594"
        x="402.33685"
        id="tspan3905"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H9</tspan></text>
+       sodipodi:role="line">H9</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3907"
      y="-152.8647"
      x="422.21054"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-152.8647"
        x="422.21054"
        id="tspan3909"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H16</tspan></text>
+       sodipodi:role="line">H16</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3911"
      y="-190.95601"
      x="490.11246"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-190.95601"
        x="490.11246"
        id="tspan3913"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H13</tspan></text>
+       sodipodi:role="line">H13</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3925"
      y="-156.17699"
      x="614.3233"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-156.17699"
        x="614.3233"
        id="tspan3927"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H11</tspan></text>
+       sodipodi:role="line">H11</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3929"
      y="-225.73505"
      x="880.96246"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-225.73505"
        x="880.96246"
        id="tspan3931"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H5</tspan></text>
+       sodipodi:role="line">H5</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3933"
      y="-205.8613"
      x="935.61517"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-205.8613"
        x="935.61517"
        id="tspan3935"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H2</tspan></text>
+       sodipodi:role="line">H2</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3937"
      y="-121.39796"
      x="1049.8892"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-121.39796"
        x="1049.8892"
        id="tspan3939"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H1</tspan></text>
+       sodipodi:role="line">H1</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3941"
      y="-159.48927"
      x="988.61182"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-159.48927"
        x="988.61182"
        id="tspan3943"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">pdmH1</tspan></text>
+       sodipodi:role="line">pdmH1</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3945"
      y="-15.404755"
      x="1076.3876"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="-15.404755"
        x="1076.3876"
        id="tspan3947"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H6</tspan></text>
+       sodipodi:role="line">H6</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3949"
      y="141.92894"
      x="1212.1912"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="141.92894"
        x="1212.1912"
        id="tspan3951"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H17</tspan></text>
+       sodipodi:role="line">H17</tspan></text>
   <text
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
+     sodipodi:linespacing="125%"
      id="text3953"
      y="199.89397"
      x="1182.3807"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.72613335px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"><tspan
        y="199.89397"
        x="1182.3807"
        id="tspan3955"
-       sodipodi:role="line"
-       style="font-size:31.72613335px;line-height:1.25">H18</tspan></text>
+       sodipodi:role="line">H18</tspan></text>
   <image
      y="-210.60243"
      x="-524.95428"
@@ -971,10 +948,11 @@
      inkscape:export-ydpi="90" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="-558.82349"
      y="-125.88235"
      id="text4503"
+     sodipodi:linespacing="125%"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"><tspan
@@ -982,19 +960,47 @@
        id="tspan4505"
        x="-558.82349"
        y="-125.88235"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'">A</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'">A</tspan></text>
   <text
+     sodipodi:linespacing="125%"
      id="text4507"
      y="-125.88235"
      x="226.47063"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"
      inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'"
        y="-125.88235"
        x="226.47063"
        id="tspan4509"
        sodipodi:role="line">B</tspan></text>
+  <circle
+     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
+     inkscape:export-ydpi="90"
+     inkscape:export-xdpi="90"
+     r="10.448488"
+     cy="-163.48503"
+     cx="404.65594"
+     id="circle4253"
+     style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility" />
+  <circle
+     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
+     inkscape:export-ydpi="90"
+     inkscape:export-xdpi="90"
+     r="10.448488"
+     cy="-172.64748"
+     cx="1105.5624"
+     id="circle4255"
+     style="fill:#7056ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility" />
+  <circle
+     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
+     inkscape:export-ydpi="90"
+     inkscape:export-xdpi="90"
+     style="fill:#00ffff;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
+     id="circle4257"
+     cx="1130.9373"
+     cy="-172.64748"
+     r="10.448488" />
 </svg>
