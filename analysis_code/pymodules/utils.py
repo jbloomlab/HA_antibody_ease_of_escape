@@ -93,7 +93,7 @@ def MapDiffselColorToSite(diffselfile, scriptfile, script_type='pymol',
     column_names = list(df)
     if column_names == ['site', 'wildtype', 'mutation', 'mutdiffsel']:
         filetype = 'mutdiffsel'
-    elif column_names == ['site', 'abs_diffsel', 'positive_diffsel', 'negative_diffsel']:
+    elif column_names == ['site', 'abs_diffsel', 'positive_diffsel', 'negative_diffsel', 'max_diffsel', 'min_diffsel']:
         filetype = 'sitediffsel'
     else:
         raise ValueError('diffsel file does not have appropriate set of column identifiers')
