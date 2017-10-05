@@ -32,7 +32,7 @@
 \newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\newcommand{\comment}[1]{{\color{red}(\textsl{#1})}}
+\newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
 
 \usepackage{setspace}
 
@@ -93,9 +93,34 @@ Recently we have described new technologies... \cite{doud2017complete, dingens20
 Some text
 
 \begin{figure}
-\centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/fig.png}}
+\centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/antibody_summary_fig.pdf}}
 \caption{\label{fig:antibody_summary}
+CAPTION
+\comment{Can you make the following changes:
+(1) Add H17-L10 and H17-L7. These could just be in different shades of red since they are all narrow antibodies like H17-L19. (2) Make the structure slightly larger relative to the tree. (3) Increase the line widths on the tree and the font sizes everywhere. (4) Move the color-based label to the left side of the tree so it falls between the two panels, since it is really labeling both. (5) Make the tree branches all black. Since color is already being used to represent the different antibodies, I think it is confusing to also use it to distinguish Group 1 and Group 2.}}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{figs/fracsurvive_example/frac_survive_example_plot.pdf}}
+\caption{\label{fig:fracsurvive_example}
 CAPTION}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{figs/neutralization_curves/WT_neutralization_curves.pdf}}
+\caption{\label{fig:neutcurves}
+CAPTION
+\comment{Can you modify this plot to bring the formatting more in line with Figure~\ref{fig:fracsurvive_example}. 
+This includes:
+(1) Make the y-axis \emph{fraction infectivity}.
+(2) Make the vertical lines dotted and of the same color as in Figure~\ref{fig:fracsurvive_example}, which is the last color in the \emph{cbbPalette} defined here \url{https://github.com/jbloomlab/HA_antibody_ease_of_escape/blob/master/paper/figs/fracsurvive_example/fracsurvive_example.ipynb}. 
+(3) Get rid of the minor tick marks that show up on two of the four plots.
+(4) Add H17-L10 and H17-L9, and make the plot three antibodies per line.
+(5) Get rid of the concentration of S139/1 that we are not using.
+(6) Also, I think it would look better if for each plot the antibody name was just a title above the plot in large letters. The x-axis then can then just ``antibody concentration ($\mu$g/ml)''. Also, I don't think you need the number labels for the concentrations on either the plot or in the table. If your table has the concentration and fraction infectivity, it is obvious which line goes with which concentration just by seeing how they are arranged horizontally.
+(7) Increase the font size in the table (you'll have more space to do this after you get rid of the numbers).
+}
+}
 \end{figure}
 
 \section*{DISCUSSION}
