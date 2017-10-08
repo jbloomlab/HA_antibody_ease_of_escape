@@ -6,6 +6,7 @@
 \usepackage{kpfonts}
 
 \usepackage{seqsplit}
+\usepackage{placeins}
 
 \usepackage{newfloat}
 \usepackage[labelfont=bf]{caption}
@@ -19,7 +20,8 @@
 \setcounter{totalnumber}{8}
 
 \usepackage{newfloat}
-\DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
+\DeclareFloatingEnvironment[name={Figure}]{suppfigure}
+\renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
 
 \definecolor{darkblue}{rgb}{0, 0.0, 0.6}
 
@@ -44,7 +46,7 @@
 %\renewcommand{\abstractname}{\large SUMMARY}
 
 
-\title{Quantifying the ease of viral escape from broad and narrow antibodies to influenza virus hemagglutinin} 
+\title{Quantifying the ease of viral escape from broad and narrow antibodies to influenza hemagglutinin} 
 
 \author
 {Michael B. Doud$^{1,2,3,\dagger}$, Juhye M. Lee$^{1,2,3,\dagger}$, and Jesse D. Bloom$^{1,2,*}$\\
@@ -65,16 +67,16 @@
 \onehalfspacing
 
 \begin{abstract}
-Influenza virus can completely escape most neutralizing antibodies with single mutations.
+Influenza virus can completely escape most antibodies with single mutations.
 However, rare antibodies broadly neutralize many viral strains.
-It is unclear how easily the virus might escape such broad antibodies if there was strong selection to do so.
-Here we map all single amino-acid mutations to an H1 influenza hemagglutinin that increase resistance to several broad antibodies.
-Crucially, our approach both identifies antigenic mutations and quantifies their effect size.
-We find mutations that increase resistance to all antibodies tested, but the effect sizes range widely. 
-Single mutations completely escape a broad antibody targeting the hemagglutinin receptor-binding pocket, similar to escape from narrow strain-specific antibodies.   
-In contrast, the few mutations selected by broad antibodies targeting the hemagglutinin stalk have only small effects. 
-Overall, our work demonstrates a method to quantify the ease of viral antibody escape, and shows that antibody breadth is not necessarily an indicator of the difficulty of viral escape.
-In addition, our results show that broad antibodies targeting the hemagglutinin stalk are quantifiably harder to escape via point mutations.
+It is unclear how easily influenza virus might escape such broad antibodies if they became widespread due to therapeutic use or vaccination.
+Here we map all single amino-acid mutations that increase resistance to broad antibodies targeting hemagglutinin.
+Crucially, our approach not only identifies antigenic mutations but also quantifies their effect sizes.
+All antibodies select mutations, but the effect sizes vary widely. 
+The virus can escape a broad antibody targeting hemagglutinin's receptor-binding pocket the same way it escapes narrow strain-specific antibodies: via single mutations with huge effects.   
+In contrast, broad antibodies targeting hemagglutinin's stalk only select mutations with small antigenic effects. 
+Therefore, antibody breadth is not necessarily an indicator of the difficulty of viral escape.
+Broad antibodies targeting hemagglutinin's stalk are quantifiably harder to escape than antibodies targeting hemagglutinin's head or receptor-binding pocket.
 \end{abstract}
 
 \section*{INTRODUCTION}
@@ -99,7 +101,9 @@ Recently we have described new technologies... \cite{doud2017complete, dingens20
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/fracsurvive_example/fracsurvive_fig.pdf}}
 \caption{\label{fig:fracsurvive_example}
-CAPTION}
+CAPTION
+\comment{One additional change to this figure: can you increase the spacing between panels, especially the top and bottom set of panels but also a bit between the ones on the same horizontal level. Right now it is too crowded.}
+}
 \end{figure}
 
 \subsection*{Broad and narrow antibodies that neutralize influenza virus hemagglutinin}
@@ -108,8 +112,7 @@ CAPTION}
 \centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/Ab_summary.pdf}}
 \caption{\label{fig:antibody_summary}
 CAPTION
-\comment{Can you make the following changes:
-(1) Add H17-L10 and H17-L7. These could just be in different shades of red since they are all narrow antibodies like H17-L19. (2) Make the structure slightly larger relative to the tree. (3) Increase the line widths on the tree and the font sizes everywhere. (4) Move the color-based label to the left side of the tree so it falls between the two panels, since it is really labeling both. (5) Make the tree branches all black. Since color is already being used to represent the different antibodies, I think it is confusing to also use it to distinguish Group 1 and Group 2.}}
+}
 \end{figure}
 
 
@@ -134,9 +137,11 @@ This includes:
 This would show the medianavgfracsurvive plot.
 
 \begin{figure}
-\centerline{\includegraphics[width=\textwidth]{../analysis_code/results/fracsurvive/summary_medianavgfracsurvive.pdf}}
+\centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
 \caption{
+\label{fig:avgfracsurvive}
 CAPTION
+Figure~\ref{suppfig:maxfracsurvive} shows the fraction surviving for the single most strongly selected amino-acid mutation at each site.
 }
 \end{figure}
 
@@ -204,6 +209,30 @@ The research of JDB is supported in part by a Faculty Scholar Grant from the How
 \normalsize
 
 \section*{Supplementary Material}
+\FloatBarrier
 
+\begin{suppfigure}
+\centerline{\includegraphics[width=\textwidth]{figs/maxfracsurvive.pdf}}
+\caption{\label{suppfig:maxfracsurvive}
+CAPTION}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L19_fracsurvive.pdf}}
+\caption{\label{suppfig:H17L19logo}
+CAPTION}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L10_fracsurvive.pdf}}
+\caption{\label{suppfig:H17L10logo}
+CAPTION}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L7_fracsurvive.pdf}}
+\caption{\label{suppfig:H17L7logo}
+CAPTION}
+\end{suppfigure}
 
 \end{document}
