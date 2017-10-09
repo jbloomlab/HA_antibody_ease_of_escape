@@ -119,16 +119,9 @@ But no single mutation does more than modestly increase the virus's resistance t
 These results suggest that systematically quantifying the antigenic effects of all single amino-acid mutations is a useful complement to simply measuring antibody breadth when trying to assess the potential for antigenic drift. 
 
 
-Broadly neutralizing antibodies against influenza virus are of great interest... \cite{corti2017tackling}. 
+%Broadly neutralizing antibodies against influenza virus are of great interest... \cite{corti2017tackling}. 
 
-% blurbs about the specific antibodies we use here:
-C179 isolation and escape mutant selection \cite{okuno1993common}.
-C179 structure with 1957 H2, binding data to many strains, and citations to older studies demonstrating C179 cross-neutralization to H1, H2, H5, H6, and H9:  \cite{dreyfus2013structure}.
-FI6v3 was isolated... \cite{corti2011neutralizing}.
-S139/1 isolation and selection of escape mutants from Aichi H3, Adachi H2, and WSN H1: \cite{yoshida2009cross}.
-S139/1 structure with Victoria75 H3 and binding/neutralization data: \cite{lee2012heterosubtypic}.
 
-Recently we have described new technologies... \cite{doud2017complete, dingens2017comprehensive}.
 
 
 \section*{RESULTS}
@@ -139,12 +132,19 @@ Recently we have described new technologies... \cite{doud2017complete, dingens20
 \centerline{\includegraphics[width=\textwidth]{figs/fracsurvive_example/fracsurvive_fig.pdf}}
 \caption{\label{fig:fracsurvive_example}
 CAPTION
-\comment{One additional change to this figure: can you increase the spacing between panels, especially the top and bottom set of panels but also a bit between the ones on the same horizontal level. Right now it is too crowded.}
 }
 \end{figure}
 
 \subsection*{Broad and narrow antibodies that neutralize influenza virus hemagglutinin}
 \comment{Juhye writes a draft of this section.}
+
+% blurbs about the specific antibodies we use here:
+C179 isolation and escape mutant selection \cite{okuno1993common}.
+C179 structure with 1957 H2, binding data to many strains, and citations to older studies demonstrating C179 cross-neutralization to H1, H2, H5, H6, and H9:  \cite{dreyfus2013structure}.
+FI6v3 was isolated... \cite{corti2011neutralizing}.
+S139/1 isolation and selection of escape mutants from Aichi H3, Adachi H2, and WSN H1: \cite{yoshida2009cross}.
+S139/1 structure with Victoria75 H3 and binding/neutralization data: \cite{lee2012heterosubtypic}.
+
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/Ab_summary.pdf}}
 \caption{\label{fig:antibody_summary}
@@ -157,21 +157,16 @@ CAPTION
 \centerline{\includegraphics[width=0.8\textwidth]{figs/neutralization_curves/WT_neutralization_curves.pdf}}
 \caption{\label{fig:neutcurves}
 CAPTION
-\comment{Can you modify this plot to bring the formatting more in line with Figure~\ref{fig:fracsurvive_example}. 
-This includes:
-(1) Make the y-axis \emph{fraction infectivity}.
-(2) Make the vertical lines dotted and of the same color as in Figure~\ref{fig:fracsurvive_example}, which is the last color in the \emph{cbbPalette} defined here \url{https://github.com/jbloomlab/HA_antibody_ease_of_escape/blob/master/paper/figs/fracsurvive_example/fracsurvive_example.ipynb}. 
-(3) Get rid of the minor tick marks that show up on two of the four plots.
-(4) Add H17-L10 and H17-L9, and make the plot three antibodies per line.
-(5) Get rid of the concentration of S139/1 that we are not using.
-(6) Also, I think it would look better if for each plot the antibody name was just a title above the plot in large letters. The x-axis then can then just ``antibody concentration ($\mu$g/ml)''. Also, I don't think you need the number labels for the concentrations on either the plot or in the table. If your table has the concentration and fraction infectivity, it is obvious which line goes with which concentration just by seeing how they are arranged horizontally.
-(7) Increase the font size in the table (you'll have more space to do this after you get rid of the numbers).
+\comment{
+Get rid of the panel numbers altogether and just have the antibody names.
 }
 }
 \end{figure}
 
 \subsection*{Ease of escape from each antibody}
-This would show the medianavgfracsurvive plot.
+\comment{Jesse can work on a rough draft of this section.}
+
+\comment{Juhye, can you create a correlation among replicates supplemental figure. In the \texttt{./figs/corrs/} directory are all the plots. Is it possible to nicely arrange them on one page, maybe getting rid of the diagonals?}
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
