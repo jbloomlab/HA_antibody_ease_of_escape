@@ -83,27 +83,41 @@ Broad antibodies targeting hemagglutinin's stalk are quantifiably harder to esca
 Nearly all viruses show some antigenic variation.
 However, the extent of this variation ranges widely.
 For instance, although both measles virus~\citep{birrer1981antigenic,ter1981antigenic} and polio virus~\citep{crainic1983natural,diamond1985antigenic,drexler2014robustness} exhibit antigenic variation, the magnitude of this variation is small. 
-Therefore, immunity elicited by infection or vaccination provides life-long protection against both these viruses~\citep{?}.
-In contrast, some viruses exhibit much more extensive antigenic variation.
-An example is human influenza virus.
-Infection with influenza virus provides life-long immunity to the infecting strain~\citep{?}.
-But influenza virus undergoes such rapid antigenic evolution that the effectiveness of this immunity to new viral strains is almost completely eroded within a few years~\citep{?}. 
+Therefore, immunity to both these viruses is lifelong~\citep{?}.
+In contrast, human influenza virus exhibits extensive antigenic variation.
+So although infection with an influenza virus strain provides lifelong immunity to that exact strain~\citep{?}, the virus's rapid antigenic evolution erodes the effectiveness of this immunity to that strain's descendents within just a few years~\citep{?}.
 
-One possible explanation for the reason that viruses exhibit differences in the extent of antigenic variation is that they have disparate inherent evolutionary capacities to escape immunodominant antibodies~\citep{lipsitch2007patterns,cobey2014pathogen,fulton2015mutational}.
+One possible reason that different viruses exhibit different amounts of antigenic variation is that they may have disparate evolutionary capacities to escape the antibodies that are immunodominant during natural immune responses~\citep{lipsitch2007patterns,cobey2014pathogen,fulton2015mutational}.
 According to this explanation, human influenza virus undergoes rapid antigenic drift because most neutralizing antibodies target epitopes on the viral hemagglutinin protein that are highly tolerant of mutational change.
-This explanation is supported by classic experiments showing that it is easy to select viral mutants that escape most anti-hemagglutinin antibodies~\citep{yewdell1979antigenic,webster1980determination}, as well as by the observation that mutations that alter antigenicity arise frequently during influenza's evolution at the global scale~\citep{koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction} and even within individual humans with long-term infections~\citep{xue2017parallel}.
+This explanation is supported by classic experiments showing that it is easy to select viral mutants that escape most antibodies~\citep{yewdell1979antigenic,webster1980determination}, as well as by the observation that mutations that alter antigenicity arise frequently during influenza's evolution globally~\citep{koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction} and within individual humans with long-term infections~\citep{xue2017parallel}.
 A corollary of this explanation is that the virus's capacity for antigenic drift would be reduced if most antibodies instead targeted epitopes that were less mutationally tolerant.
 
 Verifying this corollary has become of practical importance with the discovery of broadly neutralizing antibodies against influenza virus.
 These antibodies typically target conserved epitopes in hemagglutinin's stalk~\citep{?} or receptor-binding pocket~\citep{?}, and neutralize a wide range of viral strains.
-Broad antibodies usually make only a modest contribution to natural human immunity, since they are less abundant than antibodies to the antigenically variable head of hemagglutinin~\citep{?}.
-However, major efforts are now underway to elicit broad antibodies by vaccination~\citep{?} or administer them directly as therapeutics or prophylactics~\citep{?}.
+Broad antibodies usually make only a modest contribution to natural human immunity, since they are less abundant than antibodies to antigenically variable epitopes on the head of hemagglutinin~\citep{?}.
+However, major efforts are underway to elicit broad antibodies by vaccination~\citep{?} or administer them directly as therapeutics or prophylactics~\citep{?}.
 
-If these efforts succeed, the epitopes of broadly neutralizing antibodies will then be under strong antigenic selection in human influenza virus.
-Certainly there is precedent for the idea that changing the immune status of the host population can alter influenza virus evolution: ...
-Of course, it remains unclear if these epitopes are more conserved because they are inherent intolerant or just aren't under pressure.
-For instance, non-human influenza doesn't undergo much antigenic drift.
-Knowing is important because success of a vaccine would put them under pressure.
+If these efforts succeed, the epitopes of broad antibodies will be under strong antigenic selection in human influenza virus.
+Would such selection then drive extensive antigenic variation in these epitopes?
+There is precedent for the idea that the immune status of the host population can shape influenza virus antigenic evolution: the virus undergoes faster antigenic drift in long-lived humans that accumulate immune memory than in short-lived swine that are mostly naive~\citep{sheerar1989antigenic,luoh1992hemagglutinin}, and poultry vaccination may accelerate antigenic drift of avian influenza~\citep{lee2004effect}.
+But alternatively, perhaps broad antibodies are broad because the virus has difficulty escaping from them regardless of the selection from host immunity.
+
+So far, there is limited data addressing whether the epitopes of broad antibodies are inherently resistant to viral antigenic evolution.
+Several studies have shown that the globular head domain of hemagglutinin is less mutationally tolerant than the stalk domain where many broad antibodies bind~\citep{thyagarajan2014inherent,wu2014high,heaton2013genome}.
+However, these studies did not select for actual antibody escape, so it is difficult to directly relate their measurements to the virus's evolutionary capacity under immune selection.
+Other work has selected antigenic mutants with a few broad antibodies~\citep{?}, demonstrating that these epitopes are not entirely refractory to change.
+But given that antibodies can select some antigenic variation even in measles virus~\citep{?} and polio virus~\citep{?}, the existence of mutations selectable by broad antibodies does not necessarily imply that influenza virus can escape these antibodies with ease.
+The fundamental problem is that none of these studies provide quantitative data on the ease of viral escape that can be compared across antibodies in an apples-to-apples fashion.
+
+Here we systematically quantify the ease with which influenza virus can escape from a range of broad and narrow antibodies via single amino-acid mutations.
+Specifically, we impose antibody selection on libraries of viruses carrying all amino-acid mutants of hemagglutinin compatible with viral replication, and then measure the fraction of virions with each mutation that survive the selection at several antibody concentrations.
+Critically, this approach quantifies the \emph{magnitude} of the antigenic effect of every mutation in a way that can be directly compared across antibodies.
+We find that even the broadest antibodies can select mutations that increase the virus's resistance to neutralization.
+However, the magnitudes of the antigenic effects vary greatly across antibodies.
+Single mutations can make the virus completely resistant to both narrow strain-specific antibodies and a broad antibody against the receptor-binding pocket.
+But no single mutation does more than modestly increase the virus's resistance to broad antibodies against the hemagglutinin stalk.
+These results suggest that systematically quantifying the antigenic effects of all single amino-acid mutations is a useful complement to simply measuring antibody breadth when trying to assess the potential for antigenic drift. 
+
 
 Broadly neutralizing antibodies against influenza virus are of great interest... \cite{corti2017tackling}. 
 
