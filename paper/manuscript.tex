@@ -107,7 +107,7 @@ Several studies have shown that the head domain of hemagglutinin is less mutatio
 However, these studies did not select for actual antibody escape, so it is difficult to relate their measurements to the virus's evolutionary capacity under immune selection.
 Other work has shown that it is possible to select antigenic mutants with broad antibodies~\citep{yoshida2009cross,chai2016two}, demonstrating that these epitopes are not entirely refractory to change.
 But given that antibodies can select some antigenic variation even in measles virus~\citep{birrer1981antigenic,ter1981antigenic} and polio virus~\citep{crainic1983natural,diamond1985antigenic}, the existence of selectable mutations does not necessarily imply that influenza virus can escape broad antibodies with the same ease that it drifts away from narrow strain-specific ones.
-The fundamental problem is that existing studies do not quantify the ease of viral escape in a way that can be compared across antibodies in an apples-to-apples fashion.
+The fundamental problem is that existing studies have not quantified the ease of viral escape in a way that can be compared across antibodies in an apples-to-apples fashion.
 
 Here we systematically quantify the results of selecting all single amino-acid mutants of an H1 hemagglutinin with several broad and narrow antibodies.
 Critically, our approach quantifies the \emph{magnitude} of the antigenic effect of every mutation in a way that can be directly compared across antibodies.
@@ -125,7 +125,15 @@ Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral 
 
 \section*{RESULTS}
 
-\subsection*{A method to quantify the ease of escape.}
+\subsection*{An approach to quantify the fraction of virions with each mutation that escape antibody neutralization}
+A feature of influenza antigenic drift is that single amino-acid mutations often have very large effects on neutralization by monoclonal antibodies targeting hemagglutinin's globular head~\citep{?}.
+We can visualize the outcome of antibody selection on viral populations containing such strong escape mutations in several ways.
+For instance, Figure~\ref{fig:fracsurvive_example} shows hypothetical data for four viral variants (wildtype, and mutants V1K, L2C, and S3A).
+If mutation V1K strongly escapes neutralization, then most variants with this mutation will evade antibody neutralization at a concentration where the other three variants are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
+This escape is manifested by a large rightward shift in the neutralization curve for the V1K variant (Figure~\ref{fig:fracsurvive_example}B).
+If we imagine drawing vertical lines through the overlaid neutralization curves for all variants, we can calculate the fraction of variants with each mutation that escape neutralization.
+These fractions can be represented using logo plots as in Figure~\ref{fig:fracsurvive_example}C -- if a mutation is a strong escape mutation, then a large fraction of variants with that mutation will survive at antibody concentrations that eliminate most other variants.
+
 \comment{Jesse writes a draft of this section.}
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/fracsurvive_example/fracsurvive_fig.pdf}}
