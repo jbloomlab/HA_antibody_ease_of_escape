@@ -122,28 +122,52 @@ Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral 
 
 \subsection*{An approach to quantify the fraction of virions with each mutation that escape antibody neutralization}
 We can visualize the outcome of antibody selection on viral populations containing antigenic mutations as in Figure~\ref{fig:fracsurvive_example}.
-Specifically, this figure shows hypothetical data for four viral variants.
+This figure shows hypothetical data for four viral variants.
 If a mutation strongly escapes neutralization, then all virions with this mutation will survive antibody treatment at a concentration where other virions are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
 This escape is manifested by a large rightward shift in the neutralization curve for the mutant (Figure~\ref{fig:fracsurvive_example}B).
 If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that escape neutralization at each antibody concentration (Figure~\ref{fig:fracsurvive_example}B).
-These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive antibody treatment (Figure~\ref{fig:fracsurvive_example}C).
+These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive the antibody (Figure~\ref{fig:fracsurvive_example}C).
 In these logo plots, large letters correspond to strong escape mutations. 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/fracsurvive_example/fracsurvive_fig.pdf}}
 \caption{\label{fig:fracsurvive_example}
-CAPTION
+{\bf Quantifying the fraction of virions with each mutation that escape antibody neutralization.}
+This figure shows hypothetical data for four viral variants: wildtype and three mutants.
+(A) Virions with the V1K mutation (orange) completely survive an antibody concentration where most other virions are neutralized.
+(B) This resistance is manifested by a large shift in V1K's neutralization curve.
+(C) For each dotted vertical line drawn through the neutralization curves in (B), we calculate the fraction of virions with that mutation that survive the antibody, and indicate this fraction by the height of the letter corresponding to that amino acid at that site.
+(D-F) Similar data to the first three panels, but now V1K has only a small antigenic effect, and so only modestly increases the fraction of virions that survive antibody treatment.
 }
 \end{figure}
 
 Now consider the case where a mutation has only a small antigenic effect, and so only slightly increases the fraction of virions that escape neutralization (Figure~\ref{fig:fracsurvive_example}D).
 In this scenario, the neutralization curve is only slightly shifted to the right (Figure~\ref{fig:fracsurvive_example}E).
 In the logo plot representation, the antigenic mutation is only slightly larger than other amino acids (Figure~\ref{fig:fracsurvive_example}F), since possessing the mutation only modestly increases the chance that a virion survives antibody treatment.
+These logo plots therefore provide a way to both identify escape mutations and quantify the magnitudes of their antigenic effects in a way that is directly comparable across antibodies.
 
 Our goal is to determine the fraction of mutant virions that escape antibody neutralization for \emph{all} mutations to influenza HA.
-In other words, we want to generate data like that in Figure~\ref{fig:fracsurvive_example}C,F for every amino acid at every site in HA.
-One way to do this would be to measure individual neutralization curves for the wildtype virus and viruses carrying each of the $19\times565 = 10,735$ amino-acid mutations that can be made to the 565-residue HA protein.
-However, individually creating and assaying that many viral mutants would be extraordinarily time-consuming and expensive.
+In other words, we want to generate logo plots like those in Figure~\ref{fig:fracsurvive_example} for every amino acid at every site in HA.
+One way to do this would be to measure individual neutralization curves for each of the $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
+However, individually creating and assaying that many viral mutants would be time-consuming and expensive.
+Fortunately, we have recently shown that antibody selection on all viral mutations can be assayed in a single experiment using an approach termed mutational antigenic profiling~\citep{doud2017complete,dingens2017comprehensive}.
+This approach involves generating viral libraries containing all mutations to the protein of interest (in this case, HA), selecting these viruses with or without antibody, and then using an accurate deep-sequencing method to determine the relative frequencies of each mutation.
+
+These frequencies can be analyzed to calculate the fraction of variants with each mutation that survive antibody treatment.
+Specifically, the deep sequencing determines the frequencies of virions carrying amino-acid $a$ at site $r$ in the antibody-selected and mock-selected conditions, which we denote as $\rho_{r,a}^{\rm{selected}}$ and $\rho_{r,a}^{\rm{mock}}$, respectively.
+We can also measure the total fraction of the viral library that survives the antibody treatment, which we denote as $\gamma$.
+The fraction of variants with amino-acid $a$ at site $r$ that survive selection is then simply 
+\begin{equation}
+\label{eq:fracsurvive}
+F_{r,a} = \gamma \frac{\rho_{r,a}^{\rm{selected}}}{\rho_{r,a}^{\rm{mock}}}.
+\end{equation}
+For instance, in Figure~\ref{fig:fracsurvive_example}A, the frequency of virions with the orange mutation is $\rho_{r,a}^{\rm{selected}} = \frac{4}{7}$ in the antibody-selected condition and $\rho_{r,a}^{\rm{mock}} = \frac{4}{16}$ in the mock-selected condition.
+The overall fraction of virions that survive the antibody in Figure~\ref{fig:fracsurvive_example}A is $\gamma = \frac{7}{16}$.
+Therefore, we use Equation~\ref{eq:fracsurvive} to calculate that the fraction of variants with the orange mutation that survive the selection is $F_{r,a} = \frac{7}{16} \times \frac{4/7}{4/16} = 1$.
+Performing the analogous calculation for Figure~\ref{fig:fracsurvive_example}D correctly determines that fraction of virions with the orange mutation that survive the antibody is only 0.5 for the scenario in that figure panel.
+In most of the analyses of real data below, we will plot the fraction surviving \emph{above} the overall library average (this is $\max\left[0, F_{a,r} - \gamma\right]$) since this quantity more clearly accentuates antigenic mutations.
+Details of how the calculations are extended to account for sequencing errors and sampling statistics are in the METHODS.
+Open-source software that performs all steps in the analysis beginning with the deep sequencing data is available at \url{https://jbloomlab.github.io/dms_tools2/}.
 
 \subsection*{Broad and narrow antibodies that neutralize influenza virus}
 \comment{Juhye writes a draft of this section.}
