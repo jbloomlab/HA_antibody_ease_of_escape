@@ -46,7 +46,7 @@
 %\renewcommand{\abstractname}{\large SUMMARY}
 
 
-\title{Quantifying the ease of viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin} 
+\title{Quantifying the ease of viral escape from broad and narrow antibodies to influenza hemagglutinin} 
 
 \author
 {Michael B. Doud$^{1,2,3,\dagger}$, Juhye M. Lee$^{1,2,3,\dagger}$, and Jesse D. Bloom$^{1,2,*}$\\
@@ -104,9 +104,9 @@ But alternatively, perhaps broad antibodies are broad because the virus has diff
 
 So far, there is limited data to distinguish between these possibilities.
 Several studies have shown that the head domain of HA is less mutationally tolerant than the stalk domain where many broad antibodies bind~\citep{thyagarajan2014inherent,wu2014high,heaton2013genome}.
-However, these studies did not select for actual antibody escape, so it is difficult to relate their measurements to the virus's evolutionary capacity under immune selection.
+However, these studies did not select for antibody escape, so it is difficult to relate their measurements to the virus's evolutionary capacity under immune selection.
 Other work has shown that it is possible to select antigenic mutants with broad antibodies~\citep{yoshida2009cross,chai2016two}, demonstrating that these epitopes are not entirely refractory to change.
-But given that antibodies can select some antigenic variation even in measles virus~\citep{birrer1981antigenic,ter1981antigenic} and polio virus~\citep{crainic1983natural,diamond1985antigenic}, the existence of selectable mutations does not necessarily imply that influenza virus can escape broad antibodies with the same ease that it drifts away from narrow strain-specific ones.
+But given that antibodies can select some antigenic variation even in measles virus~\citep{birrer1981antigenic,ter1981antigenic} and polio virus~\citep{crainic1983natural,diamond1985antigenic}, the existence of selectable mutations does not necessarily imply that influenza virus can escape broad antibodies as easily as it drifts away from narrow strain-specific ones.
 The fundamental problem is that existing studies have not quantified the ease of viral escape in a way that can be compared across antibodies in an apples-to-apples fashion.
 
 Here we systematically quantify the results of selecting all single amino-acid mutations to an H1 HA with several broad and narrow antibodies.
@@ -123,8 +123,8 @@ Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral 
 
 \subsection*{An approach to quantify the fraction of virions with each mutation that escape antibody neutralization}
 We can visualize the outcome of antibody selection on viral populations containing antigenic mutations as in Figure~\ref{fig:fracsurvive_example}.
-If a mutation strongly escapes neutralization, then all virions with this mutation will survive antibody treatment at a concentration where other virions are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
-This escape is manifested by a large rightward shift in the neutralization curve for the mutant (Figure~\ref{fig:fracsurvive_example}B).
+If a mutation strongly escapes neutralization, then all virions with this mutation survive antibody treatment at a concentration where other virions are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
+This escape is manifested by a large shift in the neutralization curve for the mutant (Figure~\ref{fig:fracsurvive_example}B).
 If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that escape neutralization at each antibody concentration (Figure~\ref{fig:fracsurvive_example}B).
 These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive the antibody (Figure~\ref{fig:fracsurvive_example}C).
 In these logo plots, large letters correspond to strong escape mutations. 
@@ -142,15 +142,15 @@ This figure shows hypothetical data for four viral variants: wildtype and three 
 \end{figure}
 
 Now consider the case where a mutation has just a small antigenic effect, and so only slightly increases the fraction of virions that escape neutralization (Figure~\ref{fig:fracsurvive_example}D).
-In this scenario, the neutralization curve shifts only slightly to the right (Figure~\ref{fig:fracsurvive_example}E).
+In this scenario, the neutralization curve shifts only slightly (Figure~\ref{fig:fracsurvive_example}E).
 In the logo plot representation, the antigenic mutation is only slightly larger than other amino acids (Figure~\ref{fig:fracsurvive_example}F), since possessing the mutation only modestly increases the chance that a virion survives antibody treatment.
 These logo plots therefore provide a way to both identify escape mutations and quantify the magnitudes of their antigenic effects in a way that is directly comparable across antibodies.
 
 Our goal is to determine the fraction of mutant virions that escape antibody neutralization for \emph{all} mutations to influenza HA.
 In other words, we want to generate logo plots like those in Figure~\ref{fig:fracsurvive_example} for every amino acid at every site in HA.
-One way to do this would be to measure individual neutralization curves for each of the $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
-However, individually creating and assaying that many viral mutants would be time-consuming and expensive.
-Fortunately, we have recently shown that antibody selection on all viral mutations can be assayed in a single experiment using an approach termed mutational antigenic profiling~\citep{doud2017complete,dingens2017comprehensive}.
+One way to do this would be to measure individual neutralization curves for all $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
+However, individually creating and assaying that many viral mutants would be exceedingly time-consuming and expensive.
+Fortunately, we have recently shown that antibody selection on all viral mutations can be assayed in a single experiment using mutational antigenic profiling~\citep{doud2017complete,dingens2017comprehensive}.
 This approach involves generating viral libraries containing all mutations to the protein of interest (in this case, HA), selecting these viruses with or without antibody, and then using an accurate deep-sequencing method to determine the relative frequencies of each mutation.
 
 These frequencies can be analyzed to calculate the fraction of virions with each mutation that survive antibody treatment.
@@ -165,7 +165,7 @@ For instance, in Figure~\ref{fig:fracsurvive_example}A, the frequency of virions
 The overall fraction of virions that survive the antibody in Figure~\ref{fig:fracsurvive_example}A is $\gamma = \frac{7}{16}$.
 Therefore, we use Equation~\ref{eq:fracsurvive} to calculate that the fraction of variants with the orange mutation that survive the selection is $F_{r,a} = \frac{7}{16} \times \frac{4/7}{4/16} = 1$.
 Performing the analogous calculation for Figure~\ref{fig:fracsurvive_example}D correctly determines that fraction of virions with the orange mutation that survive the antibody is only 0.5 for the scenario in that figure panel.
-In most of the analyses of real data below, we will plot the fraction surviving \emph{above} the overall library average, which is
+In the analyses of real data below, we will plot the fraction surviving \emph{above} the overall library average, which is
 \begin{equation}
 \label{eq:fracsurvive_above}
 F_{r,a}^{\rm{aboveavg}} = \max\left(0, F_{r,a} - \gamma\right).
@@ -235,8 +235,13 @@ FI6v3 was expressed and purified by the Fred Hutchinson Cancer Research Center p
 C179 was purchased from Takara Bio Inc (Catalog \# M145).
 S139/1 heavy and light chain variable sequences were obtained from PDB ID 4GMS~\cite{lee2012heterosubtypic} and expressed and purified by the Fred Hutchinson Cancer Research Center protein expression core.
 
-\subsection*{Mutant virus selections with antibody}
-Library selections, deep sequencing, and computation of mutation differential selection were performed as previously described~\cite{doud2017complete}. Briefly, ...
+\subsection*{Neutralization assays}
+\comment{add this}
+
+\subsection*{Mutant virus selections with antibody and deep sequencing}
+Library selections, deep sequencing, and computation of mutation differential selection were performed as previously described~\cite{doud2017complete}. 
+
+Describe estimation of $\gamma$ by qPCR.
 
 \subsection*{Calculating the fraction of virions with each mutation that escapes antibody neutralization}
 In prior mutational antigenic profiling work~\citep{doud2017complete,dingens2017comprehensive}, we calculated the differential selection on each mutation as the logarithm of its enrichment relative to wildtype in an antibody-selected sample versus a mock-selected control.
@@ -245,8 +250,52 @@ However, there is no natural way to compare these values across experiments with
 We therefore developed the new approach in this paper to quantify the antigenic effect of a mutation in units that can be compared across antibodies and concentrations.
 
 The general principle of the calculations is illustrated in Figure~\ref{fig:fracsurvive_example} and discussed in the first section of the \nameref{sec:results}.
-Code that performs these calculations is included in the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
+Here we provide details on how these calculations are performed.
+The deep sequencing measures the number of times that codon $x$ is observed at site $r$ in both the antibody-selected and mock-selected conditions. 
+Denote these counts as $n_{r,x}^{\rm{selected}}$ and $n_{r,x}^{\rm{mock}}$, respectively.
+We also perform deep sequencing of a control (in this case, plasmid DNA encoding the wildtype HA gene) to estimate the sequencing error rate.
+Denote the counts of codon $x$ at site $r$ in this control as $n_{r,x}^{\rm{err}}$.
+Also denote the total reads at each site $r$ in each sample as
+$N_{r}^{\rm{selected}} = \sum_x n_{r,x}^{\rm{selected}}$,
+$N_{r}^{\rm{mock}} = \sum_x n_{r,x}^{\rm{mock}}$, and
+$N_{r}^{\rm{err}} = \sum_x n_{r,x}^{\rm{err}}$.
 
+We first estimate the rate of sequencing errors at site $r$ as
+\begin{equation}
+\label{eq:epsilonrx}
+\epsilon_{r,x} = \frac{n_{r,x}^{\rm{err}}}{N_{r}^{\rm{err}}}.
+\end{equation}
+For the wildtype identity at site $r$, which we denote as $\operatorname{wt}\left(r\right)$, the value of $\epsilon_{r,\operatorname{wt}\left(r\right)}$ is the fraction of times we correctly observe the wildtype identity $\operatorname{wt}\left(r\right)$ at site $r$ versus observing some spurious mutation. 
+For all mutant identities $x \ne \operatorname{wt}\left(r\right)$ at site $r$, $\epsilon_{r,x}$ is the fraction of times we observe the mutation $x$ at site $r$ when the identity is really wildtype.
+We ignore second-order terms where we incorrectly read one mutation as another, as such errors will be very rare as mutations themselves are rare (most codons are wildtype in most sequences). 
+
+We next adjust all of the deep sequencing codon counts in the antibody-selected and mock-selected conditions by the error control. 
+Specifically, the error-adjusted counts for the antibody-selected sample are
+\begin{equation}
+\label{eq:erroradjust}
+\hat{n}_{r,x} ^{\rm{selected}}= \begin{cases}
+\max\left[N_r^{\rm{selected}} \times \left(\frac{n_{r,x}^{\rm{selected}}}{N_r^{\rm{selected}}} - \epsilon_{r,x}\right), 0\right] & \mbox{if } x \ne \operatorname{wt}\left(r\right) \\
+n_{r,x} / \epsilon_{r,x} & \mbox{if } x = \operatorname{wt}\left(r\right).
+\end{cases}
+\end{equation}
+An equivalent equation is used to calculate $\hat{n}_{r,x} ^{\rm{mock}}$.
+We then sum the error-adjusted codon counts for each amino acid $a$:
+\begin{eqnarray}
+\hat{n}_{r,a}^{\rm{selected}} &=& \sum\limits_{\left\{x \mid \mathcal{A}\left(x\right) = a\right\}} \hat{n}_{r,x}^{\rm{selected}},
+\end{eqnarray}
+so that $\hat{n}_{r,a}^{\rm{selected}}$ are the error-adjusted counts for the antibody-selected condition summed across all codons $x$ where the encoded amino acid $\mathcal{A}\left(x\right)$ is $a$.
+An equivalent equation is used to calculate $\hat{n}_{r,a} ^{\rm{mock}}$.
+
+Finally, we use these error-adjusted amino-acid counts to estimate the mutation frequencies $\rho_{r,a}^{\rm{selected}}$ and $\rho_{r,a}^{\rm{mock}}$ that are used in Equation~\ref{eq:fracsurvive} to calculate the fraction $F_{r,a}$ of virions with amino acid $a$ at site $r$ that survive the selection.
+When estimating these mutation frequencies, we add a pseudocount of $P = 5$ to the lower-depth sample, and a depth-adjusted pseudocount to the higher depth sample.
+The rationale for adding a pseudocount is to regularize the estimates in the case of low counts.
+Depth adjusted...
+
+The experiments also use some independent method (in this case, qPCR) to measure $\gamma$, the total fraction of the virus library that survives the antibody selection.
+
+
+Code that performs these calculations is included in the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
+Specifically, the analyses described here were performed with the program \texttt{dms2\_batch\_fracsurvive} distributed with version 2.1.0 of \texttt{dms\_tools2}.
 
 \subsection*{Data availability and source code}
 Deep sequencing data are available from the Sequence Read Archive under BioSample accession (\comment{add this}).
@@ -271,10 +320,7 @@ The research of JDB is supported in part by a Faculty Scholar Grant from the How
 \FloatBarrier
 
 \begin{suppfigure}
-\centerline{\includegraphics[width=0.6\textwidth]{figs/corrs/site_correlations_bnAbs.pdf}}
-\vspace{0.2in}
-
-\centerline{\includegraphics[width=0.5\textwidth]{figs/corrs/site_correlations_H17LAbs.pdf}}
+\centerline{\includegraphics[width=\textwidth]{figs/corrs/site_correlations.pdf}}
 \caption{\label{suppfig:corr}
 Correlation of measurements across replicates. 
 Each point represents one site in HA, and gives the fraction of mutant virions surviving selection taken across all amino-acid mutations at that site.
