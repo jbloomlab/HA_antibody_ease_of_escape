@@ -280,22 +280,44 @@ n_{r,x} / \epsilon_{r,x} & \mbox{if } x = \operatorname{wt}\left(r\right).
 \end{equation}
 An equivalent equation is used to calculate $\hat{n}_{r,x} ^{\rm{mock}}$.
 We then sum the error-adjusted codon counts for each amino acid $a$:
-\begin{eqnarray}
-\hat{n}_{r,a}^{\rm{selected}} &=& \sum\limits_{\left\{x \mid \mathcal{A}\left(x\right) = a\right\}} \hat{n}_{r,x}^{\rm{selected}},
-\end{eqnarray}
+\begin{equation}
+\hat{n}_{r,a}^{\rm{selected}} = \sum\limits_{\left\{x \mid \mathcal{A}\left(x\right) = a\right\}} \hat{n}_{r,x}^{\rm{selected}},
+\end{equation}
 so that $\hat{n}_{r,a}^{\rm{selected}}$ are the error-adjusted counts for the antibody-selected condition summed across all codons $x$ where the encoded amino acid $\mathcal{A}\left(x\right)$ is $a$.
 An equivalent equation is used to calculate $\hat{n}_{r,a} ^{\rm{mock}}$.
 
 Finally, we use these error-adjusted amino-acid counts to estimate the mutation frequencies $\rho_{r,a}^{\rm{selected}}$ and $\rho_{r,a}^{\rm{mock}}$ that are used in Equation~\ref{eq:fracsurvive} to calculate the fraction $F_{r,a}$ of virions with amino acid $a$ at site $r$ that survive the selection.
 When estimating these mutation frequencies, we add a pseudocount of $P = 5$ to the lower-depth sample, and a depth-adjusted pseudocount to the higher depth sample.
 The rationale for adding a pseudocount is to regularize the estimates in the case of low counts.
-Depth adjusted...
+Specifically, we estimate the mutation frequencies as
+\begin{eqnarray}
+\rho_{r,x}^{\rm{selected}} &=& \frac{n_{r,x}^{\rm{selected}} + f_{r, \rm{selected}} \times P}{N_r^{\rm{selected}} + f_{r, \rm{selected}} \times P \times A} \\
+\rho_{r,x}^{\rm{mock}} &=& \frac{n_{r,x}^{\rm{mock}} + f_{r, \rm{mock}} \times P}{N_r^{\rm{mock}} + f_{r, \rm{mock}} \times P \times A} 
+\end{eqnarray}
+where $A$ is the number of characters (e.g., 20 for amino acids), $f_{r, \rm{selected}}$ and $f_{r, \rm{mock}}$ are the pseudocount adjustment factors defined as:
+\begin{eqnarray}
+f_{r, \rm{selected}} &=& \max\left(1, \frac{N_{r}^{\rm{selected}}}{N_{r}^{\rm{mock}}}\right) \\
+f_{r, \rm{mock}} &=& \max\left(1, \frac{N_{r}^{\rm{mock}}}{N_{r}^{\rm{selected}}}\right).
+\end{eqnarray}
+The pseudocount adjustment factors ensure that $P$ is added to the counts for the lower depth sample, and a proportionally scaled-up pseudocount is added to the higher depth sample.
+The depth scaling is necessary to avoid systematically biasing towards higher mutation frequencies in the lower depth sample.
+It is these estimated mutation frequencies that are used in conjunction with $\gamma$ (the qPCR estimated overall of virions that survive selection) to compute the fraction surviving ($F_{r,a}$) and fraction surviving above average ($F_{r,a}^{\rm{aboveavg}}$) via Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_above}.
 
-The experiments also use some independent method (in this case, qPCR) to measure $\gamma$, the total fraction of the virus library that survives the antibody selection.
+In some cases, we need to summarize the fraction of mutations surviving into a single number for each site, such as for plotting as a function of the site number or displaying on the crystal structure.
+There are 19 different $F_{r,a}^{\rm{aboveavg}}$ values for non-wildtype amino acids for each site. 
+One summary statistic is the fraction surviving above the library average \emph{averaged} over all 19 amino-acid mutations at site $r$:
+\begin{equation}
+\label{eq:avgfracsurvive}
+\mathcal{F}_r^{avg} = \frac{1}{19} \sum\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}} F_{r,a}^{\rm{aboveavg}}.
+\end{equation}
+Another summary statistic is the \emph{maximum} fraction surviving above average among all 19 amino-acid mutations at site $r$:
+\begin{equation}
+\label{eq:maxfracsurvive}
+\mathcal{F}_r^{max} = \frac{1}{19} \max\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}}\left( F_{r,a}^{\rm{aboveavg}} \right).
+\end{equation}
 
-
-Code that performs these calculations is included in the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
-Specifically, the analyses described here were performed with the program \texttt{dms2\_batch\_fracsurvive} distributed with version 2.1.0 of \texttt{dms\_tools2}.
+Code that performs all these calculations is included in the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
+The in this paper were performed using version 2.1.0 of \texttt{dms\_tools2}.
 
 \subsection*{Data availability and source code}
 Deep sequencing data are available from the Sequence Read Archive under BioSample accession (\comment{add this}).
