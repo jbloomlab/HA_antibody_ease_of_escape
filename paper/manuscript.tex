@@ -146,31 +146,30 @@ In this scenario, the neutralization curve shifts only slightly (Figure~\ref{fig
 In the logo plot representation, the antigenic mutation is only slightly larger than other amino acids (Figure~\ref{fig:fracsurvive_example}F), since possessing the mutation only modestly increases the chance that a virion survives antibody treatment.
 These logo plots therefore provide a way to both identify escape mutations and quantify the magnitudes of their antigenic effects in a way that is directly comparable across antibodies.
 
-Our goal is to determine the fraction of mutant virions that escape antibody neutralization for \emph{all} mutations to influenza HA.
-In other words, we want to generate logo plots like those in Figure~\ref{fig:fracsurvive_example} for every amino acid at every site in HA.
-One way to do this would be to measure individual neutralization curves for all $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
-However, individually creating and assaying that many viral mutants would be exceedingly time-consuming and expensive.
-Fortunately, we have recently shown that antibody selection on all viral mutations can be assayed in a single experiment using mutational antigenic profiling~\citep{doud2017complete,dingens2017comprehensive}.
-This approach involves generating viral libraries containing all mutations to the protein of interest (in this case, HA), selecting these viruses with or without antibody, and then using an accurate deep-sequencing method to determine the relative frequencies of each mutation.
+Our goal is to determine the fraction of mutant virions that escape antibody neutralization for \emph{all} mutations to HA.
+One way to do this would be to measure individual neutralization curves for each of the $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
+However, individually creating and assaying that many mutants would be exceedingly time-consuming and expensive.
+Fortunately, we have shown that antibody selection on all viral mutations can be assayed in a single experiment using mutational antigenic profiling~\citep{doud2017complete,dingens2017comprehensive}.
+This approach involves generating viral libraries containing all mutations to the protein of interest, selecting these viruses with or without antibody, and using an accurate deep-sequencing method to determine the relative frequencies of each mutation.
 
 These frequencies can be analyzed to calculate the fraction of virions with each mutation that survive antibody treatment.
 Specifically, the deep sequencing determines the frequencies of virions carrying amino-acid $a$ at site $r$ in the antibody-selected and mock-selected conditions, which we denote as $\rho_{r,a}^{\rm{selected}}$ and $\rho_{r,a}^{\rm{mock}}$, respectively.
-We can also measure the total fraction of the viral library that survives the antibody treatment, which we denote as $\gamma$.
+We can also measure the total fraction of the viral library that survives the antibody, which we denote as $\gamma$.
 The fraction of variants with amino-acid $a$ at site $r$ that survive antibody selection is then simply 
 \begin{equation}
 \label{eq:fracsurvive}
 F_{r,a} = \gamma \times \frac{\rho_{r,a}^{\rm{selected}}}{\rho_{r,a}^{\rm{mock}}}.
 \end{equation}
-For instance, in Figure~\ref{fig:fracsurvive_example}A, the frequency of virions with the orange mutation is $\rho_{r,a}^{\rm{selected}} = \frac{4}{7}$ in the antibody-selected condition and $\rho_{r,a}^{\rm{mock}} = \frac{4}{16}$ in the mock-selected condition.
+For instance, in Figure~\ref{fig:fracsurvive_example}A, the frequency of virions with the orange mutation is $\rho_{r,a}^{\rm{selected}} = \frac{4}{7}$ in the antibody selection and $\rho_{r,a}^{\rm{mock}} = \frac{4}{16}$ in the mock selection.
 The overall fraction of virions that survive the antibody in Figure~\ref{fig:fracsurvive_example}A is $\gamma = \frac{7}{16}$.
-Therefore, we use Equation~\ref{eq:fracsurvive} to calculate that the fraction of variants with the orange mutation that survive the selection is $F_{r,a} = \frac{7}{16} \times \frac{4/7}{4/16} = 1$.
+Therefore, we use Equation~\ref{eq:fracsurvive} to calculate that the fraction of variants with the orange mutation that survive is $F_{r,a} = \frac{7}{16} \times \frac{4/7}{4/16} = 1$.
 Performing the analogous calculation for Figure~\ref{fig:fracsurvive_example}D correctly determines that fraction of virions with the orange mutation that survive the antibody is only 0.5 for the scenario in that figure panel.
-In the analyses of real data below, we will plot the fraction surviving \emph{above} the overall library average, which is
+In the analyses of real data below, we will plot the excess fraction surviving \emph{above} the overall library average, which is
 \begin{equation}
-\label{eq:fracsurvive_above}
-F_{r,a}^{\rm{aboveavg}} = \max\left(0, F_{r,a} - \gamma\right).
+\label{eq:fracsurvive_excess}
+F_{r,a}^{\rm{excess}} = \max\left(0, F_{r,a} - \gamma\right).
 \end{equation}
-We plot the fraction surviving above the library average rather than the raw fraction surviving since the former quantity more clearly accentuates antigenic mutations against the background of other mutations.
+We plot the excess fraction surviving above the library average since this quantity more clearly accentuates antigenic mutations against the background of other mutations.
 Details of how the calculations are extended to account for sequencing errors and sampling statistics are in the \nameref{sec:methods}.
 Open-source software that performs all steps in the analysis beginning with the deep sequencing data is available at \url{https://jbloomlab.github.io/dms_tools2/}.
 
@@ -211,7 +210,7 @@ Get rid of the panel numbers altogether and just have the antibody names.
 
 \subsection*{Quantifying the antigenic effects of all mutations selected by each antibody}
 We performed mutational antigenic profiling using the three broad antibodies (FI6v3, C179, and S139/1) at the concentrations indicated in Figure~\ref{fig:neutcurves}, and analyzed the data to calculate the fraction of virions carrying each mutation that survived neutralization. 
-All experiments were performed in full biological triplicate using three independently generated virus libraries carrying all amino-acid mutants to the HA of the A/WSN/1933 (H1N1) strain~\citep{doud2016accurate}, and in some cases we also included technical replicates with the same virus library.
+All experiments were performed in full biological triplicate using three independently generated virus libraries carrying all amino-acid mutants to the HA of the A/WSN/1933 (H1N1) strain~\citep{doud2016accurate}.
 We have previously described~\citep{doud2017complete} mutational antigenic profiling of the three strain-specific antibodies (H17-L19, H17-L10, and H17-L7) at the concentrations indicated in Figure~\ref{fig:neutcurves}, and we also re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived each selection.
 The correlations among replicates are in Figure~\ref{suppfig:corr}.
 For the remainder of this paper, we will refer to the median antigenic effect of each mutation taken across all replicates with that antibody at that concentration.
@@ -220,11 +219,12 @@ For the remainder of this paper, we will refer to the median antigenic effect of
 \centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
 \caption{
 \label{fig:avgfracsurvive}
-{\bf The strain-specific and broad anti-receptor-binding-pocket antibodies select mutations with large antigenic effects at multiple sites, but the broad anti-stalk antibodies only select mutations with small effects on neutralization.}
-The fraction surviving above average taken across all amino acids at each site in HA.
-Specifically, the panels in this figure show the $\mathcal{F}_r^{avg}$ values calculated using Equation~\ref{eq:avgfracsurvive}.
-The sites are labeled in H3 numbering.
-Figure~\ref{suppfig:maxfracsurvive} shows the fraction surviving for the single most strongly selected amino-acid mutation at each site.
+{\bf The strain-specific and broad anti-receptor-binding-pocket antibodies select mutations with large antigenic effects, but the broad anti-stalk antibodies only select mutations with small effects.}
+The height of the line at each site indicates the excess fraction of virions with a mutation at that site that survive the antibody selection, averaging across all amino-acid mutations at the site (see Equation~\ref{eq:avgfracsurvive}).
+It is immediately obvious that there are multiple large-effect mutations for H17L19, H17L10, H17L7, and S139/1 -- but not any large effect mutations for FI6v3 and C179.
+Sites are labeled in H3 numbering.
+Figure~\ref{suppfig:maxfracsurvive} shows the excess fraction surviving for the single most strongly selected amino-acid mutation at each site.
+Figures~\ref{suppfig:H17L19logo}, \ref{suppfig:H17L10logo}, \ref{suppfig:H17L7logo}, \ref{suppfig:FI6v3logo}, \ref{suppfig:C179logo}, and \ref{suppfig:S139logo} show data for all mutations for each antibody using logo plots.
 }
 \end{figure}
 
@@ -232,8 +232,15 @@ It is immediately obvious that both the three strain-specific antibodies and the
 Specifically, Figure~\ref{fig:avgfracsurvive} shows that for all four of these antibodies, there are sites where a substantial fraction of virions with any mutation survive antibody concentrations that are far in excess of those needed to nearly complete neutralize the wildtype virus.
 
 
-
 \subsection*{For all antibodies, the selected sites of escape occur in the antibody binding footprints}
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
+\caption{
+\label{fig:structures}
+CAPTION
+}
+\end{figure}
 
 \section*{DISCUSSION}
 Some discussion
@@ -317,19 +324,19 @@ f_{r, \rm{mock}} &=& \max\left(1, \frac{N_{r}^{\rm{mock}}}{N_{r}^{\rm{selected}}
 \end{eqnarray}
 The pseudocount adjustment factors ensure that $P$ is added to the counts for the lower depth sample, and a proportionally scaled-up pseudocount is added to the higher depth sample.
 The depth scaling is necessary to avoid systematically biasing towards higher mutation frequencies in the lower depth sample.
-It is these estimated mutation frequencies that are used in conjunction with $\gamma$ (the qPCR estimated overall of virions that survive selection) to compute the fraction surviving ($F_{r,a}$) and fraction surviving above average ($F_{r,a}^{\rm{aboveavg}}$) via Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_above}.
+It is these estimated mutation frequencies that are used in conjunction with $\gamma$ (the qPCR estimated overall of virions that survive selection) to compute the fraction surviving ($F_{r,a}$) and excess fraction surviving above the library average ($F_{r,a}^{\rm{excess}}$) via Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_excess}.
 
-In some cases, we need to summarize the fraction of mutations surviving into a single number for each site, such as for plotting as a function of the site number or displaying on the crystal structure.
-There are 19 different $F_{r,a}^{\rm{aboveavg}}$ values for non-wildtype amino acids for each site. 
+In some cases, we need to summarize the excess fraction of mutations surviving into a single number for each site, such as for plotting as a function of the site number or displaying on the crystal structure.
+There are 19 different $F_{r,a}^{\rm{excess}}$ values for non-wildtype amino acids for each site. 
 One summary statistic is the fraction surviving above the library average \emph{averaged} over all 19 amino-acid mutations at site $r$:
 \begin{equation}
 \label{eq:avgfracsurvive}
-\mathcal{F}_r^{avg} = \frac{1}{19} \sum\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}} F_{r,a}^{\rm{aboveavg}}.
+\mathcal{F}_r^{avg} = \frac{1}{19} \sum\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}} F_{r,a}^{\rm{excess}}.
 \end{equation}
 Another summary statistic is the \emph{maximum} fraction surviving above average among all 19 amino-acid mutations at site $r$:
 \begin{equation}
 \label{eq:maxfracsurvive}
-\mathcal{F}_r^{max} = \frac{1}{19} \max\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}}\left( F_{r,a}^{\rm{aboveavg}} \right).
+\mathcal{F}_r^{max} = \frac{1}{19} \max\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}}\left( F_{r,a}^{\rm{excess}} \right).
 \end{equation}
 
 Code that performs all these calculations is included in the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
@@ -352,12 +359,14 @@ The research of JDB is supported in part by a Faculty Scholar Grant from the How
 
 \section*{Supplementary Material}
 \FloatBarrier
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{S\arabic{page}}
 
 \begin{suppfigure}
 \centerline{\includegraphics[width=0.84\textwidth]{figs/corrs/site_correlations.pdf}}
 \caption{\label{suppfig:corr}
-Correlations across experimental replicates. 
-Each point represents one site in HA, and gives the fraction surviving above average across all amino-acid mutations at that site, as in Equation~\ref{eq:avgfracsurvive}.
+{\bf Correlations across experimental replicates.} 
+Each point represents one site in HA, and gives the fraction surviving above average across all amino-acid mutations at that site, as calculated using Equation~\ref{eq:avgfracsurvive}.
 The replicates are highly correlated for antibodies with strong escape mutations (S139/1, H17-L19, H17-L10, and H17-L7), and reasonably correlated for antibodies with only weak escape mutations (FI6v3 and C179).
 }
 \end{suppfigure}
@@ -365,25 +374,75 @@ The replicates are highly correlated for antibodies with strong escape mutations
 \begin{suppfigure}
 \centerline{\includegraphics[width=\textwidth]{figs/maxfracsurvive.pdf}}
 \caption{\label{suppfig:maxfracsurvive}
-CAPTION}
+{\bf The excess fraction surviving for the single strongest escape mutation at each site.}
+This plot differs from Figure~\ref{fig:avgfracsurvive} in that the height of the line indicates the excess fraction of virions that survive the antibody selection for the single strongest escape mutation at that site, rather than the average across all amino-acid mutations at that site.
+}
 \end{suppfigure}
 
 \begin{suppfigure}
 \centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L19_fracsurvive.pdf}}
 \caption{\label{suppfig:H17L19logo}
-CAPTION}
+{\bf The excess fraction surviving selection with antibody H17L19 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
 \end{suppfigure}
 
 \begin{suppfigure}
 \centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L10_fracsurvive.pdf}}
 \caption{\label{suppfig:H17L10logo}
-CAPTION}
+{\bf The excess fraction surviving selection with antibody H17L10 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
 \end{suppfigure}
 
 \begin{suppfigure}
 \centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L7_fracsurvive.pdf}}
 \caption{\label{suppfig:H17L7logo}
-CAPTION}
+{\bf The excess fraction surviving selection with antibody H17L7 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/FI6v3_fracsurvive.pdf}}
+\caption{\label{suppfig:FI6v3logo}
+{\bf The excess fraction surviving selection with antibody FI6v3 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/C179_fracsurvive.pdf}}
+\caption{\label{suppfig:C179logo}
+{\bf The excess fraction surviving selection with antibody C179 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/S139_fracsurvive.pdf}}
+\caption{\label{suppfig:S139logo}
+{\bf The excess fraction surviving selection with antibody S139/1 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
 \end{suppfigure}
 
 \end{document}
