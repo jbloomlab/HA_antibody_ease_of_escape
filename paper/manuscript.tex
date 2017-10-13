@@ -203,23 +203,28 @@ Get rid of the panel numbers altogether and just have the antibody names.
 \end{figure}
 
 \subsection*{Quantifying the antigenic effects of all mutations selected by each antibody}
-We performed mutational antigenic profiling using the three broadly neutralizing antibodies (FI6v3, C179, and S139/1) at the concentrations indicated in Figure~\ref{fig:neutcurves}, and analyzed the data to calculate the fraction of virions carrying each mutation that survived neutralization. 
+We performed mutational antigenic profiling using the three broad antibodies (FI6v3, C179, and S139/1) at the concentrations indicated in Figure~\ref{fig:neutcurves}, and analyzed the data to calculate the fraction of virions carrying each mutation that survived neutralization. 
 All experiments were performed in full biological triplicate using three independently generated virus libraries carrying all amino-acid mutants to the HA of the A/WSN/1933 (H1N1) strain~\citep{doud2016accurate}, and in some cases we also included technical replicates with the same virus library.
-We have previously described~\citep{doud2017complete} complete mapping of escape from the three strain-specific antibodies (H17-L19, H17-L10, and H17-L7) at the concentrations indicated in Figure~\ref{fig:neutcurves}, and we also re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived each selection.
-The correlations among replicates are shown in Figure~\ref{suppfig:corr}.
+We have previously described~\citep{doud2017complete} mutational antigenic profiling of the three strain-specific antibodies (H17-L19, H17-L10, and H17-L7) at the concentrations indicated in Figure~\ref{fig:neutcurves}, and we also re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived each selection.
+The correlations among replicates are in Figure~\ref{suppfig:corr}.
 For the remainder of this paper, we will refer to the median antigenic effect of each mutation taken across all replicates with that antibody at that concentration.
-
-
-\comment{Jesse can work on a rough draft of this section.}
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
 \caption{
 \label{fig:avgfracsurvive}
-CAPTION
+{\bf The strain-specific and broad anti-receptor-binding-pocket antibodies select mutations with large antigenic effects at multiple sites, but the broad anti-stalk antibodies only select mutations with small effects on neutralization.}
+The fraction surviving above average taken across all amino acids at each site in HA.
+Specifically, the panels in this figure show the $\mathcal{F}_r^{avg}$ values calculated using Equation~\ref{eq:avgfracsurvive}.
+The sites are labeled in H3 numbering.
 Figure~\ref{suppfig:maxfracsurvive} shows the fraction surviving for the single most strongly selected amino-acid mutation at each site.
 }
 \end{figure}
+
+It is immediately obvious that both the three strain-specific antibodies and the antibody targeting HA's receptor-binding pocket (S139/1) select antigenic mutations with large effects at multiple sites.
+Specifically, Figure~\ref{fig:avgfracsurvive} shows that for all four of these antibodies, there are sites where a substantial fraction of virions with any mutation survive antibody concentrations that are far in excess of those needed to nearly complete neutralize the wildtype virus.
+
+
 
 \subsection*{For all antibodies, the selected sites of escape occur in the antibody binding footprints}
 
@@ -243,6 +248,9 @@ S139/1 heavy and light chain variable sequences were obtained from PDB ID 4GMS~\
 Library selections, deep sequencing, and computation of mutation differential selection were performed as previously described~\cite{doud2017complete}. 
 
 Describe estimation of $\gamma$ by qPCR.
+
+\subsection*{H3 sequence numbering}
+\comment{add this}
 
 \subsection*{Calculating the fraction of virions with each mutation that escapes antibody neutralization}
 In prior mutational antigenic profiling work~\citep{doud2017complete,dingens2017comprehensive}, we calculated the differential selection on each mutation as the logarithm of its enrichment relative to wildtype in an antibody-selected sample versus a mock-selected control.
