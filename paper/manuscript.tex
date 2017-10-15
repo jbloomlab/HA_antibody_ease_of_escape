@@ -215,9 +215,9 @@ The vertical dotted lines show the concentrations of antibody used in our select
 \end{figure}
 
 \subsection*{Quantifying the antigenic effects of all mutations selected by each antibody}
-We performed mutational antigenic profiling using the three broad antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}, and analyzed the data to calculate the fraction of virions carrying each mutation that survived neutralization. 
-All experiments were performed in full biological triplicate using three independently generated virus libraries carrying all amino-acid mutants to the HA of the A/WSN/1933 (H1N1) strain~\citep{doud2016accurate}.
-We have previously described~\citep{doud2017complete} mutational antigenic profiling of the three narrow strain-specific antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}, and we also re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived neutralization.
+We performed mutational antigenic profiling using the three broad antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}, and calculated the fraction of virions carrying each mutation that survived neutralization. 
+All experiments were performed in full biological triplicate using three independently generated virus libraries carrying all single amino-acid mutations to HA~\citep{doud2016accurate}.
+We have previously described~\citep{doud2017complete} mutational antigenic profiling of the three narrow strain-specific antibodies, and we re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived neutralization.
 The correlations among replicates are in Figure~\ref{suppfig:corr}.
 For the remainder of this paper, we will refer to the median antigenic effect of each mutation across replicates.
 
@@ -225,19 +225,19 @@ For the remainder of this paper, we will refer to the median antigenic effect of
 \centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
 \caption{
 \label{fig:avgfracsurvive}
-{\bf The strain-specific and broad anti-receptor-binding-pocket antibodies select mutations with large antigenic effects, but the broad anti-stalk antibodies only select mutations with small effects.}
-The height of the line at each site indicates the excess fraction of virions with a mutation at that site that survive the antibody selection, averaging across all amino-acid mutations at the site (see Equation~\ref{eq:avgfracsurvive}).
-It is immediately obvious that there are multiple large-effect mutations for H17L19, H17L10, H17L7, and S139/1 -- but not any large effect mutations for FI6v3 and C179.
-Sites are labeled in H3 numbering.
-Figure~\ref{suppfig:maxfracsurvive} shows the excess fraction surviving for the single most strongly selected amino-acid mutation at each site.
+{\bf The strain-specific and broad anti-receptor-binding-site antibodies select mutations with large antigenic effects, but the broad anti-stalk antibodies only select small-effect mutations.}
+The height of the lines indicate the excess fraction of virions with a mutation at that site that survive the antibody, averaging across all amino-acid mutations at each site (see Equation~\ref{eq:avgfracsurvive}).
+There are multiple sites of large-effect mutations for H17L19, H17L10, H17L7, and S139/1 -- but not any for FI6v3 and C179.
+Figure~\ref{suppfig:maxfracsurvive} shows the excess fraction surviving for the most strongly selected amino-acid mutation at each site.
 Figures~\ref{suppfig:H17L19logo}, \ref{suppfig:H17L10logo}, \ref{suppfig:H17L7logo}, \ref{suppfig:FI6v3logo}, \ref{suppfig:C179logo}, and \ref{suppfig:S139logo} show data for all mutations for each antibody using logo plots.
+Sites are labeled in H3 numbering.
 }
 \end{figure}
 
 It is immediately obvious that the narrow strain-specific antibodies and the antibody targeting HA's receptor-binding pocket (S139/1) select mutations with large antigenic effects.
-Figure~\ref{fig:avgfracsurvive} shows that for all four of these antibodies, there are multiple sites in HA where mutations enable a substantial fraction of virions to survive high antibody concentrations.
-Specifically, there are mutations that enable over a third of the virions to evade antibody at concentrations where virtually all the wildtype virions are neutralized (Figure~\ref{suppfig:maxfracsurvive}).
-Therefore, the virus can escape these four antibodies with the type of large-effect single amino-acid mutations that are thought to underly to influenza antigenic drift.  
+For all four of these antibodies, there are multiple sites in HA where mutations enable a substantial fraction of virions to survive high antibody concentrations (Figure~\ref{fig:avgfracsurvive}).
+There are mutations that enable over a third of virions to evade these antibodies at concentrations where virtually all wildtype virions are neutralized (Figure~\ref{suppfig:maxfracsurvive}).
+Therefore, the virus can escape these four antibodies with the sort of large-effect single amino-acid mutations that characterize traditional influenza antigenic drift~\citep{yewdell1979antigenic,webster1980determination,koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction}.  
 
 In contrast, the stalk-targeting antibodies...
 
@@ -253,6 +253,22 @@ For all of the antibodies, the sites with mutations exhibiting the greatest frac
 \centerline{\includegraphics[width=\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
 \caption{
 \label{fig:structures}
+CAPTION
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/stalkAbs_zoomed/stalkAbs_zoomed.pdf}}
+\caption{
+\label{fig:stalkAbs_zoomed}
+CAPTION
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/FI6v3mutant_neutcurves/FI6v3_mutant_neutcurves.pdf}}
+\caption{
+\label{fig:FI6v3neutcurves}
 CAPTION
 }
 \end{figure}
