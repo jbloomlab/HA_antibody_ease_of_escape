@@ -18,6 +18,10 @@
 \setcounter{topnumber}{8}
 \setcounter{bottomnumber}{8}
 \setcounter{totalnumber}{8}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
 
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[name={Figure}]{suppfigure}
@@ -214,25 +218,25 @@ The vertical dotted lines show the concentrations of antibody used in our select
 }
 \end{figure}
 
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
+\caption{
+\label{fig:avgfracsurvive}
+{\bf The strain-specific and anti-receptor-binding-site antibodies select mutations with large antigenic effects, but the anti-stalk antibodies only select small-effect mutations.}
+The excess fraction of virions with a mutation at each site that survive the antibody, averaging across all amino-acid mutations at each site (see Equation~\ref{eq:avgfracsurvive}).
+There are multiple sites of large-effect mutations for H17L19, H17L10, H17L7, and S139/1 -- but none for FI6v3 and C179.
+Figure~\ref{suppfig:maxfracsurvive} shows the excess fraction surviving for the largest-effect mutation at each site.
+Figures~\ref{suppfig:H17L19logo}, \ref{suppfig:H17L10logo}, \ref{suppfig:H17L7logo}, \ref{suppfig:FI6v3logo}, \ref{suppfig:C179logo}, and \ref{suppfig:S139logo} show all mutations using logo plots.
+Sites are labeled in H3 numbering.
+}
+\end{figure}
+
 \subsection*{Quantifying the antigenic effects of all mutations selected by each antibody}
 We performed mutational antigenic profiling using the three broad antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}, and calculated the fraction of virions carrying each mutation that survived neutralization. 
 All experiments were performed in full biological triplicate using three independently generated virus libraries carrying all single amino-acid mutations to HA~\citep{doud2016accurate}.
 We have previously described~\citep{doud2017complete} mutational antigenic profiling of the three narrow strain-specific antibodies, and we re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived neutralization.
 The correlations among replicates are in Figure~\ref{suppfig:corr}.
 For the remainder of this paper, we will refer to the median antigenic effect of each mutation across replicates.
-
-\begin{figure}
-\centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
-\caption{
-\label{fig:avgfracsurvive}
-{\bf The strain-specific and broad anti-receptor-binding-site antibodies select mutations with large antigenic effects, but the broad anti-stalk antibodies only select small-effect mutations.}
-The height of the lines indicate the excess fraction of virions with a mutation at that site that survive the antibody, averaging across all amino-acid mutations at each site (see Equation~\ref{eq:avgfracsurvive}).
-There are multiple sites of large-effect mutations for H17L19, H17L10, H17L7, and S139/1 -- but not any for FI6v3 and C179.
-Figure~\ref{suppfig:maxfracsurvive} shows the excess fraction surviving for the most strongly selected amino-acid mutation at each site.
-Figures~\ref{suppfig:H17L19logo}, \ref{suppfig:H17L10logo}, \ref{suppfig:H17L7logo}, \ref{suppfig:FI6v3logo}, \ref{suppfig:C179logo}, and \ref{suppfig:S139logo} show data for all mutations for each antibody using logo plots.
-Sites are labeled in H3 numbering.
-}
-\end{figure}
 
 It is immediately obvious that the narrow strain-specific antibodies and the antibody targeting HA's receptor-binding pocket (S139/1) select mutations with large antigenic effects.
 For all four of these antibodies, there are multiple sites in HA where mutations enable a substantial fraction of virions to survive high antibody concentrations (Figure~\ref{fig:avgfracsurvive}).
@@ -246,7 +250,7 @@ But the effect sizes of these antigenic mutations are tiny compared to the other
 Therefore, the HA of A/WSN/1933 influenza virus is far less capable of escaping these anti-stalk antibodies by single mutations than it is of escaping the other four antibodies. 
 
 
-\subsection*{For all antibodies, the selected sites of escape occur in the antibody binding footprints}
+\subsection*{The selected mutations are in the binding footprints for all antibodies}
 We visualized for each mutation the fraction surviving selection as a logoplot, and for each site mapped the mutation with the maximum fraction surviving selection onto the HA structure, shown in Figure~\ref{fig:structures}. 
 For all of the antibodies, the sites with mutations exhibiting the greatest fraction escape localize in the antibody-binding footprint.
 
@@ -256,17 +260,20 @@ For all of the antibodies, the sites with mutations exhibiting the greatest frac
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
+\centerline{\includegraphics[width=0.7\textwidth]{figs/stalkAbs_zoomed/stalkAbs_zoomed.pdf}}
 \caption{
 \label{fig:structures}
-CAPTION
+\comment{Juhye, can you actually merge these two figures into one image.
+Some of the journals (\textit{Cell Host \& Microbe}, \textit{Immunity}) limit papers to 6 figures.
+The first figure can be panel (A).
+Include a healthy amount of vertical space, and make the current (A) and (B) into (B) and (C).
+Also, can you do the following:
+(1) Put the stalk zooms inside a frame box (a thin black or grey line) -- this should make the cutting off look better.
+(2) Clip the zoom boxes a little further on the right so that the zoomed sites are slightly bigger.
+(3) Move the scale bar legend below the zoom panels to separate it from the color labeling of what will now be panel (A).
+(4) Label the scale bar ``fraction surviving''.
+(5) For the tree figure, the logo plot for that site is now shown in panel (A) of the same figure. So you can get rid of that, and just include labels that indicate that green means binding / neutralization by C179, and the letters are the amino acid at site 38.
 }
-\end{figure}
-
-\begin{figure}
-\centerline{\includegraphics[width=\textwidth]{figs/stalkAbs_zoomed/stalkAbs_zoomed.pdf}}
-\caption{
-\label{fig:stalkAbs_zoomed}
-CAPTION
 }
 \end{figure}
 
@@ -274,7 +281,13 @@ CAPTION
 \centerline{\includegraphics[width=\textwidth]{figs/FI6v3mutant_neutcurves/FI6v3_mutant_neutcurves.pdf}}
 \caption{
 \label{fig:FI6v3neutcurves}
-CAPTION
+\comment{The neutralization curves look good, except can you make the different mutations have different shapes as well as different colors.
+Also, I think it would be good to show the P80D and V135T neutralization curves versus H17-L7 and H17-L19, respectively.
+So your current figure could be panel (A), and then these could be below and be called panel (B) and (C). Each panel could also be labeled with the antibody name.
+You can get these neutralization curves from Mike's paper. 
+I think the data for them is in his paper repository, but if you can't find it then perhaps e-mail him to ask if he knows, or I can help look for it too.
+The rationale here is that it will provide an illustration of the difference between the ``large effect'' mutations for other antibodies and the ``small effect'' ones for these FI6v3. 
+}
 }
 \end{figure}
 
