@@ -76,7 +76,7 @@ All antibodies select mutations, but the effect sizes vary widely.
 The virus can escape a broad antibody targeting hemagglutinin's receptor-binding pocket the same way it escapes narrow strain-specific antibodies: via single mutations with huge effects.   
 In contrast, broad antibodies targeting hemagglutinin's stalk only select mutations with small effects. 
 Therefore, antibody breadth is not necessarily an indicator of the difficulty of viral escape.
-Broad antibodies targeting hemagglutinin's stalk are quantifiably harder to escape than antibodies targeting hemagglutinin's head or receptor-binding pocket.
+Broad antibodies targeting hemagglutinin's stalk are quantifiably harder to escape than the other antibodies tested here.
 \end{abstract}
 
 \section*{INTRODUCTION}
@@ -93,7 +93,7 @@ This explanation is supported by classic experiments showing that it is easy to 
 A corollary of this explanation is that influenza virus's capacity for antigenic drift would be reduced if most antibodies instead targeted epitopes that were less mutationally tolerant.
 
 Verifying this corollary has become of practical importance with the discovery of broadly neutralizing antibodies against influenza virus.
-These antibodies typically target conserved epitopes in HA's stalk~\citep{sui2009structural,ekiert2009antibody,corti2011neutralizing} or receptor-binding pocket~\citep{lee2012heterosubtypic,ekiert2012cross}, and neutralize a wide range of viral strains.
+These antibodies typically target conserved epitopes in HA's stalk~\citep{sui2009structural,ekiert2009antibody,corti2011neutralizing} or receptor-binding pocket~\citep{lee2012heterosubtypic,ekiert2012cross,schmidt2015viral}, and neutralize a wide range of viral strains.
 Broad antibodies are usually less abundant in human serum than antibodies to antigenically variable epitopes on the head of HA~\citep{ellebedy2014induction,andrews2015immune}.
 However, major efforts are underway to elicit broad antibodies by vaccination or administer them directly as therapeutics~\citep{krammer2015advances,corti2017tackling}.
 
@@ -125,15 +125,15 @@ Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral 
 We can visualize the outcome of antibody selection on viral populations containing antigenic mutations as in Figure~\ref{fig:fracsurvive_example}.
 If a mutation strongly escapes neutralization, then all virions with this mutation survive antibody treatment at a concentration where other virions are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
 This escape is manifested by a large shift in the neutralization curve for the mutant (Figure~\ref{fig:fracsurvive_example}B).
-If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that escape neutralization at each antibody concentration (Figure~\ref{fig:fracsurvive_example}B).
-These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive the antibody (Figure~\ref{fig:fracsurvive_example}C).
-In these logo plots, large letters correspond to strong escape mutations. 
+If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that survive neutralization at each antibody concentration (Figure~\ref{fig:fracsurvive_example}B).
+These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive (Figure~\ref{fig:fracsurvive_example}C).
+Large letters correspond to strong escape mutations. 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/fracsurvive_example/fracsurvive_fig.pdf}}
 \caption{\label{fig:fracsurvive_example}
 {\bf Quantifying the fraction of virions with each mutation that escape antibody neutralization.}
-This figure shows hypothetical data for four viral variants: wildtype and three mutants.
+This figure shows hypothetical data for four viral variants.
 (A) Virions with the V1K mutation (orange) completely survive an antibody concentration where most other virions are neutralized.
 (B) This resistance is manifested by a large shift in V1K's neutralization curve.
 (C) For each dotted vertical line drawn through the neutralization curves in (B), we calculate the fraction of virions with that mutation that survive the antibody, and indicate this fraction by the height of the letter corresponding to that amino acid at that site.
@@ -141,12 +141,12 @@ This figure shows hypothetical data for four viral variants: wildtype and three 
 }
 \end{figure}
 
-Now consider the case where a mutation has just a small antigenic effect, and so only slightly increases the fraction of virions that escape neutralization (Figure~\ref{fig:fracsurvive_example}D).
+Now consider the case where a mutation has just a small antigenic effect, and so only slightly increases the fraction of virions that survive neutralization (Figure~\ref{fig:fracsurvive_example}D).
 In this scenario, the neutralization curve shifts only slightly (Figure~\ref{fig:fracsurvive_example}E).
 In the logo plot representation, the antigenic mutation is only slightly larger than other amino acids (Figure~\ref{fig:fracsurvive_example}F), since possessing the mutation only modestly increases the chance that a virion survives antibody treatment.
-These logo plots therefore provide a way to both identify escape mutations and quantify the magnitudes of their antigenic effects in a way that is directly comparable across antibodies.
+These logo plots therefore provide a way to both identify antigenic mutations and quantify the magnitudes of their effects in a way that is directly comparable across antibodies.
 
-Our goal is to determine the fraction of mutant virions that escape antibody neutralization for \emph{all} mutations to HA.
+Our goal is to determine the fraction of mutant virions that survive antibody neutralization for \emph{all} mutations to HA.
 One way to do this would be to measure individual neutralization curves for each of the $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
 However, individually creating and assaying that many mutants would be exceedingly time-consuming and expensive.
 Fortunately, we have shown that antibody selection on all viral mutations can be assayed in a single experiment using mutational antigenic profiling~\citep{doud2017complete,dingens2017comprehensive}.
@@ -169,47 +169,48 @@ In the analyses of real data below, we will plot the excess fraction surviving \
 \label{eq:fracsurvive_excess}
 F_{r,a}^{\rm{excess}} = \max\left(0, F_{r,a} - \gamma\right).
 \end{equation}
-We plot the excess fraction surviving above the library average since this quantity more clearly accentuates antigenic mutations against the background of other mutations.
+%We plot the excess fraction above the library average since this quantity more clearly accentuates antigenic mutations against the background of other mutations.
 Details of how the calculations are extended to account for sequencing errors and sampling statistics are in the \nameref{sec:methods}.
 Open-source software that performs all steps in the analysis beginning with the deep sequencing data is available at \url{https://jbloomlab.github.io/dms_tools2/}.
-
-\subsection*{Broad and narrow antibodies that neutralize influenza virus}
-We applied the approach described above to several broad antibodies that neutralize the A/WSN/1933 (H1N1) influenza virus strain.
-For comparison, we also included three narrow strain-specific antibodies that we previously characterized in~\cite{doud2017complete} and were used in classical antigenic mapping experiments (cite Gerhard, Caton).
-The crystal structures of the broadly-neutralizing antibodies and the binding footprints of the strain-specific antibodies are shown in Figure~\ref{fig:antibody_summary}A.
-Two of the broadly-neutralizing antibodies, specifically FI6v3 and C179, target the stalk domain of HA~\citep{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
-However, FI6v3 exhibits binding activity across group 1 and group 2 HA's, while C179 can bind to only certain group 1 HA's (Figure~\ref{fig:antibody_summary}B).
-The third broad antibody, S139/1, targets the receptor-binding site and can bind HA's from both groups~\citep{yoshida2009cross, lee2012heterosubtypic}.
-The strain-specific antibodies H17-L19, H17-L10, and H17-L7 bind the Ca2, Ca1, and Cb antigenic regions, respectively.
-We were therefore able to profile the ease of escape from antibodies of different specificities and breadths.
-
-To choose appropriate concentrations of these antibodies for selection experiments, we performed neutralization assays using wildtype A/WSN/1933 (H1N1) virus. 
-Figure~\ref{fig:neutcurves} shows the neutralization curves for each antibody.
-All six antibodies exhibit similar potencies against the WSN virus.
-We chose to conduct the library selections with concentrations of antibodies that would allow us to detect genuine escape mutants while neutralizing nearly all wildtype viruses. 
-For the broad antibodies, we included multiple concentrations to impose different stringencies of selection and thereby capture escape mutations of varying effect sizes.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/Ab_summary.pdf}}
 \caption{\label{fig:antibody_summary}
-{\bf Specificities and breadth of broad and narrow antibodies targeting influenza virus hemagglutinin.}
-(A) We profiled three broadly-neutralizing and three strain-specific antibodies.
-The broad antibodies are denoted by circles and the narrow antibodies are denoted by squares.
-S139/1 (PDB 4GMS,~\cite{lee2012heterosubtypic}) targets the receptor-binding pocket; C179 (PDB 4HLZ,~\cite{dreyfus2013structure}) and FI6v3 (PDB 3ZTN,~\cite{corti2011neutralizing}) target the stalk. 
-The crystal structures of the broad antibodies and the presumed binding footprints of the narrow antibodies~\citep{doud2017complete} are superimposed onto the structure of the HA trimer (PDB 1RVX,~\cite{gamblin2004structure}). 
-(B) For each HA in the phylogenetic tree, we denote antibodies with demonstrated binding and/or neutralization activity against that HA. 
-S139/1 not tested for binding against H8, H9, H11; C179 not tested for binding against H8, H11; none of the antibodies tested against H17 and H18.
+{\bf Epitopes and breadth of broad and narrow antibodies targeting HA.}
+(A) Crystal structures of the broad antibodies and binding footprints of the narrow ones are superimposed on the structure of the HA trimer~\citep[PDB 1RVX;][]{gamblin2004structure}. 
+Broad antibodies are denoted by circles, and narrow antibodies by squares.
+S139/1~\citep[PDB 4GMS;][]{lee2012heterosubtypic} targets the receptor-binding pocket; C179~\citep[PDB 4HLZ;][]{dreyfus2013structure} and FI6v3~\citep[PDB 3ZTN;][]{corti2011neutralizing} target the stalk. 
+The footprints for H17-L19, H17-L10, and H17-L7 are those mapped by \citet{doud2017complete}. 
+(B) A phylogenetic tree of HA subtypes, with group 1 at top and group 2 at bottom.
+Circles and squares denote antibodies with reported binding or neutralization activity against that subtype. 
+Not all antibodies have been tested against all subtypes. 
+Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8, and H11; no antibodies have been tested against H17 and H18.
 }
 \end{figure}
 
+\subsection*{Broad and narrow antibodies that neutralize influenza virus}
+We applied our approach to anti-HA antibodies with a range of breadths and epitopes.
+%For comparison, we also included three previously characterized~\citep{doud2017complete} narrow strain-specific antibodies.
+The crystal structures or binding footprints of these antibodies are shown in Figure~\ref{fig:antibody_summary}A.
+We selected two broad antibodies, FI6v3 and C179, that target the stalk of HA~\citep{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
+FI6v3 is extremely broad, and neutralizes both group 1 and group 2 HAs (Figure~\ref{fig:antibody_summary}B).
+C179 is less broad, and neutralizes only some group 1 HAs (Figure~\ref{fig:antibody_summary}B).
+We also selected a broad antibody, S139/1, that targets HA's receptor-binding site and can neutralize both group 1 and group 2 HAs~\citep{yoshida2009cross, lee2012heterosubtypic}.
+Finally, we re-analyzed deep sequencing data from prior mutational antigenic profiling of three narrow strain-specific antibodies, H17-L19, H17-L10, and H17-L7~\citep{doud2017complete}.
+These narrow antibodies bind the Ca2, Ca1, and Cb antigenic regions on HA's globular head~\citep{caton1982antigenic}, and only neutralize a narrow slice of H1 viruses.
+
+We performed our experiments using the A/WSN/1933 (H1N1) strain of influenza, which is neutralized by all six antibodies with similar potencies (Figure~\ref{fig:neutcurves}).
+We performed the experiments at antibody concentrations where nearly all the wildtype virus was neutralized, allowing us to detect genuine antigenic mutations that increase the fraction of virions that survive beyond the baseline of wildtype (Figure~\ref{fig:neutcurves}). 
+We used several concentrations of each broad antibody to increase sensitivity to antigenic mutations of both large and small effect sizes.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{figs/neutralization_curves/WT_neutralization_curves.pdf}}
 \caption{\label{fig:neutcurves}
-CAPTION
-\comment{
-Get rid of the panel numbers altogether and just have the antibody names.
-}
+{\bf Neutralization of wildtype virus by each antibody, and the fraction of virions surviving at each concentration used in our experiments.}
+The curves show neutralization of wildtype A/WSN/1933 virus. 
+Each point represents the mean and standard error of three measurements. 
+\comment{Is the preceding sentence correct?}
+The vertical dotted lines show the concentrations of antibody used in our selections, and the tables give the overall fraction of the mutant virus libraries that survived at each concentration.
 }
 \end{figure}
 
