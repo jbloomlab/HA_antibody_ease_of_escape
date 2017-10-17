@@ -23,6 +23,8 @@
 \renewcommand{\textfraction}{0}
 \renewcommand{\floatpagefraction}{1}
 
+\usepackage[font=small,labelfont=bf]{caption}
+
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[name={Figure}]{suppfigure}
 \renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
@@ -265,22 +267,17 @@ Despite the similarities in the epitope-targeting of C179 and FI6v3, these two a
 \comment{Do you think the mutant neutralization curves should be a separate subsection?}
 
 \begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
+\centerline{\includegraphics[width=0.95\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
 \caption{
 \label{fig:structures}
 {\bf Mutations selected by broad and narrow antibodies.}
-(A) For each antibody, the logo plots show the sites where mutations have the largest effect.
-Letter heights are proportional to the excess fraction of virions with that mutation that survive antibody, with the proportionality scaled separately for each antibody as indicated by the scale bars.
-The structures are colored white to red by the excess fraction surviving for the largest-effect mutation at each site, with each antibody again scaled separately.  
-(B) Zoomed-in view of sites of selection from the anti-stalk antibodies C179 and FI6v3, with the same coloring scale for both antibodies.
-(C) A phylogenetic tree (not to scale) of HA subtypes, with group 1 in black and group 2 in gray. 
+(A) The logo plots show the sites where mutations have the largest effect.
+Letter heights are proportional to the excess fraction of virions with that mutation that survive antibody, as indicated by the scale bars.
+The structures are colored white to red by the excess fraction surviving for the largest-effect mutation at each site, with each antibody scaled separately.  
+(B) Sites of selection from anti-stalk antibodies, with the same coloring scale for both antibodies.
+(C) Cladogram of HA subtypes, with group 1 in black and group 2 in gray. 
 The amino acid at site 38 is indicated. 
-Subtypes known to be bound or neutralized by C179 are in green, and subtypes known not to be bound or neutralized are in red.  
-\comment{Change coloring in panel C, as red and green are identical to color-blind people. 
-Maybe use orange and light blue as in Figure 1.
-Also, this figure is too large.
-Here I just scaled it all down, but really we want to just shrink panel B. Can you make it a bit smaller with respect to the rest by scaling the figure part by not the text down.
-Also, the tree can be made shorter (take up less space) by moving the legend to the right side.}
+Colors indicate whether a subtype is bound or neutralized by C179 if this has been tested.  
 }
 \end{figure}
 
