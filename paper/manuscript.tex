@@ -187,14 +187,12 @@ S139/1~\citep[PDB 4GMS;][]{lee2012heterosubtypic} targets the receptor-binding p
 The footprints for H17-L19, H17-L10, and H17-L7 are those mapped by \citet{doud2017complete}. 
 (B) A phylogenetic tree of HA subtypes, with group 1 at top and group 2 at bottom.
 Circles and squares denote antibodies with reported binding or neutralization activity against that subtype. 
-Not all antibodies have been tested against all subtypes. 
-Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8, and H11; no antibodies have been tested against H17 and H18.
+Note that not all antibodies have been tested against all subtypes. 
 }
 \end{figure}
 
 \subsection*{Broad and narrow antibodies that neutralize influenza virus}
 We applied our approach to anti-HA antibodies with a range of breadths and epitopes.
-%For comparison, we also included three previously characterized~\citep{doud2017complete} narrow strain-specific antibodies.
 The crystal structures or binding footprints of these antibodies are shown in Figure~\ref{fig:antibody_summary}A.
 We selected two broad antibodies, FI6v3 and C179, that target the stalk of HA~\citep{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
 FI6v3 is extremely broad, and neutralizes both group 1 and group 2 HAs (Figure~\ref{fig:antibody_summary}B).
@@ -258,26 +256,28 @@ On the other hand, we see selection for only a handful of amino acids at sites o
 For S139/1, we observed strong escape mutations at sites 156, 158, and 193, in H3 numbering. 
 These three sites surround the receptor-binding pocket, and were previously reported as sites of escape in selection experiments with S139/1~\citep{yoshida2009cross}.
 The mutation contributing the greatest fraction of virions surviving selection, G158N, introduces a glycosylation motif (N-X-S/T) at this site.
+C179 and FI6v3, which share very similar binding footprints and angles of approach~\citep{dreyfus2013structure}, select for identical escape mutations at several sites (Figure~\ref{fig:structures}B). 
+Both antibodies select for the K280S, K280T, and N291S mutations, all of which introduce glycosylation motifs in close proximity to the epitope and all have similar effect sizes in conferring escape from either antibody. 
 
-C179 and FI6v3, which share very similar binding footprints and angles of approach~\citep{dreyfus2013structure}, select for identical escape mutations at several sites. Specifically, both antibodies select for mutants K280S and K280T, both of which introduce glycosylation motifs. 
+Despite the similarities in the epitope-targeting of C179 and FI6v3, these two antibodies have very different breadths. FI6v3 can neutralize across many group 1 and group 2 HA's, while C179 can neutralize only some group 1 HA's. The presence of a glycan on the Asn at site 38 in group 2 HA's but not in group 1 HA's has been posited as a reason for this difference in breadth~\citep{corti2011neutralizing, sui2009structural, ekiert2009antibody}. Interestingly, in our experiments, the mutation with the strongest effect size from selection with C179 occurs at site 38, while we do not see observable escape mutations at this site by selection with FI6v3. While the H38S mutation does not introduce a glycosylation motif, we found that HA subtypes susceptible to binding or neutralization by C179 tend to possess a histidine at this site, but subtypes not bound or neutralized by C179 possess a glutamine or serine (Figure~\ref{fig:structures}C). 
 
-% For these two antibodies, we see selection for a few common escape mutations (S/T at site280, S at site 291, R at 47 / 48 (HA2), but also selection for distinct escape mutations (site 2, site 38, site 323, sites 42, 43)
+\comment{pdmH1N1 has an NTT glycosylation motif at sites 278-280. Its IC50 for FI6v3 is around 4-fold higher than the IC50 for WSN, according to Corti et al 2011}
+
+\comment{Do you think the mutant neutralization curves should be a separate subsection?}
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
 \caption{
 \label{fig:structures}
-\comment{Juhye, can you actually merge these two figures into one image.
-Some of the journals (\textit{Cell Host \& Microbe}, \textit{Immunity}) limit papers to 6 figures.
-The first figure can be panel (A).
-Include a healthy amount of vertical space, and make the current (A) and (B) into (B) and (C).
-Also, can you do the following:
-(1) Put the stalk zooms inside a frame box (a thin black or grey line) -- this should make the cutting off look better.
-(2) Clip the zoom boxes a little further on the right so that the zoomed sites are slightly bigger.
-(3) Move the scale bar legend below the zoom panels to separate it from the color labeling of what will now be panel (A).
-(4) Label the scale bar ``fraction surviving''.
-(5) For the tree figure, the logo plot for that site is now shown in panel (A) of the same figure. So you can get rid of that, and just include labels that indicate that green means binding / neutralization by C179, and the letters are the amino acid at site 38.
-}
+{\bf Mapping of escape mutations from broad and narrow antibodies.}
+(A) Logoplots for a subset of sites with mutations exhibiting some of the largest fraction of virions surviving selection. 
+Sites are labeled in H3 numbering. 
+The height of the scalebar for each antibody corresponds to the excess fraction of virions with a mutation that survive antibody selection. 
+To the right of each logoplot, the excess fraction surviving for the single strongest escape mutation is visualized at each site from white to red on the HA trimer (PDB 1RVX). 
+The strongest shade of red is set to the mutation with the maximum fraction escape for that antibody.
+The crystal structures of each broad antibody are superimposed on HA's structure.
+(B) Zoomed-in view of C179 and FI6v3 epitopes. %Here, the colors are normalized to C179 max mut fracsurvive
+(C) A phylogenetic tree (not to scale) of HA subtypes, with group 1 HA's in black and group 2 HA's in gray. The amino-acid identity at site 38 is shown to the right of each subtype. Subtypes bound or neutralized by C179 are denoted by green rectangles, while subtypes not bound or neutralized by C179 are denoted by red rectangles. Subtypes not tested for binding or neutralization activity are not colored. None of the group 2 subtypes are bound/neutralized by C179.
 }
 \end{figure}
 
@@ -317,7 +317,8 @@ Library selections, deep sequencing, and computation of mutation differential se
 Describe estimation of $\gamma$ by qPCR.
 
 \subsection*{Construction of HA phylogenetic tree}
-We downloaded HA sequences from the Influenza Research Database, aligned sequences using MUSCLE... \comment{going to add more here}
+To construct the phylogenetic tree of HA, we downloaded HA sequences from the Influenza Research Database, aligned sequences using MUSCLE... \comment{going to add more here}
+Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8, and H11; no antibodies have been tested against H17 and H18.
 
 \subsection*{H3 sequence numbering}
 \comment{add this}
