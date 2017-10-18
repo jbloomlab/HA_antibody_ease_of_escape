@@ -267,11 +267,11 @@ This would suggest that susceptibility to neutralization by C179 may in part be 
 Furthermore, the difference in breadth between C179 and FI6v3 has been attributed to FI6v3 being able to accommodate a glycan on the Asn at site 38 which is present in group 2 but not group 1 HA's, while group 1-specific stalk-targeting antibodies clash with this glycan~\citep{corti2011neutralizing, sui2009structural, ekiert2009antibody}. 
 The H38S mutation selected by C179 does not introduce a glycosylation motif, which indicates that introduction of a glycan at this site is not the only means of mediating escape from this group 1-specific anti-stalk antibody.
 The amino-acid identity at site 111 of HA2 can change the orientation of a conserved Trp21 in HA2, also resulting in group 1 and group 2 differences in the binding ability of stalk-targeting antibodies. An H111T mutation in the A/South Carolina/1/1918 (H1N1) has been reported to abrogate C179 binding~\citep{dreyfus2013structure}.
-However, we did not observe escape mutations at site 111, but this may be due to strain-specific differences
+However, we did not observe escape mutations at site 111, but this may be due to strain-specific differences.
 
 \comment{pdmH1N1 has an NTT glycosylation motif at sites 278-280. Its IC50 for FI6v3 is around 4-fold higher than the IC50 for WSN, according to Corti et al 2011}
 
-\comment{Do you think the mutant neutralization curves should be a separate subsection?}
+\subsection*{Validating escape mutation effect sizes with neutralization assays}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.95\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
@@ -315,22 +315,25 @@ C179 was purchased from Takara Bio Inc (Catalog \# M145).
 S139/1 heavy and light chain variable sequences were obtained from PDB ID 4GMS~\cite{lee2012heterosubtypic} and expressed and purified by the Fred Hutchinson Cancer Research Center protein expression core.
 
 \subsection*{Neutralization assays}
-We performed neutralization assays as previously described in ~\citep{}.
-\comment{going to add more here}
+We performed neutralization assays as previously described in~\citep{hooper2013mutant} using WSN GFP reporter viruses. Viruses carrying GFP in the PB1 segment were grown using reverse genetics plasmids in complementing 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells that constitutively express the PB1 protein. 
 
 \subsection*{Mutant virus selections with antibody and deep sequencing}
-Library selections, deep sequencing, and computation of mutation differential selection were performed as previously described in ~\cite{doud2017complete}. 
-
-To estimate the fraction of the overall library surviving selection, we used a standard curve by making 10-fold serial dilutions of the virus libraries
-
-Describe estimation of $\gamma$ by qPCR.
+Library selections and deep sequencing were performed as previously described in~\cite{doud2017complete}. 
+We conducted the antibody selections using the mutant virus libraries from~\cite{doud2016accurate}. 
+We diluted the virus libraries to a concentration of $1 \times 10^{6}$ TCID$_{50}$ per ml and incubated the virus dilutions with an equal volume of antibody at the intended concentration.
+We then incubated the virus-antibody mixture at 37$^\circ$C for 1.5 hours
+Each selection was done in biological triplicate at the antibody concentrations shown in Figure~\ref{fig:neutcurves} concentrations, and technical replicates of some of the concentrations were also performed. 
+To estimate the fraction of the overall library surviving selection, denoted as $\gamma$ in this paper, we made duplicate 10-fold serial dilutions of each of the virus libraries to use as a standard curve of infectivity. 
+qRT-PCR of the standard curves were performed as previously described in~\cite{doud2017complete} using qPCR primers for WSN influenza nucleoprotein (NP) to quantify viral infectivity and primers for canine GAPDH to correct for RNA amounts.
+Next, we fit a linear regression of the log(infectious dose) versus the mean difference in qPCR Ct values between NP and GAPDH to estimate the total library fraction infectivity after antibody selection.
 
 \subsection*{Construction of HA phylogenetic tree}
-To construct the phylogenetic tree of HA, we downloaded HA sequences from the Influenza Research Database, aligned sequences using MUSCLE... \comment{going to add more here}
-Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8, and H11; no antibodies have been tested against H17 and H18.
+We downloaded one HA sequence per subtype from the NIAID Influenza Research Database (IRD) \comment{cite}, built the phylogenetic tree using RaxML \comment{cite}, and visualized the tree using FigTree \comment{cite}. The HA sequences we downloaded were: H1 (A/WSN/1933); pdmH1N1 (A/California/04/2009); H2 (A/Japan/305/1957); H3 (A/Aichi/2/1968); H4 (A/swine/Ontario/01911/2/1999); H5 (A/Vietnam/1203/2004); H6 (A/chicken/Taiwan/0705/1999); H7 (A/Netherlands/219/2003); H8 (A/turkey/Ontario/6118/1968); H9 (A/swine/HongKong/9/1998); H10 (A/mallard/Bavaria/3/2006); H11 (A/duck/England/1/1956); H12 (A/duck/Alberta/60/1976); H13 (A/gull/Maryland/704/1977); H14 (A/mallard/Astrakhan/263/1982); H15 (A/mallard duck/Sweden/139579/2012); H16 (A/black headed gull/Mongolia/1756/2006); H17 (A/little yellow-shouldered bat/Guatemala/060/2010); H18 (A/dark fruit-eating bat/Bolivia/PBV780-781/2011).
+
+We denoted HA's with reported binding or neutralization activity by each antibody, and defined binding activity as \comment{binding to full influenza virus, VLPs, recombinant or purified HA's}. Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8 and H11; no antibodies have been tested against H17 and H18.
 
 \subsection*{H3 sequence numbering}
-\comment{add this}
+Unless otherwise indicated, all residues are numbered in H3 numbering in this paper, with the signal peptide in negative numbers, the HA1 subunit as plain numbers, and the HA2 subunit denoted with "(HA2)". We converted the sequential residue numbers into H3 numbering by running the Python script available on \url{https://github.com/jbloomlab/HA_numbering}. In this script, we used MUSCLE to align the WSN/1933 H1 HA sequence to the 4HMG pdb sequence for the A/Aichi/2/1968 H3 HA, which allowed us to convert from the sequential numbering to the H3 numbering scheme. 
 
 \subsection*{Calculating the fraction of virions with each mutation that escapes antibody neutralization}
 In prior mutational antigenic profiling work~\citep{doud2017complete,dingens2017comprehensive}, we calculated the differential selection on each mutation as the logarithm of its enrichment relative to wildtype in an antibody-selected sample versus a mock-selected control.
