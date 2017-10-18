@@ -1,0 +1,13 @@
+import sys
+
+cmd.set('bg_rgb','[1,1,1]')
+cmd.set('ray_opaque_background', 'off')
+cmd.set('antialias', '2')
+cmd.set('specular', '0')
+
+cmd.load('1RVX_H3_numbering.pdb')
+cmd.hide('everything')
+cmd.show('surface')
+cmd.select('1RVX', '1RVX_H3_numbering')
+cmd.select('HA1', '(chain A | chain C | chain E)')
+cmd.select('HA2', '(chain B | chain D | chain F)')
