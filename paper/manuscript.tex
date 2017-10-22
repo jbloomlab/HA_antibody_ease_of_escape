@@ -320,10 +320,35 @@ The most unexpected mutations identified in our mutational antigenic profiling w
 We tested one of these mutations, K(-8)T, and found that it indeed caused a modest but detectable increase in neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A).
 As controls, we also tested three more mutations (P80D, V135T, and M17L in HA2) that did \emph{not} have substantial effects in the mutational antigenic profiling, and confirmed that none of them affected neutralization resistance.
 
-A notable aspect of these validation experiments is the very small effect sizes of the identified mutations.
+A notable aspect of these validation experiments is the very small effect sizes of the identified mutations on neutralization by FI6v3.
 Antigenic mutations selected by strain-specific antibodies to HA generally increase the concentration of antibody needed to neutralize the virus by orders of magnitude.
 Neutralization curves for examples of such large-effect escape mutants are in Figure~\ref{fig:FI6v3neutcurves}B,C.
 Although there are no such large-effect single mutations that escape FI6v3 and C179, the results in Figure~\ref{fig:FI6v3neutcurves}A show that we can still use mutational antigenic profiling to identify mutations that have small but measurable effects on resistance to these antibodies.
+
+\subsection*{Limited HA mutational tolerance does not fully explain the lack of strong escape mutations from the anti-stalk antibodies}
+Why are there no large-effect escape mutations from the anti-stalk antibodies?
+One possibility is that all the HA sites in the antibody-binding interfaces are intolerant of mutations, meaning that viruses with mutations at these sites cannot replicate and so are not present in our mutant virus libraries.
+Another possibility is that mutations are tolerated at some HA sites in the antibody-binding interface, but that the binding energetics are distributed across sites in such a way that none of these tolerated mutations strongly affect neutralization.
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/prefs_fracsurvive/prefs_fracsurvive_logoplots.pdf}}
+\caption{
+\label{fig:muttolerance}
+CAPTION
+}
+\end{figure}
+
+We can examine these possibilities using deep mutational scanning data that measures the tolerance of HA for each possible amino-acid mutation.
+Specifically, we have previously selected our A/WSN/1933 virus HA mutant libraries for variants that can replicate in cell culture, and then used deep sequencing to estimate the preference of each site in HA for each possible amino acid~\citep{doud2016accurate}.
+Figure~\ref{fig:muttolerance} shows these amino-acid preferences for all sites in HA within 4 angstroms of each broad antibody, with the antigenic effects of the mutations overlaid.
+Although some sites in the HA-antibody interfaces strongly prefer a single amino acid, for all antibodies there are also interface sites that tolerate a fairly wide range of amino acids.
+In most cases the mutations selected by the antibodies occur at these mutationally tolerant sites.
+However, there are exceptions -- for instance, the H38S mutation selected by C179 is rather disfavored with respect to viral growth, but has a large enough antigenic effect to still be detected in our mutational antigenic profiling.
+
+The data in Figure~\ref{fig:muttolerance} show that the lack of large-effect escape mutants from FI6v3 and C179 is not due to complete mutational intolerance of the antibody-HA interface.
+Rather, only a fraction of mutations to HA sites in the interface actually reduce antibody neutralization.
+This finding is reminiscent of prior work showing that the binding energetics at protein-protein interfaces can be asymmetrically distributed across sites~\citep{jin1992high,cunningham1993comparison,dall1998mutational}.
+The broad anti-stalk antibodies appear to distribute their binding energetics in such a way that altering the mutationally tolerant HA sites has relatively little effect on neutralization.
 
 \section*{DISCUSSION}
 Some discussion
