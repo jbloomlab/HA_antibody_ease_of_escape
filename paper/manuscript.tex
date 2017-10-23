@@ -183,7 +183,7 @@ Open-source software that performs all steps in the analysis beginning with the 
 \centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/Ab_summary.pdf}}
 \caption{\label{fig:antibody_summary}
 {\bf Epitopes and breadth of broad and narrow antibodies targeting HA.}
-(A) Crystal structures of the broad antibodies and binding footprints of the narrow ones are superimposed on the structure of the HA trimer~\citep[PDB 1RVX;][]{gamblin2004structure}. 
+(A) Crystal structures of the broad antibodies and binding footprints of the narrow ones superimposed on the structure of the HA trimer~\citep[PDB 1RVX;][]{gamblin2004structure}. 
 S139/1~\citep[PDB 4GMS;][]{lee2012heterosubtypic} targets the receptor-binding site; C179~\citep[PDB 4HLZ;][]{dreyfus2013structure} and FI6v3~\citep[PDB 3ZTN;][]{corti2011neutralizing} target the stalk. 
 The footprints for H17-L19, H17-L10, and H17-L7 are those mapped by \citet{doud2017complete}. 
 (B) A phylogenetic tree of HA subtypes, with group 1 at top and group 2 at bottom.
@@ -193,7 +193,7 @@ Not all antibodies have been tested against all subtypes.
 \end{figure}
 
 \subsection*{Broad and narrow antibodies that neutralize influenza virus}
-We applied our approach to anti-HA antibodies with a range of breadths and epitopes.
+We applied this approach to anti-HA antibodies with a range of breadths and epitopes.
 The crystal structures or binding footprints of these antibodies are shown in Figure~\ref{fig:antibody_summary}A.
 We selected two broad antibodies, FI6v3 and C179, that target the stalk of HA~\citep{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
 FI6v3 is extremely broad, and neutralizes both group 1 and group 2 HAs (Figure~\ref{fig:antibody_summary}B).
@@ -285,8 +285,8 @@ Interestingly, group 1 HA subtypes that are susceptible to C179 tend to possess 
 %The amino-acid identity at site 111 of HA2 can change the orientation of a conserved Trp21 in HA2, also resulting in group 1 and group 2 differences in the binding ability of stalk-targeting antibodies. An H111T mutation in the A/South Carolina/1/1918 (H1N1) has been reported to abrogate C179 binding~\citep{dreyfus2013structure}.
 %However, we did not observe escape mutations at site 111, but this may be due to strain-specific differences.
 
-Interestingly, FI6v3 weakly selects several mutations at residue -8, which is part of HA's signal peptide (Figure~\ref{fig:structures}A). 
-This signal peptide is cleaved from the mature HA protein~\citep{daniels2003n,burke2014recommended}, so mutations at this site may affect the density of HA trimers on the virion~\citep{nordholm2017translational} rather than the physical binding of the antibody to HA.
+The FI6v3 antibody also weakly selects several mutations at residue -8, which is part of HA's signal peptide (Figure~\ref{fig:structures}A). 
+This signal peptide is cleaved from the mature HA protein~\citep{daniels2003n,burke2014recommended}, so mutations at this site likely affect HA's expression~\citep{nordholm2017translational} and subsequently its density on virions rather than affecting the physical binding of the antibody to HA.
 
 \subsection*{Neutralization assays validate the mutational antigenic profiling}
 Do the mutations identified in our mutational antigenic profiling actually have the expected effect on antibody neutralization?
@@ -322,38 +322,38 @@ As controls, we also tested three more mutations (P80D, V135T, and M17L in HA2) 
 
 A notable aspect of these validation experiments is the very small effect sizes of the identified mutations on neutralization by FI6v3.
 Antigenic mutations selected by strain-specific antibodies to HA generally increase the concentration of antibody needed to neutralize the virus by orders of magnitude.
-Neutralization curves for examples of such large-effect escape mutants are in Figure~\ref{fig:FI6v3neutcurves}B,C.
+Neutralization curves for such large-effect escape mutants are in Figure~\ref{fig:FI6v3neutcurves}B,C.
 Although there are no such large-effect single mutations that escape FI6v3 and C179, the results in Figure~\ref{fig:FI6v3neutcurves}A show that we can still use mutational antigenic profiling to identify mutations that have small but measurable effects on resistance to these antibodies.
 
 \subsection*{Limited HA mutational tolerance does not fully explain the lack of strong escape mutations from the anti-stalk antibodies}
 Why are there no large-effect escape mutations from the anti-stalk antibodies?
-One possibility is that all the HA sites in the antibody-binding interfaces are intolerant of mutations, meaning that viruses with mutations at these sites cannot replicate and so are not present in our mutant virus libraries.
-Another possibility is that mutations are tolerated at some HA sites in the antibody-binding interface, but that the binding energetics are distributed across sites in such a way that none of these tolerated mutations strongly affect neutralization.
+One possibility is that all HA sites in the antibody-binding footprint are intolerant of mutations, meaning that viruses with mutations at these sites cannot replicate and so are not present in our mutant virus libraries.
+Another possibility is that mutations are tolerated at some HA sites in the antibody footprint, but that the binding energetics are distributed across sites in such a way that none of these tolerated mutations strongly affect neutralization.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/prefs_fracsurvive/prefs_fracsurvive_logoplots.pdf}}
 \caption{
 \label{fig:muttolerance}
-{\bf Mutational tolerance of HA sites in the antibody-binding interfaces.}
+{\bf Mutational tolerance of HA sites in the antibody-binding footprints.}
 These plots show all HA sites within 4 angstroms of the antibody in the crystal structure, plus any additional sites (marked with a *) where we identified antigenic mutations. 
 The logo plots at bottom show the preference of each HA site for each amino acid under selection for viral growth as measured by \citet{doud2016accurate}.
 For instance, site 153 in HA only tolerates tryptophan, so W occupies the entire height of the preference logo stack.
 In contrast, site 156 tolerates many amino acids, all of which contribute to the height of the preference logo stack. 
 Above the preference logo stacks are logo plots showing the excess fraction surviving antibody treatment as measured in the current study.
 Note that scale for these antigenic effects is 10$\times$ smaller for the FI6v3 and C179 than for S139/1.
-Overall, it is clear that many mutations that are tolerated at interface sites that do not have a detectable antigenic effect.
+Overall, it is clear that many mutations that are tolerated at footprint sites that do not have a detectable antigenic effect.
 }
 \end{figure}
 
 We can examine these possibilities using deep mutational scanning data that measures the tolerance of HA for each possible amino-acid mutation.
 Specifically, we have previously selected our A/WSN/1933 virus HA mutant libraries for variants that can replicate in cell culture, and then used deep sequencing to estimate the preference of each site in HA for each possible amino acid~\citep{doud2016accurate}.
 Figure~\ref{fig:muttolerance} shows these amino-acid preferences for all sites in HA within 4 angstroms of each broad antibody, with the antigenic effects of the mutations overlaid.
-Although some sites in the HA-antibody interfaces strongly prefer a single amino acid, for all antibodies there are also interface sites that tolerate a fairly wide range of amino acids.
+Although some HA sites in the antibody footprints strongly prefer a single amino acid, for all antibodies there are also footprint sites that tolerate a fairly wide range of amino acids.
 In most cases the mutations selected by the antibodies occur at these mutationally tolerant sites.
 However, there are exceptions -- for instance, the H38S mutation selected by C179 is rather disfavored with respect to viral growth, but has a large enough antigenic effect to still be detected in our mutational antigenic profiling.
 
-The data in Figure~\ref{fig:muttolerance} show that the lack of large-effect escape mutants from FI6v3 and C179 is not due to complete mutational intolerance of the antibody-HA interface.
-Rather, only a fraction of mutations to HA sites in the interface actually reduce antibody neutralization.
+The data in Figure~\ref{fig:muttolerance} show that the lack of large-effect escape mutants from FI6v3 and C179 is not due to complete mutational intolerance of HA sites in the antibody-binding footprints.
+Rather, only a fraction of mutations to HA sites in the footprint actually reduce antibody neutralization.
 This finding is reminiscent of prior work showing that the binding energetics at protein-protein interfaces can be asymmetrically distributed across sites~\citep{jin1992high,cunningham1993comparison,dall1998mutational}.
 The broad anti-stalk antibodies appear to distribute their binding energetics in such a way that altering the mutationally tolerant HA sites has relatively little effect on neutralization.
 
