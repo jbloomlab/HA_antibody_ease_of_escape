@@ -391,12 +391,16 @@ Going forward, we suggest that quantifying the ease of viral escape will be a us
 \section*{METHODS}
 \label{sec:methods}
 \subsection*{Antibodies}
-FI6v3 was expressed and purified by the Fred Hutchinson Cancer Research Center protein expression core \comment{i think?}.
-C179 was purchased from Takara Bio Inc (Catalog \# M145).
-S139/1 heavy and light chain variable sequences were obtained from PDB ID 4GMS~\cite{lee2012heterosubtypic} and expressed and purified by the Fred Hutchinson Cancer Research Center protein expression core.
+C179 IgG was purchased from Takara Bio Inc (Catalog \#M145).
+FI6v3 was purified from 293F cells transduced with a lentiviral vector encoding a commercially synthesized gene for the IgG form of the antibody, with the heavy and light chains reverse-translated from the protein sequence in the PDB structure 3ZTN~\citep{corti2011neutralizing} as described in \citet{balazs2013broad}.
+Genes encoding S139/1 in IgG form were were reverse-translated from the protein sequence in PDB structure 4GMS~\citep{lee2012heterosubtypic}, and used to express and purify protein by the Fred Hutchinson Cancer Research Center protein expression core.
 
 \subsection*{Neutralization assays}
-We performed neutralization assays as previously described in~\citep{hooper2013mutant} using WSN GFP reporter viruses. Viruses carrying GFP in the PB1 segment were grown using reverse genetics plasmids in complementing 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells that constitutively express the PB1 protein. 
+We performed neutralization assays using influenza viruses that carried GFP in the PB1 segment.
+These PB1flank-eGFP were generated in co-cultures of 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells as described in \citet{bloom2010permissive}, using the standard bi-directional pHW181-PB2, ..., pHW188-NS reverse-genetics plasmids~\citep{hoffmann2000dna} for all genes \emph{except} PB1, plus the pHH-PB1flank-eGFP plasmid~\citep{bloom2010permissive}.
+Each mutant was generated repeating this process using a version of the pHW184-HA plasmid that had been engineered by site-directed mutagenesis to carry the indicated mutation.
+The neutralization assays themselves were performed by using a plate reader to quantify the GFP signal produced by MDCK-SIAT1-CMV-PB1 cells infected by PB1flank-eGFP virus that had been incubated with the indicated antibody concentration as described in \citet{hooper2013mutant}.
+All neutralization curves represent the mean and standard error of three measurements. 
 
 \subsection*{Mutant virus selections with antibody and deep sequencing}
 Library selections and deep sequencing were performed as previously described in~\cite{doud2017complete}. 
@@ -498,10 +502,13 @@ The in this paper were performed using version 2.1.0 of \texttt{dms\_tools2}.
 Deep sequencing data are available from the Sequence Read Archive under BioSample accession SAMN05789126.
 
 \subsection*{ACKNOWLEDGMENTS}
-This work was supported by grants R01GM102198 and R01AI127893 from the NIGMS and NIAID of the NIH.
+We thank Adam Dingens, Lauren Gentles, and Jeremy Roop for helpful comments on the project and manuscript.
+We thank the Fred Hutchinson Cancer Research Center genomics core for performing the Illumina deep sequencing, and the protein expression core for expressing and purifying the C179 antibody.
+This work was supported by grant R01AI127893 from the NIAID of the NIH.
 MBD was supported in part by training grant T32AI083203 from the NIAID of the NIH.
-JML was supported in part by \comment{CIDID grant}.
+JML was supported in part by the Center for Inference and Dynamics of Infectious Diseases (CIDID), which is funded by grant U54GM111274 from the NIGMS of the NIH.
 The research of JDB is supported in part by a Faculty Scholar Grant from the Howard Hughes Medical Institute and the Simons Foundation.
+The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
 
 \bibliographystyle{mbe}
 \bibliography{references.bib}
