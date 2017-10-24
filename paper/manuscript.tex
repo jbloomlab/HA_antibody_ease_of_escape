@@ -255,7 +255,7 @@ Therefore, the HA of A/WSN/1933 influenza virus is far less capable of escaping 
 Antigenic mutations selected by narrow strain-specific antibodies against HA generally occur at residues in or near the physical binding footprint of the antibody~\citep{yewdell1979antigenic,webster1980determination,caton1982antigenic}.
 We examined whether this was also the case for the broad antibodies used in our experiments.
 Figure~\ref{fig:structures}A shows a zoomed-in view of the sites of mutations selected by each antibody, as well as their locations on HA's structure. 
-It is immediately clear that the selected mutations are nearly all in or near the antibody-binding footprint.
+It is immediately clear that the selected mutations are nearly all in or close to the antibody-binding footprint.
 
 \begin{figure}[h!]
 \centerline{\includegraphics[width=0.89\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
@@ -277,7 +277,7 @@ These three sites fall directly in the physical binding footprint of the antibod
 Our data show that numerous different amino-acid mutations at each site confer neutralization resistance.
 The mutation with the largest effect, D158N, introduces an N-linked glycosylation motif.
 
-Although the anti-stalk antibodies C179 and FI6v3 only select mutations with small effects, these mutations almost all fall in the physical binding footprints of the antibodies (Figure~\ref{fig:structures}A).
+Although the anti-stalk antibodies C179 and FI6v3 only select mutations with small effects, these mutations almost all fall in or near the physical binding footprints of the antibodies (Figure~\ref{fig:structures}A).
 The two antibodies have similar epitopes and angles of approach~\citep{dreyfus2013structure}, and they select identical mutations at several sites (Figure~\ref{fig:structures}B). 
 The three largest-effect mutations for FI6v3 (K280S, K280T, and N291S) all introduce glycosylation motifs near the epitope, and all three mutations have similar magnitude antigenic effects in both FI6v3 and C179.
 
@@ -315,8 +315,6 @@ Figure~\ref{fig:FI6v3neutcurves} shows that the mutational antigenic profiling i
 As discussed in the previous section, the three mutations most strongly selected by FI6v3 introduce glycosylation motifs at sites 278-280 or 289-291 (Figure~\ref{fig:structures}A).
 We created viruses carrying each of these mutations (K280S, K280T, and N291S) and validated that all three modestly increased resistance to FI6v3 (Figure~\ref{fig:FI6v3neutcurves}A).
 As a control, we also validated that a mutation at one of these sites (K280A) that does \emph{not} have an effect in our mutational antigenic profiling does not shift the neutralization curve (Figure~\ref{fig:FI6v3neutcurves}A).
-Interestingly, the HA of pandemic H1N1 has a glycosylation motif at 278-280, and \citet{corti2011neutralizing} have reported that this HA is $\sim$4-fold more resistant to FI6v3 than the A/WSN/1933 HA used in our experiments.
-This reported difference between strains is of similar magnitude to the effect that we measure for introducing the glycosylation motif via the K280S or K280T mutations.
 
 Our mutational antigenic profiling also identified several non-glycosylation-motif mutations that were selected by FI6v3.
 We validated that one of these mutations, G47R in the HA2 chain, increased neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A) -- although as predicted by the mutational antigenic profiling, the magnitude of the effect was small.
@@ -404,7 +402,7 @@ We performed neutralization assays using influenza viruses that carried GFP in t
 These PB1flank-eGFP were generated in co-cultures of 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells as described in \citet{bloom2010permissive}, using the standard bi-directional pHW181-PB2, ..., pHW188-NS reverse-genetics plasmids~\citep{hoffmann2000dna} for all genes \emph{except} PB1, plus the pHH-PB1flank-eGFP plasmid~\citep{bloom2010permissive}.
 Each mutant was generated repeating this process using a version of the pHW184-HA plasmid that had been engineered by site-directed mutagenesis to carry the indicated mutation.
 The neutralization assays themselves were performed by using a plate reader to quantify the GFP signal produced by MDCK-SIAT1-CMV-PB1 cells infected by PB1flank-eGFP virus that had been incubated with the indicated antibody concentration as described in \citet{hooper2013mutant}.
-All neutralization curves represent the mean and standard error of three measurements. 
+All neutralization curves represent the mean and standard deviation of three measurements. 
 \subsection*{H3 sequence numbering}
 Unless otherwise indicated, all residues are numbered in the H3 numbering scheme, with the signal peptide in negative numbers, the HA1 subunit as plain numbers, and the HA2 subunit denoted with ``(HA2)''. 
 The conversion between sequential numbering of the A/WSN/1933 HA and the H3 numbering scheme was performed using the Python script available at \url{https://github.com/jbloomlab/HA_numbering}.
@@ -422,13 +420,13 @@ For subtypes not tested, the amino-acid identity reported is that in the strain 
 
 \subsection*{Mutant virus libraries}
 The mutant virus libraries are those described in \citet{doud2016accurate}, and were produced in full biological triplicate.
-Briefly, these libraries were generated by using codon mutagenesis~\citep{bloom2014experimentally} to introduce random codon mutations into plasmid-encoded HA, and then generating the virus libraries using a helper-virus strategy that avoids the bottlenecks associated with standard influenza reverse genetics.
+Briefly, these libraries were generated by using codon mutagenesis~\citep{bloom2014experimentally} to introduce random codon mutations into plasmid-encoded HA, and then using a helper-virus strategy that avoids the bottlenecks associated with standard influenza reverse genetics to create the virus libraries.
 Full details of the library generation and sequencing statistics that quantify how completely each of the triplicate libraries covers the possible amino-acid mutations are in \citet{doud2016accurate}.
 
 \subsection*{Mutational antigenic profiling}
 The mutational antigenic profiling was performed as described in \citet{doud2017complete}. 
-Briefly, we diluted each virus libraries to a concentration of $10^{6}$ TCID$_{50}$ per ml and incubated the virus dilutions with an equal volume of antibody at the intended concentration at 37$^\circ$C for 1.5 hours.
-The final antibody concentrations in these mixtures are shown in Figure~\ref{fig:neutcurves} concentrations.
+Briefly, we diluted each of the virus libraries to a concentration of $10^{6}$ TCID$_{50}$ per ml and incubated the virus dilutions with an equal volume of antibody at the intended concentration at 37$^\circ$C for 1.5 hours.
+The final antibody concentrations in these mixtures are shown in Figure~\ref{fig:neutcurves}.
 We performed three fully independent replicates of each selection using the three replicate mutant virus libraries.
 In addition, we performed technical replicates (independent neutralization experiments on the \emph{same} virus library) in some cases as indicated in Figure~\ref{suppfig:corr}.
 The virus-antibody mixtures were used to infect cells, and viral RNA was extracted, reverse-transcribed, and PCR amplified as described in \citet{doud2017complete}.
@@ -444,7 +442,7 @@ To estimate the fractions, we used linear regression to fit a line relating loga
 
 \subsection*{Analysis of deep sequencing data}
 The deep sequencing data were analyzed using version 2.1.0 of the \texttt{dms\_tools2} software package~\citep{bloom2015software}, which is available at \url{http://jbloomlab.github.io/dms_tools2}.
-File~\ref{suppfile:analysis_code} contains a Jupyter notebook that performs all steps of the analysis beginning with downloading the FASTQ files from the Sequence Read archive.
+File~\ref{suppfile:analysis_code} contains a Jupyter notebook that performs all steps of the analysis beginning with downloading the FASTQ files from the Sequence Read Archive.
 Detailed statistics about the sequencing depth and error rates are shown in this Jupyter notebook.
 
 \subsection*{Calculating the fraction of virions with each mutation that escapes antibody neutralization}
@@ -683,7 +681,6 @@ In this CSV file, the \emph{original} column gives the residue number in sequent
 \caption{\label{suppfile:HAsubtypes}
 {\bf Sequences used to infer the tree for all HA subtypes.}
 This FASTA file gives the HA sequences used to infer the tree of subtypes in Figure~\ref{fig:antibody_summary}.
-\comment{Juhye, can you add this file into the \texttt{./paper/figs/} directory.}
 }
 \end{suppfile}
 
