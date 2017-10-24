@@ -405,21 +405,20 @@ These PB1flank-eGFP were generated in co-cultures of 293T-CMV-PB1 and MDCK-SIAT1
 Each mutant was generated repeating this process using a version of the pHW184-HA plasmid that had been engineered by site-directed mutagenesis to carry the indicated mutation.
 The neutralization assays themselves were performed by using a plate reader to quantify the GFP signal produced by MDCK-SIAT1-CMV-PB1 cells infected by PB1flank-eGFP virus that had been incubated with the indicated antibody concentration as described in \citet{hooper2013mutant}.
 All neutralization curves represent the mean and standard error of three measurements. 
+\subsection*{H3 sequence numbering}
+Unless otherwise indicated, all residues are numbered in the H3 numbering scheme, with the signal peptide in negative numbers, the HA1 subunit as plain numbers, and the HA2 subunit denoted with ``(HA2)''. 
+The conversion between sequential numbering of the A/WSN/1933 HA and the H3 numbering scheme was performed using the Python script available at \url{https://github.com/jbloomlab/HA_numbering}.
+File~\ref{suppfile:HAnumbering} gives the numbering conversion.  
 
 \subsection*{Inference of HA phylogenetic tree}
-To infer the phylogenetic tree in Figure~\ref{fig:antibody_summary}, we downloaded one HA sequence per subtype from the Influenza Research Database~\citep{?}, inferred the phylogenetic tree using RaxML~\citep{?} with a \comment{what model of substitution?}, and visualized the tree using FigTree (\comment{url}). 
-The HA sequences used were: H1 (A/WSN/1933); pdmH1N1 (A/California/04/2009); H2 (A/Japan/305/1957); H3 (A/Aichi/2/1968); H4 (A/swine/Ontario/01911/2/1999); H5 (A/Vietnam/1203/2004); H6 (A/chicken/Taiwan/0705/1999); H7 (A/Netherlands/219/2003); H8 (A/turkey/Ontario/6118/1968); H9 (A/swine/HongKong/9/1998); H10 (A/mallard/Bavaria/3/2006); H11 (A/duck/England/1/1956); H12 (A/duck/Alberta/60/1976); H13 (A/gull/Maryland/704/1977); H14 (A/mallard/Astrakhan/263/1982); H15 (A/mallard duck/Sweden/139579/2012); H16 (A/black headed gull/Mongolia/1756/2006); H17 (A/little yellow-shouldered bat/Guatemala/060/2010); H18 (A/dark fruit-eating bat/Bolivia/PBV780-781/2011).
+To infer the phylogenetic tree in Figure~\ref{fig:antibody_summary}, we downloaded one HA sequence per subtype from the Influenza Research Database~\citep{zhang2017influenza}, inferred the phylogenetic tree using RaxML~\citep{stamatakis2014raxml} with a \comment{what model of substitution?}, and visualized the tree using FigTree (\url{http://tree.bio.ed.ac.uk/software/figtree/}). 
+The HA sequences used are in File~\ref{suppfile:HAsubtypes}. 
 In Figure~\ref{fig:antibody_summary}, we indicate which HAs each antibody has been reported to bind or neutralize. 
 Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8 and H11; and no antibodies have been tested against H17 and H18.
 The narrow H17-L19, H17-L10, and H17-L7 antibodies have not been tested against any other subtypes -- however, since these antibodies have a very limited range even among H1 HAs~\citep{caton1982antigenic}, we assume that they do not bind other subtypes.
 
 For the cladogram in Figure~\ref{fig:structures}C, the amino-acid identities at site 38 are from the strains tested against C179 by \citet{dreyfus2013structure}. 
-For subtypes not tested, the amino-acid identity reported is that in the strain listed above.
-
-\subsection*{H3 sequence numbering}
-Unless otherwise indicated, all residues are numbered in the H3 numbering scheme, with the signal peptide in negative numbers, the HA1 subunit as plain numbers, and the HA2 subunit denoted with ``(HA2)''. 
-The conversion between sequential numbering of the A/WSN/1933 HA and the H3 numbering scheme was performed using the Python script available at \url{https://github.com/jbloomlab/HA_numbering}.
-File~\ref{suppfile:HAnumbering} gives the numbering conversion.  
+For subtypes not tested, the amino-acid identity reported is that in the strain for that subtype in File~\ref{suppfile:HAsubtypes}.
 
 \subsection*{Mutant virus libraries}
 The mutant virus libraries are those described in \citet{doud2016accurate}, and were produced in full biological triplicate.
@@ -442,6 +441,11 @@ The fractions were estimated using qPCR against the viral NP and canine GAPDH as
 Briefly, we made duplicate 10-fold serial dilutions of each of the virus libraries to use as a standard curve.
 We also performed qPCR on the cells infected with the virus-antibody mix.
 To estimate the fractions, we used linear regression to fit a line relating logarithm of the viral infectious dose in the standard curve to the difference in Ct values between NP and GAPDH, and then interpolated the fraction surviving for each selection from this regression.
+
+\subsection*{Analysis of deep sequencing data}
+The deep sequencing data were analyzed using version 2.1.0 of the \texttt{dms\_tools2} software package~\citep{bloom2015software}, which is available at \url{http://jbloomlab.github.io/dms_tools2}.
+File~\ref{suppfile:analysis_code} contains a Jupyter notebook that performs all steps of the analysis beginning with downloading the FASTQ files from the Sequence Read archive.
+Detailed statistics about the sequencing depth and error rates are shown in this Jupyter notebook.
 
 \subsection*{Calculating the fraction of virions with each mutation that escapes antibody neutralization}
 In prior mutational antigenic profiling work~\citep{doud2017complete,dingens2017comprehensive}, we calculated the differential selection on each mutation as the logarithm of its enrichment relative to wildtype in an antibody-selected sample versus a mock-selected control.
@@ -516,11 +520,15 @@ Another summary statistic is the \emph{maximum} fraction surviving above average
 \mathcal{F}_r^{max} = \frac{1}{19} \max\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}}\left( F_{r,a}^{\rm{excess}} \right).
 \end{equation}
 
-Code that performs all these calculations is included in the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
-The in this paper were performed using version 2.1.0 of \texttt{dms\_tools2}.
+In this paper, Figures~\ref{fig:avgfracsurvive} and \ref{suppfig:maxfracsurvive} show the median of excess fraction surviving taken across all biological and technical replicates at a given antibody concentration.
+The subsequent logo plots show the medians of these values taken across all concentrations for each antibody.
+The numerical values plotted in these logo plots are in File~\ref{suppfile:fracsurvive}.
+
+Code that performs these fraction surviving analyses has been added to version 2.1.0 of the \texttt{dms\_tools2} software package~\citep{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
 
 \subsection*{Data availability and source code}
 Deep sequencing data are available from the Sequence Read Archive under BioSample accession SAMN05789126.
+Computer code that analyzes these data to generate the results described in this paper is in File~\ref{suppfile:analysis_code}.
 
 \subsection*{ACKNOWLEDGMENTS}
 We thank Adam Dingens, Lauren Gentles, and Jeremy Roop for helpful comments on the project and manuscript.
@@ -668,6 +676,32 @@ This table shows the values for the broad antibodies; values for the narrow H17-
 \caption{\label{suppfile:HAnumbering}
 {\bf Conversion from sequential numbering of the A/WSN/1933 HA to H3 numbering.}
 In this CSV file, the \emph{original} column gives the residue number in sequential (1, 2, ...) numbering of the A/WSN/1933 HA, and the \emph{new} column gives the residue number in H3 numbering.
+}
+\end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:HAsubtypes}
+{\bf Sequences used to infer the tree for all HA subtypes.}
+This FASTA file gives the HA sequences used to infer the tree of subtypes in Figure~\ref{fig:antibody_summary}.
+\comment{Juhye, can you add this file into the \texttt{./paper/figs/} directory.}
+}
+\end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:analysis_code}
+{\bf Computer code and data for the analysis of the mutational antigenic profiling data.}
+The code in this ZIP file performs the entire computational analysis beginning with downloading the FASTQ files from the Sequence Read Archive.
+The ZIP file contains a \texttt{README} file that explains the contents in detail.
+The actual analysis is performed by the Jupyter notebook \texttt{analysis\_notebook.ipynb}, which includes embedded plots summarizing key statistics and results.
+An HTML version of this notebook is also included as \texttt{analysis\_notebook.html}.
+}
+\end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:fracsurvive}
+{\bf The excess fraction surviving for each mutation for each antibody.}
+This file is a ZIP of CSV files giving the numerical values plotted in the logo plots.
+These are median excess fraction surviving taken first across replicates and then across antibody concentrations.
 }
 \end{suppfile}
 
