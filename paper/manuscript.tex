@@ -411,9 +411,9 @@ The conversion between sequential numbering of the A/WSN/1933 HA and the H3 numb
 File~\ref{suppfile:HAnumbering} gives the numbering conversion.  
 
 \subsection*{Inference of HA phylogenetic tree}
-To infer the phylogenetic tree in Figure~\ref{fig:antibody_summary}, we downloaded one HA sequence per subtype from the Influenza Research Database~\citep{zhang2017influenza}, inferred the phylogenetic tree using RaxML~\citep{stamatakis2014raxml} with a \comment{what model of substitution?}, and visualized the tree using FigTree (\url{http://tree.bio.ed.ac.uk/software/figtree/}). 
+To infer the phylogenetic tree in Figure~\ref{fig:antibody_summary}, we downloaded one HA sequence per subtype from the Influenza Research Database~\citep{zhang2017influenza}, inferred the phylogenetic tree using RaxML~\citep{stamatakis2014raxml} with a GTR model, and visualized the tree using FigTree (\url{http://tree.bio.ed.ac.uk/software/figtree/}). 
 The HA sequences used are in File~\ref{suppfile:HAsubtypes}. 
-In Figure~\ref{fig:antibody_summary}, we indicate which HAs each antibody has been reported to bind or neutralize. 
+In Figure~\ref{fig:antibody_summary}, we indicate which HAs each antibody has been reported to bind or neutralize~\citep{yoshida2009cross, lee2012heterosubtypic, okuno1993common, dreyfus2013structure, corti2011neutralizing}. 
 Among broad antibodies, S139/1 has not been tested against H8, H9, and H11; C179 has not been tested against H8 and H11; and no antibodies have been tested against H17 and H18.
 The narrow H17-L19, H17-L10, and H17-L7 antibodies have not been tested against any other subtypes -- however, since these antibodies have a very limited range even among H1 HAs~\citep{caton1982antigenic}, we assume that they do not bind other subtypes.
 
@@ -438,7 +438,7 @@ We also estimated the overall fraction of virions surviving each antibody select
 These fractions are denoted by $\gamma$ in this paper.
 The average of these fractions across libraries are reported in Figure~\ref{fig:neutcurves}, and the values for each individual replicate are in Table~\ref{supptab:fracsurvive}.
 The fractions were estimated using qPCR against the viral NP and canine GAPDH as described in \citet{doud2017complete}.
-Briefly, we made duplicate 10-fold serial dilutions of each of the virus libraries to use as a standard curve.
+Briefly, we made duplicate 10-fold serial dilutions of each of the virus libraries to use as a standard curve of infectivity.
 We also performed qPCR on the cells infected with the virus-antibody mix.
 To estimate the fractions, we used linear regression to fit a line relating logarithm of the viral infectious dose in the standard curve to the difference in Ct values between NP and GAPDH, and then interpolated the fraction surviving for each selection from this regression.
 
