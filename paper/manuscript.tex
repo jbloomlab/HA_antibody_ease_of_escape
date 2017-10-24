@@ -135,7 +135,7 @@ Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral 
 We can visualize the outcome of antibody selection on viral populations containing antigenic mutations as in Figure~\ref{fig:fracsurvive_example}.
 If a mutation strongly escapes neutralization, then all virions with this mutation survive antibody treatment at a concentration where other virions are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
 This escape is manifested by a large shift in the neutralization curve for the mutant (Figure~\ref{fig:fracsurvive_example}B).
-If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that survive neutralization at each antibody concentration (Figure~\ref{fig:fracsurvive_example}B).
+If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that survive neutralization at each antibody concentration.
 These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive (Figure~\ref{fig:fracsurvive_example}C).
 Large letters correspond to strong escape mutations. 
 
@@ -266,7 +266,8 @@ It is immediately clear that the selected mutations are nearly all in or close t
 Letter heights are proportional to the excess fraction of virions with that mutation that survive antibody, as indicated by the scale bars.
 Structures are colored white to red by the excess fraction surviving for the largest-effect mutation at each site, with each antibody scaled separately.  
 (B) Sites of selection from anti-stalk antibodies, with the same coloring scale for both antibodies.
-(C) Cladogram of HA subtypes, with group 1 in black and group 2 in gray. 
+(C) Cladogram of group 1 HA subtypes.
+\comment{Juhye: can you update panel C to only show group 1} 
 The amino acid at site 38 is indicated. 
 Colors indicate whether a subtype is bound or neutralized by C179.  
 }
@@ -290,7 +291,7 @@ Interestingly, group 1 HA subtypes that are susceptible to C179 tend to possess 
 %However, we did not observe escape mutations at site 111, but this may be due to strain-specific differences.
 
 The FI6v3 antibody also weakly selects several mutations at residue -8, which is part of HA's signal peptide (Figure~\ref{fig:structures}A). 
-This signal peptide is cleaved from the mature HA protein~\citep{daniels2003n,burke2014recommended}, so mutations at this site likely affect HA's expression~\citep{nordholm2017translational} and subsequently its density on virions rather than affecting the physical binding of the antibody to HA.
+This signal peptide is cleaved from the mature HA protein~\citep{daniels2003n,burke2014recommended}, although mutations at this site can affect HA's expression level~\citep{nordholm2017translational}.
 
 \subsection*{Neutralization assays validate the mutational antigenic profiling}
 Do the mutations identified in our mutational antigenic profiling actually have the expected effect on antibody neutralization?
@@ -304,8 +305,8 @@ We therefore tested some of these FI6v3-selected mutations using neutralization 
 \label{fig:FI6v3neutcurves}
 {\bf The mutations selected by FI6v3 increase neutralization resistance, but the effects are small.}
 (A) Neutralization curves of individual viral mutants with FI6v3.
-The mutations K280S, K280T, N291S, G47R (HA2), and K(-8)T are all expected to increase neutralization resistance based on the mutational antigenic profiling (Figure~\ref{fig:structures}A), and they all do so -- but only modestly. 
-The mutations K280A, M17L (HA2), P80D, and V135T are \emph{not} expected to affect neutralization based on the mutational antigenic profiling (Figure~\ref{suppfig:FI6v3logo}), and none of them do.
+The mutations K280S, K280T, N291S, G47R (HA2), and K(-8)T are all expected to increase neutralization resistance based on the mutational antigenic profiling (Figure~\ref{fig:structures}A). 
+The mutations K280A, M17L (HA2), P80D, and V135T are \emph{not} expected to affect neutralization based on the mutational antigenic profiling (Figure~\ref{suppfig:FI6v3logo}).
 (B), (C) In contrast to FI6v3, mutations selected by narrow antibodies have very large effects on neutralization.
 Shown are neutralization curves for representative escape mutants from H17-L19 and H17-L7 taken from \citet{doud2017complete}.
 }
@@ -319,7 +320,7 @@ As a control, we also validated that a mutation at one of these sites (K280A) th
 Our mutational antigenic profiling also identified several non-glycosylation-motif mutations that were selected by FI6v3.
 We validated that one of these mutations, G47R in the HA2 chain, increased neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A) -- although as predicted by the mutational antigenic profiling, the magnitude of the effect was small.
 The most unexpected mutations identified in our mutational antigenic profiling were at site -8 in the signal peptide.
-We tested one of these mutations, K(-8)T, and found that it indeed caused a modest but detectable increase in neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A).
+We tested one of these mutations, K(-8)T, and found that it did appear to lead to a very slight increase in neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A).
 As controls, we also tested three mutations (P80D, V135T, and M17L in HA2) that did \emph{not} have substantial effects in the mutational antigenic profiling, and confirmed that none of them affected neutralization resistance.
 
 A notable aspect of these validation experiments is the very small effect sizes of the identified mutations on neutralization by FI6v3.
@@ -343,7 +344,6 @@ For instance, site 153 only tolerates tryptophan, so W occupies the entire heigh
 In contrast, site 156 tolerates many amino acids, all of which contribute to the height of the preference logo stack. 
 Above the preference logo stacks are logo plots showing the excess fraction surviving antibody treatment as measured in the current study.
 Note that scale for these antigenic effects is 10$\times$ smaller for the FI6v3 and C179 than for S139/1.
-Overall, it is clear that many mutations are tolerated at footprint sites but do not have a detectable antigenic effect.
 }
 \end{figure}
 
@@ -355,7 +355,8 @@ In most cases the mutations selected by the antibodies occur at these mutational
 However, there are exceptions -- for instance, the H38S mutation selected by C179 is rather disfavored with respect to viral growth, but has a large enough antigenic effect to still be detected in our mutational antigenic profiling.
 
 The data in Figure~\ref{fig:muttolerance} show that the lack of large-effect escape mutants from FI6v3 and C179 is not due to complete mutational intolerance of HA sites in the antibody-binding footprints.
-Rather, only a fraction of mutations to HA sites in the footprint actually reduce antibody neutralization.
+Some HA sites in each antibody footprint are fairly mutationally tolerant, and contain a range of mutations in the viral libraries used in our antibody selections.
+However, our mutational antigenic profiling shows that only a fraction of mutations at a fraction of these sites actually affect antibody neutralization.
 This finding is reminiscent of prior work showing that the binding energetics at protein-protein interfaces can be asymmetrically distributed across sites~\citep{jin1992high,cunningham1993comparison,dall1998mutational}.
 The broad anti-stalk antibodies appear to distribute their binding energetics in such a way that altering the mutationally tolerant HA sites has relatively little effect on neutralization.
 
@@ -384,7 +385,7 @@ However, single mutations are the most accessible form of genetic variation, and
 Quantifying the antigenic effects of all such mutations therefore provides a relevant measure of ease of viral antibody escape. 
 
 A major rationale for studying broadly neutralizing antibodies is that they are hoped to be more resistant to viral evolutionary escape than the antibodies that dominate natural immune responses to influenza virus~\citep{krammer2015advances,corti2017tackling}.
-We have used a new approach to quantify the extent to which this is actually true, and shown that anti-viral activity of broad anti-stalk antibodies is indeed more -- although certainly not completely -- resistant to erosion by viral point mutations.
+We have used a new approach to quantify the extent to which this is actually true, and shown that the anti-viral activity of broad anti-stalk antibodies is indeed more -- although certainly not completely -- resistant to erosion by viral point mutations.
 Going forward, we suggest that quantifying the ease of viral escape will be a useful complement to more traditional techniques that characterize the structural epitopes and strain breadth of anti-viral antibodies.
 
 \clearpage
@@ -400,7 +401,7 @@ Genes encoding S139/1 in IgG form were were reverse-translated from the protein 
 \subsection*{Neutralization assays}
 We performed neutralization assays using influenza viruses that carried GFP in the PB1 segment.
 These PB1flank-eGFP were generated in co-cultures of 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells as described in \citet{bloom2010permissive}, using the standard bi-directional pHW181-PB2, ..., pHW188-NS reverse-genetics plasmids~\citep{hoffmann2000dna} for all genes \emph{except} PB1, plus the pHH-PB1flank-eGFP plasmid~\citep{bloom2010permissive}.
-Each mutant was generated repeating this process using a version of the pHW184-HA plasmid that had been engineered by site-directed mutagenesis to carry the indicated mutation.
+Each mutant was generated by repeating this process using a version of the pHW184-HA plasmid that had been engineered by site-directed mutagenesis to carry the indicated mutation.
 The neutralization assays themselves were performed by using a plate reader to quantify the GFP signal produced by MDCK-SIAT1-CMV-PB1 cells infected by PB1flank-eGFP virus that had been incubated with the indicated antibody concentration as described in \citet{hooper2013mutant}.
 All neutralization curves represent the mean and standard deviation of three measurements. 
 \subsection*{H3 sequence numbering}
