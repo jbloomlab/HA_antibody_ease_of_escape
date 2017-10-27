@@ -124,7 +124,7 @@ Critically, our approach quantifies the \emph{magnitude} of the antigenic effect
 We find that even the broadest antibodies select antigenic mutations.
 However, the magnitudes of the antigenic effects vary greatly across antibodies.
 Single mutations make the virus completely resistant to both narrow strain-specific antibodies and a broad antibody against the receptor-binding site.
-But no single mutation does more than modestly increase the virus's resistance to broad antibodies against the HA stalk.
+But no single mutation does more than modestly increase the virus's resistance to two broad antibodies against the HA stalk.
 Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral escape via single amino-acid mutations than the other antibodies tested here. 
 
 
@@ -187,10 +187,10 @@ Open-source software that performs all steps in the analysis beginning with the 
 \centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/Ab_summary.pdf}}
 \caption{\label{fig:antibody_summary}
 {\bf Epitopes and breadth of broad and narrow antibodies targeting HA.}
-(A) Crystal structures of the broad antibodies and binding footprints of the narrow ones superimposed on the structure of the HA trimer~\citep[PDB 1RVX;][]{gamblin2004structure}. 
+(A) Crystal structures of the broad antibodies and sites of escape mutations selected by the narrow ones superimposed on the structure of the HA trimer~\citep[PDB 1RVX;][]{gamblin2004structure}. 
 S139/1~\citep[PDB 4GMS;][]{lee2012heterosubtypic} targets the receptor-binding site; C179~\citep[PDB 4HLZ;][]{dreyfus2013structure} and FI6v3~\citep[PDB 3ZTN;][]{corti2011neutralizing} target the stalk. 
-The footprints for H17-L19, H17-L10, and H17-L7 are those mapped by \citet{doud2017complete}. 
-(B) A phylogenetic tree of HA subtypes, with group 1 at top and group 2 at bottom.
+The sites of escape mutations for H17-L19, H17-L10, and H17-L7 are those mapped by \citet{doud2017complete}. 
+(B) A phylogenetic tree of HA subtypes.
 Circles (broad antibodies) and squares (narrow antibodies) denote reported antibody binding or neutralization activity against that subtype. 
 Not all antibodies have been tested against all subtypes. 
 }
@@ -198,25 +198,25 @@ Not all antibodies have been tested against all subtypes.
 
 \subsection*{Broad and narrow antibodies that neutralize influenza virus}
 We applied this approach to anti-HA antibodies with a range of breadths and epitopes.
-The crystal structures or binding footprints of these antibodies are shown in Figure~\ref{fig:antibody_summary}A.
-We selected two broad antibodies, FI6v3 and C179, that target the stalk of HA~\citep{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
+The crystal structures or sites of escape mutations selected by these antibodies are shown in Figure~\ref{fig:antibody_summary}A.
+We chose two broad antibodies, FI6v3 and C179, that target the stalk of HA~\citep{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
 FI6v3 is extremely broad, and neutralizes both group 1 and group 2 HAs (Figure~\ref{fig:antibody_summary}B).
 C179 is less broad, and neutralizes only some group 1 HAs (Figure~\ref{fig:antibody_summary}B).
 We also selected a broad antibody, S139/1, that targets HA's receptor-binding site and can neutralize both group 1 and group 2 HAs~\citep{yoshida2009cross, lee2012heterosubtypic}.
 Finally, we re-analyzed deep sequencing data from prior mutational antigenic profiling of three narrow strain-specific antibodies, H17-L19, H17-L10, and H17-L7~\citep{doud2017complete}.
 These narrow antibodies bind the Ca2, Ca1, and Cb antigenic regions on HA's globular head~\citep{caton1982antigenic}, and only neutralize a narrow slice of H1 viruses.
 
-We performed our experiments using the A/WSN/1933 (H1N1) strain of influenza, which is neutralized by all six antibodies with similar potencies (Figure~\ref{fig:neutcurves}).
-We used antibody concentrations where nearly all wildtype virus was neutralized, allowing us to detect antigenic mutations that increase the fraction of virions that survive beyond the baseline of wildtype (Figure~\ref{fig:neutcurves}). 
+We performed our experiments using the A/WSN/1933 (H1N1) strain of influenza, which is neutralized by all six antibodies (Figure~\ref{fig:neutcurves}).
+We used antibody concentrations sufficient for nearly complete neutralization of wildtype virus, allowing us to detect antigenic mutations that increase the fraction of mutant virions surviving beyond the baseline of wildtype (Figure~\ref{fig:neutcurves}). 
 We used several concentrations of each broad antibody to increase sensitivity to antigenic mutations of both large and small effect.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{figs/neutralization_curves/WT_neutralization_curves.pdf}}
 \caption{\label{fig:neutcurves}
-{\bf Neutralization of wildtype virus by each antibody, and the fraction of virions surviving at each concentration used in our experiments.}
-The curves show neutralization of wildtype A/WSN/1933 virus. 
+{\bf Neutralization of wildtype virus by each antibody, and the fraction of mutant library virions surviving at each concentration used in our experiments.}
+The curves show neutralization of the wildtype A/WSN/1933 virus. 
 Each point represents the mean and standard deviation of three measurements. 
-The vertical dotted lines show the concentrations of antibody used in our selections, and the tables give the overall fraction of the mutant virus libraries that survived at each concentration.
+The vertical dotted lines show the concentrations of antibody that were then used in the mutant virus library selections, and the tables give the overall fraction of the mutant virus libraries that survived at each concentration, determined by qRT-PCR.
 }
 \end{figure}
 
@@ -252,8 +252,8 @@ But the effect sizes of these antigenic mutations are tiny compared to the other
 Therefore, the HA of A/WSN/1933 influenza virus is far less capable of escaping these anti-stalk antibodies by single mutations than it is of escaping the other four antibodies. 
 
 \subsection*{The selected mutations are near the binding footprints of the antibodies}
-Antigenic mutations selected by narrow strain-specific antibodies against HA generally occur at residues in or near the physical binding footprint of the antibody~\citep{yewdell1979antigenic,webster1980determination,caton1982antigenic}.
-We examined whether this was also the case for the broad antibodies used in our experiments.
+Antigenic mutations selected by narrow strain-specific antibodies against HA are thought to occur at residues in or near the physical binding footprint of the antibody~\citep{yewdell1979antigenic,webster1980determination,caton1982antigenic}.
+We examined whether this was the case for the broad antibodies used in our experiments.
 Figure~\ref{fig:structures}A shows a zoomed-in view of the sites of mutations selected by each antibody, as well as their locations on HA's structure. 
 It is immediately clear that the selected mutations are nearly all in or close to the antibody-binding footprint.
 
@@ -265,9 +265,8 @@ It is immediately clear that the selected mutations are nearly all in or close t
 (A) Logo plots show sites where mutations have the largest effect.
 Letter heights are proportional to the excess fraction of virions with that mutation that survive antibody, as indicated by the scale bars.
 Structures are colored white to red by the excess fraction surviving for the largest-effect mutation at each site, with each antibody scaled separately.  
-(B) Sites of selection from anti-stalk antibodies, with the same coloring scale for both antibodies.
+(B) Sites of selection from anti-stalk antibodies, with the same coloring scale for both antibodies. Selection for serine or threonine at sites 280 and 291 introduces glycosylation sites at 278 and 289, respectively.
 (C) Cladogram of group 1 HA subtypes.
-\comment{Juhye: can you update panel C to only show group 1} 
 The amino acid at site 38 is indicated. 
 Colors indicate whether a subtype is bound or neutralized by C179.  
 }
@@ -276,7 +275,7 @@ Colors indicate whether a subtype is bound or neutralized by C179.
 For the broad anti-receptor binding pocket antibody S139/1, there are strong escape mutations at sites 156, 158, and 193 (Figure~\ref{fig:structures}A; sites are in H3 numbering). 
 These three sites fall directly in the physical binding footprint of the antibody~\citep{lee2012heterosubtypic}, and are the same three sites where \citet{yoshida2009cross} selected escape mutants in H1, H2, and H3 HAs. 
 Our data show that numerous different amino-acid mutations at each site confer neutralization resistance.
-The mutation with the largest effect, D158N, introduces an N-linked glycosylation motif.
+The mutation with the largest effect, G158N, introduces an N-linked glycosylation motif.
 
 Although the anti-stalk antibodies C179 and FI6v3 only select mutations with small effects, these mutations almost all fall in or near the physical binding footprints of the antibodies (Figure~\ref{fig:structures}A).
 The two antibodies have similar epitopes and angles of approach~\citep{dreyfus2013structure}, and they select identical mutations at several sites (Figure~\ref{fig:structures}B). 
@@ -313,7 +312,7 @@ Shown are neutralization curves for representative escape mutants from H17-L19 a
 \end{figure}
 
 Figure~\ref{fig:FI6v3neutcurves} shows that the mutational antigenic profiling is highly predictive of the results of the neutralization assays, even for small-effect mutations.
-As discussed in the previous section, the three mutations most strongly selected by FI6v3 introduce glycosylation motifs at sites 278-280 or 289-291 (Figure~\ref{fig:structures}A).
+As discussed in the previous section, the three mutations most strongly selected by FI6v3 introduce glycosylation motifs at sites 278-280 or 289-291 (Figure~\ref{fig:structures}A,B).
 We created viruses carrying each of these mutations (K280S, K280T, and N291S) and validated that all three modestly increased resistance to FI6v3 (Figure~\ref{fig:FI6v3neutcurves}A).
 As a control, we also validated that a mutation at one of these sites (K280A) that does \emph{not} have an effect in our mutational antigenic profiling does not shift the neutralization curve (Figure~\ref{fig:FI6v3neutcurves}A).
 
@@ -321,12 +320,12 @@ Our mutational antigenic profiling also identified several non-glycosylation-mot
 We validated that one of these mutations, G47R in the HA2 chain, increased neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A) -- although as predicted by the mutational antigenic profiling, the magnitude of the effect was small.
 The most unexpected mutations identified in our mutational antigenic profiling were at site -8 in the signal peptide.
 We tested one of these mutations, K(-8)T, and found that it did appear to lead to a very slight increase in neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A).
-As controls, we also tested three mutations (P80D, V135T, and M17L in HA2) that did \emph{not} have substantial effects in the mutational antigenic profiling, and confirmed that none of them affected neutralization resistance.
+As controls, we also tested three mutations (P80D and V135T, which are escape mutations for H17-L7 and H17-L19, and M17L in HA2) that did \emph{not} have substantial effects in the mutational antigenic profiling, and confirmed that none of them affected neutralization resistance.
 
 A notable aspect of these validation experiments is the very small effect sizes of the identified mutations on neutralization by FI6v3.
 Antigenic mutations selected by strain-specific antibodies to HA generally increase the concentration of antibody needed to neutralize the virus by orders of magnitude.
 Neutralization curves for such large-effect escape mutants are in Figure~\ref{fig:FI6v3neutcurves}B,C.
-Although there are no such large-effect single mutations that escape FI6v3 and C179, the results in Figure~\ref{fig:FI6v3neutcurves}A show that we can still use mutational antigenic profiling to identify mutations that have small but measurable effects on resistance to these antibodies.
+Although there are no such large-effect single mutations that escape FI6v3 or C179, the results in Figure~\ref{fig:FI6v3neutcurves}A show that we can still use mutational antigenic profiling to identify mutations that have small but measurable effects on resistance to these antibodies.
 
 \subsection*{Limited HA mutational tolerance does not fully explain the lack of strong escape mutations from the anti-stalk antibodies}
 Why are there no large-effect escape mutations from the anti-stalk antibodies?
@@ -343,7 +342,7 @@ The logo plots at bottom show the preference of each HA site for each amino acid
 For instance, site 153 only tolerates tryptophan, so W occupies the entire height of the preference logo stack.
 In contrast, site 156 tolerates many amino acids, all of which contribute to the height of the preference logo stack. 
 Above the preference logo stacks are logo plots showing the excess fraction surviving antibody treatment as measured in the current study.
-Note that scale for these antigenic effects is 10$\times$ smaller for the FI6v3 and C179 than for S139/1.
+Note that scale for these antigenic effects is 10$\times$ smaller for FI6v3 and C179 than for S139/1.
 }
 \end{figure}
 
@@ -366,7 +365,7 @@ Our results show that the virus's inherent evolutionary capacity for escape via 
 Interestingly, antibody breadth is not always an indicator of the difficulty of viral escape. 
 As expected, single amino-acid mutations can make the virus completely resistant to narrow strain-specific antibodies against HA's globular head.
 However, such mutations can also enable the virus to escape the broad S139/1 antibody targeting HA's receptor-binding pocket, despite the fact that this antibody neutralizes multiple subtypes.
-But no single mutations have a comparably large effect on neutralization by two broad antibodies targeting HA's stalk, FI6v3 and C179.
+But no single mutation has a comparably large effect on neutralization by two broad antibodies targeting HA's stalk, FI6v3 and C179.
 Therefore, these anti-stalk antibodies are quantifiably more difficult for the virus to escape.
 
 Although there are no large-effect escape mutations from the broad anti-stalk antibodies, there are mutations that more modestly affect neutralization.
@@ -436,7 +435,7 @@ In order to obtain high accuracy in the Illumina deep sequencing, we used the ba
 We also estimated the overall fraction of virions surviving each antibody selection.
 These fractions are denoted by $\gamma$ in this paper.
 The average of these fractions across libraries are reported in Figure~\ref{fig:neutcurves}, and the values for each individual replicate are in Table~\ref{supptab:fracsurvive}.
-The fractions were estimated using qPCR against the viral NP and canine GAPDH as described in \citet{doud2017complete}.
+The fractions were estimated using qRT-PCR against the viral NP and canine GAPDH as described in \citet{doud2017complete}.
 Briefly, we made duplicate 10-fold serial dilutions of each of the virus libraries to use as a standard curve of infectivity.
 We also performed qPCR on the cells infected with the virus-antibody mix.
 To estimate the fractions, we used linear regression to fit a line relating logarithm of the viral infectious dose in the standard curve to the difference in Ct values between NP and GAPDH, and then interpolated the fraction surviving for each selection from this regression.
@@ -530,7 +529,7 @@ Deep sequencing data are available from the Sequence Read Archive under BioSampl
 Computer code that analyzes these data to generate the results described in this paper is in File~\ref{suppfile:analysis_code}.
 
 \subsection*{ACKNOWLEDGMENTS}
-We thank Adam Dingens, Lauren Gentles, and Jeremy Roop for helpful comments on the project and manuscript.
+We thank Adam Dingens, Sarah Hilton, Katherine Xue, Lauren Gentles, and Jeremy Roop for helpful comments on the project and manuscript.
 We thank the Fred Hutchinson Cancer Research Center genomics core for performing the Illumina deep sequencing, and the protein expression core for expressing and purifying the C179 antibody.
 This work was supported by grant R01AI127893 from the NIAID of the NIH.
 MBD was supported in part by training grant T32AI083203 from the NIAID of the NIH.
