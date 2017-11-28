@@ -1,7 +1,7 @@
 % Use only LaTeX2e, calling the article.cls class and 12-point type.
 
 \documentclass[11pt]{article}
-\usepackage[super]{natbib}
+\usepackage[super,comma]{natbib}
 \usepackage[margin=1.4in]{geometry}
 \usepackage{kpfonts}
 
@@ -56,7 +56,7 @@
 \renewcommand{\abstractname}{\large ABSTRACT}
 
 
-\title{Quantifying the ease of viral escape from broad and narrow antibodies to influenza hemagglutinin} 
+\title{Quantifying the effects of single mutations on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin} 
 
 \author
 {Michael B. Doud$^{1,2,3,\dagger}$, Juhye M. Lee$^{1,2,3,\dagger}$, and Jesse D. Bloom$^{1,2,*}$\\
@@ -79,14 +79,14 @@
 \begin{abstract}
 Influenza virus can completely escape most antibodies with single mutations.
 However, rare antibodies broadly neutralize many viral strains.
-It is unclear how easily influenza virus might escape such antibodies if they became widespread due to therapeutic use or vaccination.
+It is unclear how easily influenza virus might escape such antibodies if it was under strong pressure to do so.
 Here we map all single amino-acid mutations that increase resistance to broad antibodies targeting an H1 hemagglutinin.
 Crucially, our approach not only identifies antigenic mutations but also quantifies their effect sizes.
 All antibodies select mutations, but the effect sizes vary widely. 
-The virus can escape a broad antibody targeting hemagglutinin's receptor-binding site the same way it escapes narrow strain-specific antibodies: via single mutations with huge effects.   
+The virus can escape a broad antibody that targets residues in hemagglutinin's receptor-binding site the same way it escapes narrow strain-specific antibodies: via single mutations with huge effects.   
 In contrast, broad antibodies targeting hemagglutinin's stalk only select mutations with small effects. 
-Therefore, antibody breadth is not necessarily an indicator of the difficulty of viral escape.
-Broadly neutralizing antibodies targeting hemagglutinin's stalk are quantifiably harder to escape than the other antibodies tested here.
+Therefore, among the antibodies we have examined, breadth is an imperfect indicator of the potential for viral escape via single mutations.
+Broadly neutralizing antibodies targeting the H1 hemagglutinin stalk are quantifiably harder to escape than the other antibodies tested here.
 \end{abstract}
 
 \section*{INTRODUCTION}
@@ -115,7 +115,7 @@ But alternatively, perhaps broad antibodies are broad because the virus has diff
 So far, there is limited data to distinguish between these possibilities.
 Several studies have shown that the head domain of HA is more mutationally tolerant than the stalk domain where many broad antibodies bind\cite{thyagarajan2014inherent,wu2014high,heaton2013genome}.
 However, these studies did not select for antibody escape, so it is difficult to relate their measurements to the virus's evolutionary capacity under immune selection.
-Other work has shown that it is possible to select antigenic mutants with broad antibodies\cite{yoshida2009cross,chai2016two}, demonstrating that these epitopes are not entirely refractory to change.
+Other work has shown that it is possible to select antigenic mutants with broad antibodies\cite{yoshida2009cross,chai2016two,anderson2017natural}, demonstrating that these epitopes are not entirely refractory to change.
 But given that antibodies can select some antigenic variation even in measles virus\cite{birrer1981antigenic,ter1981antigenic} and polio virus\cite{crainic1983natural,diamond1985antigenic}, the existence of selectable mutations does not necessarily imply that influenza virus can escape broad antibodies as easily as it drifts away from narrow strain-specific ones.
 The fundamental problem is that existing studies have not quantified the ease of viral escape in a way that can be compared across antibodies in an apples-to-apples fashion.
 
@@ -123,10 +123,9 @@ Here we systematically quantify the results of selecting all single amino-acid m
 Critically, our approach quantifies the \emph{magnitude} of the antigenic effect of every mutation in a way that can be directly compared across antibodies.
 We find that even the broadest antibodies select antigenic mutations.
 However, the magnitudes of the antigenic effects vary greatly across antibodies.
-Single mutations make the virus completely resistant to both narrow strain-specific antibodies and a broad antibody against the receptor-binding site.
+Single mutations make the virus completely resistant to both narrow strain-specific antibodies and a broad antibody that targets residues in HA's receptor-binding site.
 But no single mutation does more than modestly increase the virus's resistance to two broad antibodies against the HA stalk.
 Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral escape via single amino-acid mutations than the other antibodies tested here. 
-
 
 \section*{RESULTS}
 \label{sec:results}
@@ -179,7 +178,6 @@ In the analyses of real data below, we will plot the excess fraction surviving \
 \label{eq:fracsurvive_excess}
 F_{r,a}^{\rm{excess}} = \max\left(0, F_{r,a} - \gamma\right).
 \end{equation}
-%We plot the excess fraction above the library average since this quantity more clearly accentuates antigenic mutations against the background of other mutations.
 Details of how the calculations are extended to account for sequencing errors and sampling statistics are in the \nameref{sec:methods}.
 Open-source software that performs all steps in the analysis beginning with the deep sequencing data is available at \url{https://jbloomlab.github.io/dms_tools2/}.
 
@@ -188,7 +186,7 @@ Open-source software that performs all steps in the analysis beginning with the 
 \caption{\label{fig:antibody_summary}
 {\bf Epitopes and breadth of broad and narrow antibodies targeting HA.}
 (A) Crystal structures of the broad antibodies and sites of escape mutations selected by the narrow ones superimposed on the structure of the HA trimer (PDB 1RVX\cite{gamblin2004structure}). 
-S139/1 (PDB 4GMS\cite{lee2012heterosubtypic}) targets the receptor-binding site; C179 (PDB 4HLZ)\cite{dreyfus2013structure}) and FI6v3 (PDB 3ZTN\cite{corti2011neutralizing}) target the stalk. 
+S139/1 (PDB 4GMS\cite{lee2012heterosubtypic}) targets residues in the receptor-binding pocket; C179 (PDB 4HLZ\cite{dreyfus2013structure}) and FI6v3 (PDB 3ZTN\cite{corti2011neutralizing}) target the stalk. 
 The sites of escape mutations for H17-L19, H17-L10, and H17-L7 are those mapped by Doud et al\cite{doud2017complete}. 
 (B) A phylogenetic tree of HA subtypes.
 Circles (broad antibodies) and squares (narrow antibodies) denote reported antibody binding or neutralization activity against that subtype. 
@@ -202,13 +200,12 @@ The crystal structures or sites of escape mutations selected by these antibodies
 We chose two broad antibodies, FI6v3 and C179, that target the stalk of HA\cite{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
 FI6v3 is extremely broad, and neutralizes both group 1 and group 2 HAs (Figure~\ref{fig:antibody_summary}B).
 C179 is less broad, and neutralizes only some group 1 HAs (Figure~\ref{fig:antibody_summary}B).
-We also selected a broad antibody, S139/1, that targets HA's receptor-binding site and can neutralize both group 1 and group 2 HAs\cite{yoshida2009cross, lee2012heterosubtypic}.
+We also selected a broad antibody, S139/1, that crystallographic studies have shown binds to residues in HA's receptor-binding pocket\cite{lee2012heterosubtypic}, and which can neutralize both group 1 and group 2 HAs\cite{yoshida2009cross, lee2012heterosubtypic}.
 Finally, we re-analyzed deep sequencing data from prior mutational antigenic profiling of three narrow strain-specific antibodies, H17-L19, H17-L10, and H17-L7\cite{doud2017complete}.
 These narrow antibodies bind the Ca2, Ca1, and Cb antigenic regions on HA's globular head\cite{caton1982antigenic}, and only neutralize a narrow slice of H1 viruses.
 
 We performed our experiments using the A/WSN/1933 (H1N1) strain of influenza, which is neutralized by all six antibodies (Figure~\ref{fig:neutcurves}).
-We used antibody concentrations sufficient for nearly complete neutralization of wildtype virus, allowing us to detect antigenic mutations that increase the fraction of mutant virions surviving beyond the baseline of wildtype (Figure~\ref{fig:neutcurves}). 
-We used several concentrations of each broad antibody to increase sensitivity to antigenic mutations of both large and small effect.
+Our experiments utilize fully infectious influenza virus rather than pseudovirus, which is important since the accessibility of some epitopes can vary with HA density, which differs between fully infectious virus and pseudovirus\cite{corti2011neutralizing,joyce2016vaccine}.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{figs/neutralization_curves/WT_neutralization_curves.pdf}}
@@ -217,8 +214,17 @@ We used several concentrations of each broad antibody to increase sensitivity to
 The curves show neutralization of the wildtype A/WSN/1933 virus. 
 Each point represents the mean and standard deviation of three measurements. 
 The vertical dotted lines show the concentrations of antibody that were then used in the mutant virus library selections, and the tables give the overall fraction of the mutant virus libraries that survived at each concentration, determined by qRT-PCR.
+As described in the text, the antibody concentrations were chosen to give similar fractions of the mutant virus libraries that survive, rather than to fall at uniform positions on the neutralization curves of the wildtype virus.
 }
 \end{figure}
+
+The wildtype virus is neutralized with similar potency by all the antibodies (Figure~\ref{fig:neutcurves}).
+However, our selections are performed on mutant virus libraries, not wildtype virus.
+Because these libraries have different capacities to escape each antibody, the fraction of each library that survives high antibody concentrations will vary among antibodies.
+For instance, at concentrations that neutralize 99\% of the wildtype virus, we expect a larger fraction of a library to survive an antibody with many escape mutations than an antibody with few escape mutations.
+Therefore, rather than using the same concentration for all antibodies, we selected concentrations for each antibody where between 2\% and 0.1\% of the libraries survived in order to strongly select for escape mutations (Figure~\ref{fig:neutcurves}).
+Slight differences among antibodies in the fraction surviving within this range should not strongly affect our results, since Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_excess} account for such differences via the $\gamma$ term.
+However, to confirm the robustness of our results, we used several concentrations of each broad antibody (Figure~\ref{fig:neutcurves}).
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
@@ -234,13 +240,12 @@ Sites are labeled in H3 numbering.
 \end{figure}
 
 \subsection*{Quantifying the antigenic effects of all mutations selected by each antibody}
-We performed mutational antigenic profiling using the three broad antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}, and calculated the fraction of virions carrying each mutation that survived neutralization. 
+We performed mutational antigenic profiling using the three broad antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}. 
 All experiments were performed in full biological triplicate using three independently generated virus libraries carrying single amino-acid mutations to HA\cite{doud2016accurate}.
-%We have previously described\cite{doud2017complete} mutational antigenic profiling of the three narrow strain-specific antibodies, and we re-analyzed those deep sequencing data to calculate the fraction of virions with each mutation that survived neutralization.
 The correlations among replicates are shown in Figure~\ref{suppfig:corr}.
 For the remainder of this paper, we will refer to the median antigenic effect of each mutation across replicates.
 
-It is immediately obvious that the narrow strain-specific antibodies and the antibody targeting HA's receptor-binding pocket (S139/1) select mutations with large antigenic effects.
+It is immediately obvious that the narrow strain-specific antibodies and the antibody targeting residues in HA's receptor-binding pocket (S139/1) select mutations with large antigenic effects.
 For all four of these antibodies, there are multiple sites in HA where mutations enable a substantial fraction of virions to survive high antibody concentrations (Figure~\ref{fig:avgfracsurvive}).
 Specifically, there are mutations that enable over a third of virions to survive at concentrations where virtually all wildtype virions are neutralized (Figure~\ref{suppfig:maxfracsurvive}).
 Therefore, the virus can escape these four antibodies with the sort of large-effect single amino-acid mutations that characterize traditional influenza antigenic drift\cite{yewdell1979antigenic,webster1980determination,koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction}.  
@@ -272,7 +277,7 @@ Colors indicate whether a subtype has been reported in the literature to be boun
 }
 \end{figure}
 
-For the broad anti-receptor binding pocket antibody S139/1, there are strong escape mutations at sites 156, 158, and 193 (Figure~\ref{fig:structures}A; sites are in H3 numbering). 
+For the S139/1 antibody that targets residues in the HA receptor-binding pocket, there are strong escape mutations at sites 156, 158, and 193 (Figure~\ref{fig:structures}A; sites are in H3 numbering). 
 These three sites fall directly in the physical binding footprint of the antibody\cite{lee2012heterosubtypic}, and are the same three sites where previous work has selected escape mutants in H1, H2, and H3 HAs\cite{yoshida2009cross}. 
 Our data show that numerous different amino-acid mutations at each site confer neutralization resistance.
 The mutation with the largest effect, G158N, introduces an N-linked glycosylation motif.
@@ -290,7 +295,7 @@ Interestingly, group 1 HA subtypes that are susceptible to C179 tend to possess 
 %However, we did not observe escape mutations at site 111, but this may be due to strain-specific differences.
 
 The FI6v3 antibody also weakly selects several mutations at residue -8, which is part of HA's signal peptide (Figure~\ref{fig:structures}A). 
-This signal peptide is cleaved from the mature HA protein\cite{daniels2003n,burke2014recommended}, although mutations at this site can affect HA's expression level\cite{nordholm2017translational}.
+This signal peptide is cleaved from the mature HA protein\cite{daniels2003n,burke2014recommended}, although mutations at this site can affect HA's expression level\cite{nordholm2017translational}, which might conceivably affect HA density on virions and subsequently antibody neutralization\cite{corti2011neutralizing,joyce2016vaccine}.
 
 \subsection*{Neutralization assays validate the mutational antigenic profiling}
 Do the mutations identified in our mutational antigenic profiling actually have the expected effect on antibody neutralization?
@@ -421,6 +426,8 @@ For subtypes not tested, the amino-acid identity reported is that in the strain 
 \subsection*{Mutant virus libraries}
 The mutant virus libraries are those described in Doud and Bloom\cite{doud2016accurate}, and were produced in full biological triplicate.
 Briefly, these libraries were generated by using codon mutagenesis\cite{bloom2014experimentally} to introduce random codon mutations into plasmid-encoded HA, and then using a helper-virus strategy that avoids the bottlenecks associated with standard influenza reverse genetics to create the virus libraries.
+Although a helper virus is used to generate the libraries from plasmids, the viruses in the resulting library carry the full complement of genes and are fully infectious and replication-competent\cite{doud2016accurate}.
+This fact is important, since the accessibility of HA epitopes can depend on virion HA density, which is often lower in pseudovirus than in fully infectious virus\cite{corti2011neutralizing,joyce2016vaccine}.
 Full details of the library generation and sequencing statistics that quantify how completely each of the triplicate libraries covers the possible amino-acid mutations have been described previously\cite{doud2016accurate}.
 
 \subsection*{Mutational antigenic profiling}
