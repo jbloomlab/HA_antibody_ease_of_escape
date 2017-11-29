@@ -39,27 +39,33 @@ While this paper is technically sound, the novelty and biological insights are l
 
 {\color{red} This is a good and fair summary.
 We should make sure that we are not over-stating the generality of the claims.}
+{\color{blue} I agree with this too, specifically about the limited number of antibodies that we used and how this should limit generalization of the finding.}
 
 Specific comments:
 
 1. Based on Figure 4 and 5, the number of residues that can give rise to resistant mutations to S139/1 seem to be less than to two of the strain-specific antibodies (H17-L10 and H17-L19), and maybe also to H17-L7. Does that suggest S139/1 is slightly more difficult to escape as compared to strain-specific antibodies?
 {\color{red} We could comment briefly on the number of sites of escape for the different residues.}
+{\color{blue} While also mentioning that both number of sites and effect size of mutations at those sites are relevant (and I guess also the number of mutations within each site as well...), with the emphasis being the difference in effect sizes between the antibodies, but I agree with the reviewer that we should also draw attention to the number of sites of escape.}
 
 2. Related to the concern above, although the methodology in this study normalized the antigenic profiling results from different antibodies, a quantitative comparison of the ease of escape among different antibodies was not performed. Is it possible to rank the ease of escape among different antibodies?
 {\color{red} We could easily rank the antibodies by something like the median effect of the top 5 escape mutations. Mike had a figure that looked a bit like that.}
+{\color{blue} I do still like my plots of rank-ordered mutations... perhaps there is a place in the figures we could squeeze that in. I do think it is a nice way of visualizing both number of escape mutations and effect sizes. Could be useful as we comment on the # of sites issue raised above, although the plots as I was making them were by mutation not by site, but we could also show sites ranked by maximum effect size or something along those lines.}
 
 3. In Figure 6A, the fraction infectivity of K(-8)T at low concentration of FI6v3 is consistent higher that that of WT. Is there any explanation? On a related point the resistant mutation to FI6v3 at residue -8 is an interesting observation. Can the authors suggest possible mechanism?
 {\color{red} I think the effect is so small that we aren't even sure that it is true, which is why we didn't really discuss this.. We could mention something about possibly modulating expression level...}
+{\color{blue} This is also why I was pushing a little to deemphasize any interpretations about this mutant, or specifically the validation data for it. The plateau in the neutralization curve is funky (more likely technical issue than biological), and normally I wouldn't be too concerned about something like that if there was a large and obvious IC50 shift, but in this case when the curve shift is so small to begin with, a funky plateau kind of throws everything into question. I DO still think the original result from the library experiments is potentially super interesting, and like to think about expression level modulation and stuff, but want to keep it clear that it's speculation, and not hang any hats on the neutralization assay.}
 
 4. In Figure 6A, V135T seems to show some resistance at FI6v3 at level that is similar to K(-8)T, although the authors claim that V135T does not affect the neutralization activity of FI6v3. Can the authors quantify the inhibition effect (e.g. IC50) in this validation experiment to facilitate interpretation of the results?
 {\color{red} I'm not sure if we gain anything by trying to do statistics on this, since the data is all shown and the effect is clearly tiny. 
 Might be best just to remain very circumspect about K(-8)T?}
+{\color{blue} I agree best to remove as much as willing about K(-8)T, or just say the effect size of that one (and M17L) is so small that it is within the error the neutralization assay. Could drop the validation data for K(-8)T and M17L completely (or to supplement), and consider dropping panels B and C which are essentially reprints, and use the extra space to show the rank-order mutation effect size plots comparing all the antibodies. Then the figure is showing that we validated small effect sizes for the strongest FI6v3 mutations, and that the mutations are few in number and small in effect size for the stalk abs relative to the head abs with the "mike's plot" mentioned above.
+I also agree not worth doing statistics. I commend the reviewer for very politely calling us out on this.}
 
 5. In the Figure 2B and in the methods section, the authors state that S139/1 has not been tested against H9. However, S139/1 has been shown to binding to H9 by ELISA but without any neutralization activity (Yoshida et al., PLoS Pathog 2009).
 {\color{red} We should add this fact.}
 
 \section*{Reviewer \#2} 
-This is a manuscript examining the escape of influenza to broad and narrow antibodies in order to quantify escape. It is a well-written paper and the authors are to be commended for their encyclopedic referencing of classic literature. I appreciate the desire of the authors to perform an "apples-to-apples" comparison, and there is much to like about this paper, but unfortunately, this analysis has flaws that preclude me recommending it for publication.
+This is a manuscript examining the escape of influenza to broad and narrow antibodies in order to quantify escape. It is a well-written paper and the authors are to be commended for their encyclopedic referencing of classic literature. {\color{blue} (Mad Props, Jesse)} I appreciate the desire of the authors to perform an "apples-to-apples" comparison, and there is much to like about this paper, but unfortunately, this analysis has flaws that preclude me recommending it for publication.
 
 The manuscript focuses on neutralization as the primary mechanism of pressure on influenza and uses neutralization measurements, antibody selection of viruses, and a model to interpret the results. In particular, the authors compare an antibody that binds near the receptor binding site (S139/1), two stem-directed antibodies (FI6v3 and C179), and a series of strain-specific antibodies (H17 series).
 
@@ -67,6 +73,7 @@ Specific concerns
 
 1. Although mAb S139/1 is called a receptor binding site (RBS) antibody, the epitope is actually adjacent to the RBS. The abstract of the Yoshida paper called it "a novel conformational epitope adjacent to the receptor-binding domain of HA." It is not clear what a true RBS antibody (eg, 5J8, CH65) would do in this model.
 {\color{red} Although the three sites of escape found by Yoshida et al were indeed found to be near the RBS, they didn't crystallize the antibody in complex with HA. However, [Lee et al 2012 PNAS] published the crystal structure, and as can be seen in figure 1, the HCDR2 loop of S139/1 inserts into the receptor binding site.}
+{\color{blue} So clearly Reviewer \#2 isn't Ian Wilson.}
 
 2. Stem epitopes and the RBS have different degrees of exposure on properly formed, infectious influenza virions. Although a number of publications have shown that stem antibodies can access the epitope on infectious virions, the data shows that 1-3 orders of magnitude more antibody is needed to neutralize infectious virions compared with pseudovirions (where HA packing is less dense) [see Joyce MG et al. Cell 166(3): 609-623 (2016) and Corti D et al. Science 333(6044): 850-856 (2011)]. This raises the question of whether a model dependent on neutralization of infectious virions is relevant to assess in vivo pressure on the HA stem epitope. Looking at the Doud and Bloom 2016 paper, it is not clear whether the virions produced in the helper virus system would be packed tightly (as infectious influenza is) or loosely (like in the pseudovirus assay).
 {\color{red}
@@ -74,33 +81,38 @@ This is one that we could address if given a chance.
 We are using full-replication competent viruses that should have physiological HA density. 
 We can add a line that mentions this.
 }
+{\color{blue} I guess to really satisfy this reviewer we would have to do some sort of experiment measuring protein levels in virions or EM or something.  It seems nitpicky, and I would hedge that infectious virus grown in lab has physiological density of surface proteins, but do we really know that? I could imagine weird density in the helper-virus-rescued P0 virus, remember we used to speculate that funky things could be going on at that P0 stage secondary to the HAs being expressed off of plasmids and not incoming viral RNPs and all that --- but I think that doesn't matter since we are using P1 library in the experiments here.}
 
 3. In vivo protection afforded by stem-directed antibodies has been convincingly shown to be Fc-FcR mediated [see DiLillo DJ et al. J Clin Invest 126(2): 605-610 (2016) and DiLillo DJ et al. Nat Med 20(2): 143-151 (2014)], making the relevance of a finding based on neutralization (whether tightly or loosely packed) unclear.
 {\color{red}
 We can mention something about FcR.
 However, I would guess that mutations that escape neutralization probably also escape any in vivo activity.
 }
+{\color{blue} I too would guess some correlation between neutralization escape effect and FcR-based clearance escape effect. But I think in light of the good points the reviewer makes about surface density impacting amount of antibody needed to neutralize, and that the relevant density of HA on the cell surface during antibody Fc - FcR engagement  might be different than the density on virions during neutralization, etc, it might be good to lay out a caveat or just mention FcR-based viral clearance somewhere. I would have to think about this a little more.}
 
 4. The amount of antibody used is wildly different among the antibodies tested and it is not clear why some antibodies (eg, S139/1) needed very high concentrations in the assay while others (eg, C179) required two orders of magnitude less. This is particularly relevant given the comment above about epitopic exposure on virions.
 {\color{red}
 We should emphasize that we are choosing concentrations where about the same \emph{fraction} (between 0.01 and 0.001) of the library escapes the antibody.
 The neutralization curves are for wildtype library, and these fractions are computed on the mutant libraries.
 }
+{\color{blue} I would say 'measured' instead of 'computed' on the mutant libraries and just make it clear that we measured the library neutralization with qrtpcr. This is already stated clearly in the figure 3 caption.}
 
 5. The neutralization curves (Fig. 3) that show all antibodies had complete or near-complete neutralization at 1 $\mu$g/mL. Since the point is to have an ``apples-to-apples'' comparison, it would seem that comparing the ability of antibodies to select viruses at similar concentrations, and especially at concentrations likely to be present in a physiologic condition, would be the relevant assay.
 {\color{red}
 See answer above.
 }
+{\color{blue} I agree, to me, apples to apples is better achieved by roughly matching neutralization stringency. "concentrations likely to be present in a physiologic condition" seems really hard to define and translate from physiologic infection to in vitro neutralization.}
 
 
 \section*{Reviewer \#3} 
-Boud et al., used a previously characterized HA single AA mutant library and a previously developed method for quantifying viral survival to quantify the viral escape from three broad neutralizing antibodies. While the work is interesting, there are several problems.
+Boud et al.{\color{blue} (no comment)}, used a previously characterized HA single AA mutant library and a previously developed method for quantifying viral survival to quantify the viral escape from three broad neutralizing antibodies. While the work is interesting, there are several problems.
 
 1. Their previously published HA sequencing method uses a molecular barcode, which helps to correct the sequencing and PCR errors. However, they did not explain why they still need to use a ratio between antibody selected and mock treated to observe the true mutant.
 {\color{red} 
 This is a dumb comment. 
 I'm not sure if it is even worth trying to clarify in the manuscript since I think it is obvious to anyone who thinks about it.
 }
+{\color{blue} Agreed, no need to address}
 
 2. Some of the mutants may have a competitive edge over other mutants regardless of antibodies, while others, the inhibition of other competitive mutants by antibodies may give them some advantage. As their data in Figure 7 revealed, sometime the selected mutation is rather disfavored with respect to viral growth, which would affect the growth of these survivors if they are in the original viral pool without antibody selection. Thus, the use of ratio makes it impossible to distinguish these two scenarios. Also, would these selected mutants that are disfavor the viral growth develop additional mutation to favor the viral growth in long-term?
 {\color{red}
@@ -109,6 +121,7 @@ I think we make fairly clear that the goal is to identify mutations that mediate
 I guess maybe the term ``ease of escape'' is confusing in this sense?
 We are pretty clear in the Discussion that we are only looking at single mutations, and that there could be compensatory changes -- we spend a whole paragraph on this.
 }
+{\color{blue} agree, i think we are clear. }
 
 3. Also, how did authors make sure there is no drop out in the library at the beginning of the assay?
 {\color{red}
@@ -139,11 +152,13 @@ See the comment above.
 {\color{red}
 I still think it is better to show the actual data than run some semi-bogus statistical test.
 But we could add some sort of test statistic I suppose...}
+{\color{blue} I'm getting tired now and agree with all comments above and feel less inclined to really change anything with respect to this third review, which is not very useful. I wanted to say here that I agree with not doing a statistical test for this.}
 
 8. For the last result section, I do not think they have enough experimental evidence to favor one hypothesis over the other without testing dependent mutations.
 {\color{red}
 I don't think we draw any overly strong conclusions here, but I suppose we could be a bit more circumspect.
 }
+{\color{blue} I think the paragraph in discussion about single mutations is sufficient.}
 
 
 \end{document}  
