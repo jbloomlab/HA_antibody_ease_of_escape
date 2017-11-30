@@ -37,14 +37,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1828"
-     inkscape:window-height="992"
+     inkscape:window-width="1609"
+     inkscape:window-height="926"
      id="namedview3673"
      showgrid="false"
-     inkscape:zoom="0.44713639"
-     inkscape:cx="559.85696"
-     inkscape:cy="421.48365"
-     inkscape:window-x="1478"
+     inkscape:zoom="0.31617317"
+     inkscape:cx="404.4234"
+     inkscape:cy="473.88703"
+     inkscape:window-x="1574"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg3516"
@@ -1054,24 +1054,6 @@
      inkscape:export-ydpi="90"
      inkscape:export-xdpi="90"
      r="15.3725"
-     cy="65.842682"
-     cx="461.36029"
-     id="circle4504"
-     style="fill:#7056ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility" />
-  <circle
-     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
-     inkscape:export-ydpi="90"
-     inkscape:export-xdpi="90"
-     style="fill:#3ee8b5;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
-     id="circle4506"
-     cx="499.90021"
-     cy="65.842682"
-     r="15.3725" />
-  <circle
-     inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
-     inkscape:export-ydpi="90"
-     inkscape:export-xdpi="90"
-     r="15.3725"
      cy="715.06238"
      cx="1241.7462"
      id="circle4508"
@@ -1085,4 +1067,35 @@
      cx="1280.2861"
      cy="715.06238"
      r="15.3725" />
+  <g
+     id="g4269"
+     transform="translate(-1.7556458,46.368948)">
+    <circle
+       inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
+       id="circle4263"
+       cx="424.5759"
+       cy="19.887545"
+       r="15.3725" />
+    <circle
+       inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       r="15.3725"
+       cy="19.887545"
+       cx="463.11594"
+       id="circle4265"
+       style="fill:#7056ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility" />
+    <circle
+       inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       style="fill:#3ee8b5;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-opacity:1;text-rendering:optimizeLegibility"
+       id="circle4267"
+       cx="501.65585"
+       cy="19.887545"
+       r="15.3725" />
+  </g>
 </svg>
