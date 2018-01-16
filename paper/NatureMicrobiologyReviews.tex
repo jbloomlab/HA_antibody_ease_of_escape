@@ -1,0 +1,171 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+\usepackage[margin=1.2in]{geometry}     		
+
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage{color}
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+
+
+\title{Response to reviews of ``Quantifying the effects of single mutations on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin'' from \textit{Nature Microbiology}}
+\author{Michael B. Doud, Juhye M. Lee, and Jesse D. Bloom}
+
+\begin{document}
+\maketitle
+
+\subsection*{Overview of reviewer response and changes to the manuscript.}
+
+We received four reviews for the original submission to \textit{Nature Microbiology}.
+All four reviewers found the work to be scientifically sound.
+Two reviewers (\#1 and \#4) were also highly enthusiastic about the impact.
+The other two reviewers (\#2 and \#3) concurred about scientific soundness, but were less enthusiastic about impact.
+The most critical was Reviewer \#3, who still wrote that ``[t]he study is performed to an extremely high technical standard'' --- a positive comment to receive from the most negative reviewer!
+
+Given that all reviewers found the work to be scientifically sound and at least half found it to be high impact, we request that the paper be considered for \textit{Nature Communications} with the current reviews.
+Impact is subjective, and the fact that half the reviewers found the paper of sufficient impact for \textit{Nature Microbiology} indicates that it will interest many in the field. 
+In addition, we emphasize the following impactful aspects of our study:
+\begin{itemize}\parskip1pt
+\item It introduces a rigorous method to compare the potential for immune-escape by single amino-acid mutations across antibodies.
+\item It is the first paper to completely map how all single amino-acid mutations affect neutralization by broadly neutralizing anti-influenza antibodies.
+\item It is the first direct head-to-head comparison of immune-escape from anti-head versus anti-stalk antibodies to influenza hemagglutinin.
+\end{itemize}
+
+Below we provide a detailed point-by-point response to the reviews.
+As you will see, we have been able to clarify and address all the questions / concerns.
+
+In conclusion, our paper has been rigorously evaluated by four expert reviewers, who all found it to be scientifically sound, raising only minor points that we have clarified in our response / revision.
+The only question was whether our work was of sufficient impact for \textit{Nature Microbiology}, with the reviewers splitting about equally on this question.
+The \textit{Nature Communications} policies read: ``While \textit{Nature} and Nature research journals strive to publish the highest impact research within these disciplines, \textit{Nature Communications} is committed to publishing important advances of significance to specialists within each field.''
+Our study clearly meets these criteria, and so is suitable for \textit{Nature Communications}.
+
+
+\subsection*{Response to reviews}
+Below find our responses to the reviews received from \textit{Nature Microbiology}.
+The original comments {\color{blue} are in blue}, and our responses are in black.
+
+\color{blue}
+
+\subsubsection*{Reviewer Expertise:}
+
+\begin{itemize}\parskip1pt
+\item Referee \#1: influenza antibody neutralization and escape
+\item Referee \#2: viral evolution, drift, deep-sequencing, computation
+\item Referee \#3: influenza antibody neutralization and escape
+\item Referee \#4: computational analysis of viral evolution
+\end{itemize}
+
+\subsubsection*{Reviewer \#1 (Remarks to the Author):}
+
+In their manuscript Doud and colleagues quantify the effects of single mutations on viral escape from both narrow and broadly binding anti-hemagglutinin antibodies. The methodology is based on a mutant library of an H1N1 strain which are analyzed by deep sequencing after a single infection cycle in the presence or absence of mAb. The data presented in the manuscript is of high significance for the field and the work is technically sound. There are some issues that the authors need to address but no major weaknesses were identified.
+
+Specific points
+
+1) Multicylce replication might have changed the data somewhat because it would have allowed the virus to acquire additional mutations. 
+
+2) The virus used, WSN, is highly artificial and does not reflect actual human influenza viruses. It is trypsin independent (human viruses are not) and it is actually neurotropic (which is highly unusual). Also, it is a mouse adapted virus. While this is not necessarily a problem in the context of the presented data this caveat should be extensively discussed and avoided in the future.
+
+3) Page 2, beginning of second last paragraph: It is unclear if such a vaccine would really enhance the pressure dramatically. This would depend on vaccine coverage and potency. Currently, the drift of influenza viruses is driven by immunity induced by natural infection, not by vaccines (global vaccination rates are extremely low, even in high income countries in Europe the coverage is low).
+
+4) Data deposition at github: How long will data/software stored on this platform be available? If versions are update, is this tracked/recorded? 
+
+5) Figure 6: It might be a good idea to quantify the IC50 shifts and - since the neutralization assay was hopefully done at least in triplicates - check what is significant and what not. E.g. the effect of the -8 mutation for FI6 doesn't look real. 
+
+6) It would be important to quantify differences in mAb binding to the different escape mutants shown in Figure 6, e.g. by SPR/BLI. Right now it is unclear which mutant produces a complete loss of binding, if affinity changes result in the loss of neutralization etc. This needs to be explored.
+
+7) Page 15/first page of discussion: The authors did not find a single-mutant virus with full loss of neutralization by anti-stalk mAbs. It has been noted that it is relatively difficult to make escape mutants against anti-stalk mAbs and the process usually involves serial passaging of virus in the presence of sub-neutralizing mAb concentrations - but usually full escape mutants are then recovered. In most cases these escape mutants have a) more than one mutation and b) have no completely loss of binding (but complete loss of neutralization). But there are also exceptions to this rule. Two papers have so far described escape from stalk-based mAbs in detail (https://www.ncbi.nlm.nih.gov/pubmed/27351973 and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4362269/). It is strongly suggested that the authors consult this papers and include their findings in the discussion.
+
+8) It would be good to have a negative control experiment with a non-binding human or mouse mAb. This is missing but should actually be the 'real' negative control.
+
+\subsubsection*{Reviewer \#2 (Remarks to the Author):}
+
+The authors use a previously described method of mutational antigenic profiling, a very clever and elegant approach exploited in previous papers in PLOS Pathogens and CHM. This approach involves generating viral libraries containing all mutations in the protein of interest, selecting these viruses with or without antibody, and deep-sequencing to determine the relative frequencies of each mutation. The full methodology (except for summary statistics described in Equations 10 and 11), as well as all the results for the narrow antibodies, were described in their previous paper (Doud et al., 2017, PLOS Pathogens). Figure 7 seems to be imported from another paper (Doud et al., 2016, Viruses).
+
+In this work, they compare three broad and three narrow antibodies. The broad: FI6v3, binds stalk, neutralizes both group 1 and 2 HAs; C179 binds stalk, neutralizes only some group 1 HAs; S139/1, binds receptor-binding pocket, neutralizes both group 1 and group 2 HAs. The authors compare these in a re-analysis of data from narrow, strain-specific antibodies: H17-L19, H17-L10, and H17-L7, bind the Ca2, Ca1, and Cb antigenic regions on HA’s globular head.
+
+Using these three broad antibodies and WSN/33 Flu, they selected for escape mutations, and compared them to previous narrow antibody data. They find that escape from narrow or RBS-targeting Ab is relatively easy by single point mutation; while those targeting the stalk are difficult to escape by single point mutation. So breadth of antibody activity per se, is not a predictor of likelihood of escape.
+
+They go on to show that the selected mutations are nearly all in or close to the antibody-binding footprint. While this may not be surprising, it is a nice set of data. Another nice aspect, is that the authors show that numerous different amino acid mutations at each site confer neutralization resistance - most studies tend to identify just one or two, rather than all of the possible aa.
+
+They further show that the mutational antigenic profiling is highly predictive of the
+results of the neutralization assays, even for small-effect mutations, as was previously shown for large-effect mutations from narrow antibody escape.
+
+They compare the sites where mutations arise from broad antibody, to previous mutational scanning data that reveals whether these regions are tolerant or not to mutation. They find that this is only partially true, but cannot account for all lack of escape mutations; however, they do not uncover what the other reasons are.
+
+Some questions or comments that come to mind:
+
+1. If the rationale is to ask whether current circulating strains could escape immunity based on broad neutralising antibody elicited by vaccination, could the authors not use circulating strains for their experiments, or at least more lab strains that only WSN?
+
+2. What difference in terms of viral fitness is there between a mutation present in large proportion (for the narrow antibodies) vs present at low frequency (for the stalk-targeting antibodies). Figure 7 partly answers this question; however, it would be interesting to confirm the fitness of those mutants using more conventional growth curves, binding assays, etc.
+
+3. Are all changes in amino-acid obtained after one nucleotide change? Are the authors able to detect multiple nucleotide or amino acid changes?
+
+4. The major caveat of this study is that it only takes into account one mutation. Authors could check a combination of the mutations they obtain with their experiments (especially the ones escaping the stalk-targeting antibodies).
+
+5. Figure 6 confirms some of the findings using neutralisation assays. As the authors state, it is unclear whether some of the observations actually exceed the noise of the assay. In particular, K(-8)T looks as far from WT as does K280A. It could be that (1) all these differences are due to noise or that (2) there is actually a biological difference between WT and K280A. Whether (1) occurs is unclear: “three biological replicates” should perhaps be more detailed in the Materials and Methods section as to what this means: are they three rows of the same plate performed on the same day, on different days, etc.? According to the authors’ previous paper (Doug et al., 2017, PLOS Pathogens), they performed “three replicate dilution columns”. The neutralisation curves seem therefore to have been performed at different days (besides, the WT curves are the same or similar to that of Figure 3, and the neutralisation curves from the narrow antibodies were imported from the
+authors’ previous paper). This can induce a batch effect, which may not be linear, thus the normalisation performed (with no antibody and background noise) may not regress this out. From the standpoint of experimental design, these experiments should be repeated, with all viruses for a given antibody performed in the same batch; the triplicates will then give a more accurate measurement of noise. In general, all neutralisation experiments should be repeated, so as to make sure the findings are reproducible. If this has been done, it was not clear from the figure legend, and could be added for clarity. To address (2), authors should provide details of Fr,a for K280A. If I understood correctly, because Fr,a-excess (defined in Equation 2) hides mutations with lower fitness than average, it is not possible for the reader to assess whether this mutation is “neutral” or it has lower fitness with the antibody under study. 
+
+6. Could the authors detail, in the legend, how the curves of Figure 6 were fitted?
+
+\subsubsection*{Reviewer \#3 (Remarks to the Author):}
+
+This paper identifies escape mutations against anti-influenza HA antibodies and quantifies their effects. The authors employed a high-throughput approach known as mutational antigenic profiling, which was developed in their previous study (1). The authors made a minor technical improvement in this study to enable a fairer comparison across profiling results from different antibodies. Two broadly neutralizing antibodies that target the HA stem (mouse C179 and human FI6v3), and one that targets the HA receptor-binding site (S139/1) were examined in this study. Additionally, the authors reanalyzed the results from their previous study (1) on three strain-specific antibodies (H17-L7, H17-L10, and H17-L19). The authors observed strong escape mutations against the strain-specific antibodies and broadly neutralizing antibody S139/1. In contrast, only weak escape mutations were identified against the two stem antibodies. The authors conclude that “breadth is an imperfect indicator of
+the potential for viral escape”. The authors also conclude that broadly neutralizing antibodies targeting the H1 hemagglutinin stalk are “quantifiably harder to escape than the other antibodies tested here”. The last two conclusions are not unexpected and are not particularly novel insights.
+
+The study is, however, performed to an extremely high technical standard. Nevertheless, the impact is limited. The improvement in methodology over their previous study (1) is minor. Also, it is known that strong escape mutations against S139/1, one of the broadly neutralizing antibodies tested in this study (although not nearly as broad as FI6v3), can be generated rapidly through passaging the virus in the presence of the antibody (2). In fact, strong escape mutations against some of the stalk antibodies that were not tested in this study, such as CR8020 (3), CR8043 (4), CR6261 (5) and 39.29 (6), have also been generated through single point mutations. Overall, the impact and novelty of the study is not sufficient for publication in Nature Microbiology. 
+
+Specific comments:
+
+1.  Strong escape mutations to C179 have been identified in the original paper that discovered the antibody (7). But it seems like those mutations were not identified here. Can the authors provide some explanations for such a discrepancy?
+
+2.  How is the curve fitting performed for the neutralization assay results? I do not seem to see any description for the curve-fitting method. 
+
+References
+
+1.  Doud MB, Hensley SE, Bloom JD. Complete mapping of viral escape from neutralizing antibodies. PLoS Pathog. 2017;13(3):e1006271.
+
+2.  Yoshida R, Igarashi M, Ozaki H, Kishida N, Tomabechi D, Kida H, et al. Cross-protective potential of a novel monoclonal antibody directed against antigenic site B of the hemagglutinin of influenza A viruses. PLoS Pathog. 2009;5(3):e1000350.
+
+3.  Ekiert DC, Friesen RH, Bhabha G, Kwaks T, Jongeneelen M, Yu W, et al. A highly conserved neutralizing epitope on group 2 influenza A viruses. Science. 2011;333(6044):843-50.
+
+4.  Friesen RH, Lee PS, Stoop EJ, Hoffman RM, Ekiert DC, Bhabha G, et al. A common solution to group 2 influenza virus neutralization. Proc Natl Acad Sci USA. 2014;111(1):445-50.
+
+5.  Throsby M, van den Brink E, Jongeneelen M, Poon LL, Alard P, Cornelissen L, et al. Heterosubtypic neutralizing monoclonal antibodies cross-protective against H5N1 and H1N1 recovered from human IgM+ memory B cells. PLoS One. 2008;3(12):e3942.
+
+6.  Chai N, Swem LR, Reichelt M, Chen-Harris H, Luis E, Park S, et al. Two escape mechanisms of influenza A virus to a broadly neutralizing stalk-binding antibody. PLoS Pathog. 2016;12(6):e1005702.
+
+7.  Okuno Y, Isegawa Y, Sasao F, Ueda S. A common neutralizing epitope conserved between the hemagglutinins of influenza A virus H1 and H2 strains. J Virol. 1993;67(5):2552-8.
+
+
+\subsubsection*{Reviewer \#4 (Remarks to the Author):}
+
+This paper tackles a really nice question: Are some antibodies broad because they target sites that face little immune pressure, or are they broad because the epitopes they target cannot easily mutate to escape them? Put differently, are conserved epitopes that are targeted by some antibodies conserved because they've not had to change, or are they conserved because no beneficial changes are accessible? This question is obviously relevant for "universal" vaccine development, but it's also important for understanding strain structure and evolution more generally.
+
+To investigate this question, the authors analyzed the ability of a H1 flu strain to escape six well characterized antibodies via single mutations. They showed that for most antibodies, including a broadly neutralizing antibody, single mutations allowed escape from antibody detection. In the other two antibodies, no mutations really rescued the virus. By comparing the mutations conferring antibody escape to those that are generally tolerated during replication, the authors further showed that mutational tolerance does not fully explain failure to escape: despite substitutions, some antibodies are harder to escape than others. 
+
+These are important observations. My only real criticism of the work is that I found the description of mutational effects confusing as early as the abstract. Does the measured frequency of antibody escape mutants reflect only antibody selection, or does it also include selection for replicative capacity? The distinction between antibody selection and general fitness is not made until p. 13, but I think readers (especially those familiar with other work from the lab) might benefit if these distinctions were made in the introduction and review of the methods. My take is that the fraction surviving antibody escape includes both, in that non-viable mutants were rare in the initial library (again implied on p. 13), but this could be clarified. It seems the contribution of each might be quantifiable, or at the relative mutational tolerances of the different epitopes compared. 
+
+Minor points:
+
+1. How do the concentrations for selecting escape mutants in vitro compare to likely concentrations in vivo? Concentrations may be too high or low in vivo to promote adaptation.
+
+2. Outside these experiments, how much data is there on the antibodies' neutralization capacities within HA subtypes? i.e., how broad or narrow do we really know them to be? Obviously such data might be complementary. 
+
+3. Additional suggested references: 
+
+"the viruses's rapid antigenic evolution erodes the effectiveness of this immunity to that strain's descendants within four to seven years..." -- Kucharski et al. PLOS Biol 2015 (although numbers might need revising)
+
+on immune status driving the rate of antigenic evolution -- Wen et al. Proc B 2016
+
+4. In "...we expect a larger fraction of a library to survive an antibody with many escape mutations..." (and similar phrases), the "many escape mutations" read as though they modify "antibody."
+
+
+
+
+
+
+
+\end{document}  
