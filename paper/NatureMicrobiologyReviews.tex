@@ -120,8 +120,9 @@ But despite these unusual properties, the virus is neutralized by most broad ant
 
 3) Page 2, beginning of second last paragraph: It is unclear if such a vaccine would really enhance the pressure dramatically. This would depend on vaccine coverage and potency. Currently, the drift of influenza viruses is driven by immunity induced by natural infection, not by vaccines (global vaccination rates are extremely low, even in high income countries in Europe the coverage is low).
 
-{\color{red}
-Need to add response.}
+{\color{black}
+This is a good point. We have changed ``will be under strong antigenic selection'' to ``could come under stronger antigenic selection.''
+}
 
 4) Data deposition at GitHub: How long will data/software stored on this platform be available? If versions are updated, is this tracked/recorded? 
 
@@ -133,9 +134,9 @@ GitHub uses version tracking to record all updates to computer code, and make it
 For instance, while \url{https://github.com/jbloomlab/dms_tools2} provides the latest version of the code, the version used in this study (version 2.2.1) will always be available \url{https://github.com/jbloomlab/dms_tools2/tree/2.2.1}, and it is easy to examine modifications made to this version in any new updates.
 
 While it is impossible to guarantee that GitHub will exist forever, the same could be said for \textit{Nature Press} (which could go out of business) or PubMed (which could be de-funded by the NIH or the Trump administration).
-The best that we can say is that GitHub is considered the most stable and reliable way to archive and track software, as evidenced by its use not only in computational biology but also by major corporations such as Google and Microsoft.j
+The best that we can say is that GitHub is considered the most stable and reliable way to archive and track software, as evidenced by its use not only in computational biology but also by major corporations such as Google and Microsoft.
 
-In addition, all the Jupyter notebooks and major results are provided in supplementary files, which will be available as long as \textit{Nature Press} continues to maintain supporting information.
+In addition, all the Jupyter notebooks and major results are provided in supplementary files, which will be available on the \textit{Nature Press} website.
 }
 
 5) Figure 6: It might be a good idea to quantify the IC50 shifts and - since the neutralization assay was hopefully done at least in triplicates - check what is significant and what not. E.g. the effect of the -8 mutation for FI6 doesn't look real. 
@@ -167,13 +168,27 @@ These revisions address this important comment made by several reviewers.
 
 6) It would be important to quantify differences in mAb binding to the different escape mutants shown in Figure 6, e.g. by SPR/BLI. Right now it is unclear which mutant produces a complete loss of binding, if affinity changes result in the loss of neutralization etc. This needs to be explored.
 
-{\color{red}
-Need to add response.}
+{\color{black}
+The reviewer is correct that we do not include biophysical measurements of why the mutants have increased neutralization resistance.
+However, biophysically characterizeing antibody binding to the mutants is beyond the scope of the current study.
+We are careful to avoid making any claims about the mechanisms of the mutations---we simply say that they reduce neutralization.
+This is in line with many other studies in the field.
+While biophysically oriented studies certainly include such measurements, there are numerous papers on viral evolution and antibody breadth that characterize neutralization as the phenotype of interest.
+Our study falls into this latter class.
+}
 
-7) Page 15/first page of discussion: The authors did not find a single-mutant virus with full loss of neutralization by anti-stalk mAbs. It has been noted that it is relatively difficult to make escape mutants against anti-stalk mAbs and the process usually involves serial passaging of virus in the presence of sub-neutralizing mAb concentrations - but usually full escape mutants are then recovered. In most cases these escape mutants have a) more than one mutation and b) have no completely loss of binding (but complete loss of neutralization). But there are also exceptions to this rule. Two papers have so far described escape from stalk-based mAbs in detail (https://www.ncbi.nlm.nih.gov/pubmed/27351973 and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4362269/). It is strongly suggested that the authors consult this papers and include their findings in the discussion.
+7) Page 15/first page of discussion: The authors did not find a single-mutant virus with full loss of neutralization by anti-stalk mAbs. It has been noted that it is relatively difficult to make escape mutants against anti-stalk mAbs and the process usually involves serial passaging of virus in the presence of sub-neutralizing mAb concentrations - but usually full escape mutants are then recovered. In most cases these escape mutants have a) more than one mutation and b) have no completely loss of binding (but complete loss of neutralization). But there are also exceptions to this rule. Two papers have so far described escape from stalk-based mAbs in detail (\url{https://www.ncbi.nlm.nih.gov/pubmed/27351973} and \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4362269/}). It is strongly suggested that the authors consult these papers and include their findings in the discussion.
 
-{\color{red}
-Need to add response.}
+{\color{black}
+Thank you for pointing out these two important references, which we now discuss.
+We also think it is interesting that both of these studies selected their escape mutants in group 2 HAs rather than a group 1 HA like the one in our study.
+Anecdotally, it seems to us that there are more described broad anti-stalk antibodies against group 1 than group 2 HAs.
+We obviously have no way to quantify this rigorously, but in the added text that mentions the two studies suggested by the reviewer, we also point out the difference in HA groups:
+
+\begin{quote}
+\textsl{Interestingly, most previous studies (Chai, 2016; Dunand, 2016) that have reported selecting single mutations with large effects ($\gg$10-fold) on neutralization by anti-stalk antibodies have used group 2 (e.g., H3 or H7) HAs rather than group 1 HAs like the one used in our work.}
+\end{quote}
+}
 
 8) It would be good to have a negative control experiment with a non-binding human or mouse mAb. This is missing but should actually be the ``real'' negative control.
 
