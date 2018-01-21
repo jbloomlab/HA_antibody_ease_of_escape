@@ -208,6 +208,18 @@ Finally, we note that there are numerous published papers where the same monoclo
 
 The authors use a previously described method of mutational antigenic profiling, a very clever and elegant approach exploited in previous papers in PLOS Pathogens and CHM. This approach involves generating viral libraries containing all mutations in the protein of interest, selecting these viruses with or without antibody, and deep-sequencing to determine the relative frequencies of each mutation. The full methodology (except for summary statistics described in Equations 10 and 11), as well as all the results for the narrow antibodies, were described in their previous paper (Doud et al., 2017, PLOS Pathogens). Figure 7 seems to be imported from another paper (Doud et al., 2016, Viruses).
 
+{\color{black}
+All of the results for the broadly neutralizing antibodies are new to this study.
+The reviewer is correct that the data for the narrow antibodies in Figure 6B,C is from Doud et al (2017), and the mutational tolerance data in Figure 7 is from Doud and Bloom (2016).
+This fact is clearly stated; for instance, the figure legends say ``Shown are neutralization curves for representative escape mutants from H17-L19 and H17-L7 taken from Doud et al (2017)'' and ``The logo plots at bottom show the preference of each HA site of each amino acid under selection for viral replication as measured by Doud and Bloom (2016).''
+There is nothing wrong with including previous data for comparative purposes.
+For instance, new reports of protein crystal structures often compare the results to prior structures, and often include these prior structures in figures for points of comparison.
+In fact, a major strength of our approach is that it puts how mutations affect neutralization into units that can be meaningfully compared across studies.
+
+The experimental methodology is the same as in Doud et al (2017), although the entire analysis framework (all Equations in the paper, not just Equations 10 and 11) are new.
+The strength of this analysis framework is that it enables the results to be quantitatively compared across antibodies, which was not possible with the approach in Doud et al (2017). 
+}
+
 In this work, they compare three broad and three narrow antibodies. The broad: FI6v3, binds stalk, neutralizes both group 1 and 2 HAs; C179 binds stalk, neutralizes only some group 1 HAs; S139/1, binds receptor-binding pocket, neutralizes both group 1 and group 2 HAs. The authors compare these in a re-analysis of data from narrow, strain-specific antibodies: H17-L19, H17-L10, and H17-L7, bind the Ca2, Ca1, and Cb antigenic regions on HA's globular head.
 
 Using these three broad antibodies and WSN/33 Flu, they selected for escape mutations, and compared them to previous narrow antibody data. They find that escape from narrow or RBS-targeting Ab is relatively easy by single point mutation; while those targeting the stalk are difficult to escape by single point mutation. So breadth of antibody activity per se, is not a predictor of likelihood of escape.
@@ -217,29 +229,47 @@ They go on to show that the selected mutations are nearly all in or close to the
 They further show that the mutational antigenic profiling is highly predictive of the
 results of the neutralization assays, even for small-effect mutations, as was previously shown for large-effect mutations from narrow antibody escape.
 
+{\color{black}
+The foregoing paragraphs are an accurate summary.
+We think it is valuable to know that the mutational antigenic profiling also works well for small-effect mutations.
+}
+
 They compare the sites where mutations arise from broad antibody, to previous mutational scanning data that reveals whether these regions are tolerant or not to mutation. They find that this is only partially true, but cannot account for all lack of escape mutations; however, they do not uncover what the other reasons are.
 
 Some questions or comments that come to mind:
 
 1. If the rationale is to ask whether current circulating strains could escape immunity based on broad neutralising antibody elicited by vaccination, could the authors not use circulating strains for their experiments, or at least more lab strains that only WSN?
 
-{\color{red}
-Need to add response.}
+{\color{black}
+We certainly agree that it would be interesting to examine additional strains.
+However, prior to our work, no study had ever completely mapped the effect of all single mutations to any viral strain with respect to neutralization by any broadly neutralizing influenza antibody, so we believe that just doing this with one strain is a sufficient step forward in knowledge to be valuable.
+As mentioned in the response to question 2 by Reviewer \#1, we now more clearly explain that WSN is a lab-adapted strain.
+}
 
 2. What difference in terms of viral fitness is there between a mutation present in large proportion (for the narrow antibodies) vs present at low frequency (for the stalk-targeting antibodies). Figure 7 partly answers this question; however, it would be interesting to confirm the fitness of those mutants using more conventional growth curves, binding assays, etc.
 
-{\color{red}
-Need to add response.}
+{\color{black}
+The neutralization assays in Figure~6 show that the mutations for the stalk-targeting antibodies only have weak effects on neutralization, while Figure~7 shows that many of them don't have much effect on viral growth.
+In addition, we were able to generate all of the stalk-antibody mutations for the neutralization assays, so they are not too badly attenuated for viral fitness in cell culture.
+However, we avoid making strong statements about the effects of mutations on viral growth beyond the data in Figure~7 because it is beyond the scope of our study to do growth curves for such a large number of mutations.}
 
 3. Are all changes in amino-acid obtained after one nucleotide change? Are the authors able to detect multiple nucleotide or amino acid changes?
 
-{\color{red}
-Need to add response.}
+{\color{black}
+We examined all amino-acid changes, including those that involved multiple-nucleotide changes.
+The reason is that our libraries contained all codon mutations (e.g., the 63 non-wildtype codons at each site) rather than just all single nucleotide mutations.
+We have added text that clarifies this point:
+\begin{quote}
+\textsl{Importantly, as described previously (Doud and Bloom 2016), these virus libraries were generated by mutagenizing HA at the \emph{codon} level rather than at the nucleotide level.
+Performing codon mutagenesis is important, because single-nucleotide mutations access only about a third of the possible amino-acid mutations from a given codon, whereas codon mutations access all possible amino-acid mutations.}
+\end{quote}
+}
 
 4. The major caveat of this study is that it only takes into account one mutation. Authors could check a combination of the mutations they obtain with their experiments (especially the ones escaping the stalk-targeting antibodies).
 
-{\color{red}
-Need to add response.}
+{\color{black}
+We agree that this is an important caveat, and it was also mentioned by other reviewers.
+See our response to question 1 by Reviewer \#1 for how we have addressed this caveat.}
 
 5. Figure 6 confirms some of the findings using neutralisation assays. As the authors state, it is unclear whether some of the observations actually exceed the noise of the assay. In particular, K(-8)T looks as far from WT as does K280A. It could be that (1) all these differences are due to noise or that (2) there is actually a biological difference between WT and K280A. Whether (1) occurs is unclear: ``three biological replicates'' should perhaps be more detailed in the Materials and Methods section as to what this means: are they three rows of the same plate performed on the same day, on different days, etc.? According to the authors' previous paper (Doud et al., 2017, PLOS Pathogens), they performed ``three replicate dilution columns''. The neutralisation curves seem therefore to have been performed at different days (besides, the WT curves are the same or similar to that of Figure 3, and the neutralisation curves from the narrow antibodies were imported from the authors' previous paper). This can induce a batch effect, which may not be linear, thus the normalisation performed (with no antibody and background noise) may not regress this out. From the standpoint of experimental design, these experiments should be repeated, with all viruses for a given antibody performed in the same batch; the triplicates will then give a more accurate measurement of noise. In general, all neutralisation experiments should be repeated, so as to make sure the findings are reproducible. If this has been done, it was not clear from the figure legend, and could be added for clarity. To address (2), authors should provide details of $F_{r,a}$ for K280A. If I understood correctly, because $F_{r,a}^{\rm{excess}}$ (defined in Equation 2) hides mutations with lower fitness than average, it is not possible for the reader to assess whether this mutation is ``neutral'' or it has lower fitness with the antibody under study. 
 
@@ -284,8 +314,12 @@ This paper identifies escape mutations against anti-influenza HA antibodies and 
 
 The study is, however, performed to an extremely high technical standard. Nevertheless, the impact is limited. The improvement in methodology over their previous study (1) is minor. Also, it is known that strong escape mutations against S139/1, one of the broadly neutralizing antibodies tested in this study (although not nearly as broad as FI6v3), can be generated rapidly through passaging the virus in the presence of the antibody (2). In fact, strong escape mutations against some of the stalk antibodies that were not tested in this study, such as CR8020 (3), CR8043 (4), CR6261 (5) and 39.29 (6), have also been generated through single point mutations. Overall, the impact and novelty of the study is not sufficient for publication in Nature Microbiology. 
 
-{\color{red}
-Need to add response.}
+{\color{black}
+We are disappointed that the reviewer does not view the work of sufficient impact and novelty for \textit{Nature Microbiology}, but we are appreciative of the statement that the study is ``performed to an extremely high technical standard.''
+Personally, we feel that direct quantitative comparison of the escape from narrow and broad antibodies is valuable, since other comparisons have been more anecdotal.
+In any case, we are now re-submitting to \textit{Nature Communications}, which places less emphasis on impact.
+We also note that at least two of the four reviewers found the work to be of high impact---and even Reviewer \#3 praises it on a technical level.
+Therefore, we think it is appropriate for \textit{Nature Communications}.}
 
 Specific comments:
 
