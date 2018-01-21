@@ -75,23 +75,68 @@ Specific points
 
 1) Multicylce replication might have changed the data somewhat because it would have allowed the virus to acquire additional mutations. 
 
-{\color{red}
-Need to add response.}
+{\color{black}
+This is true.
+Our approach systematically quantifies how all \emph{single} mutations affect viral neutralization.
+This contrasts with an alternative approach of using multiple rounds of growth to select for multi-mutants.
+There are strengths and weaknesses to both approaches.
+Examining all single mutations makes the results complete and quantitative---but we can't make claims about the effects of multiple mutations.
+In contrast, multi-cycle growth sometimes finds combinations of mutations, but is not complete and quantitative, since there are too many multiple mutants to examine them all, and it is random which mutations arise in any given multi-cycle growth experiment.
+In particular, multi-cycle growth assays do not generate data that can be quantitatively compared across antibodies using the methods here.
+Therefore, the strength of our approach (examining all single mutations in a way that is comparable across antibodies) comes with the limitation that we do not find multiple mutants.
+
+We have taken the following pains to emphasize this limitation. 
+First, the title of the paper reads ``Quantifying the effects of \emph{single mutations} on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin'' (emphasis added). 
+Stating this fact in the title makes the limitation immediately and directly clear.
+
+In addition, we have included the following paragraph in the Discussion:
+
+\begin{quote}
+\textsl{Another important caveat is that our experiments examine {\bf single} amino-acid mutations to the HA from one influenza virus strain.
+The protein evolution literature is full of examples of epistatic interactions that enable multiple mutations to access phenotypes not accessible by single mutations.
+Such epistasis is relevant to HA's evolution.  
+For instance, work by Das et al suggests that the sequential accumulation of mutations can shift the spectrum of available antibody-escape mutations.
+Wu et al have used deep mutational scanning to directly demonstrate that rampant epistasis enables HA's receptor-binding pocket to accommodate combinations of individually deleterious mutations, some of which affect sensitivity to antibodies.
+Therefore, our work does not imply any absolute limits on the possibilities for antibody escape when evolution is given sufficient time to explore combinations of mutations.
+However, single mutations are the most accessible form of genetic variation, and much of influenza virus's natural antigenic drift involves individual mutations that reduce sensitivity to immunodominant antibody specificities.
+Quantifying the antigenic effects of all such mutations therefore provides a relevant measure of ease of viral antibody escape. }
+\end{quote}
+}
 
 2) The virus used, WSN, is highly artificial and does not reflect actual human influenza viruses. It is trypsin independent (human viruses are not) and it is actually neurotropic (which is highly unusual). Also, it is a mouse adapted virus. While this is not necessarily a problem in the context of the presented data this caveat should be extensively discussed and avoided in the future.
 
-{\color{red}
-Need to add response.}
+{\color{black}
+The reviewer is correct that A/WSN/1933 is a lab-adapted virus.
+As the reviewer notes, in his/her comment, this is not necessarily a problem for our work since we are simply examining antibody neutralization rather than pathogenesis, fitness, or transmission. 
+Nonetheless, the reviewer is correct that it is important to clearly mention this caveat. 
+We have now added the following text when we first discuss this strain:
+
+\begin{quote}
+\textsl{We performed our experiments using the lab-adapted A/WSN/1933 (H1N1) strain of influenza.
+This strain is derived from an early seasonal H1N1 that was extensively passaged in the lab, where it adapted to become neurotropic and trypsin independent.
+But despite these unusual properties, the virus is neutralized by most broad antibodies that target other H1 viruses, including those used in this study (Figure~3).}
+\end{quote}
+}
 
 3) Page 2, beginning of second last paragraph: It is unclear if such a vaccine would really enhance the pressure dramatically. This would depend on vaccine coverage and potency. Currently, the drift of influenza viruses is driven by immunity induced by natural infection, not by vaccines (global vaccination rates are extremely low, even in high income countries in Europe the coverage is low).
 
 {\color{red}
 Need to add response.}
 
-4) Data deposition at github: How long will data/software stored on this platform be available? If versions are update, is this tracked/recorded? 
+4) Data deposition at GitHub: How long will data/software stored on this platform be available? If versions are updated, is this tracked/recorded? 
 
-{\color{red}
-Need to add response.}
+{\color{black}
+GitHub is the leading platform for archiving and tracking computer code.
+It is used widely in computational biology, and also by Google and Microsoft, among others. For instance, see: \url{https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/}
+
+GitHub uses version tracking to record all updates to computer code, and make it possible to access any prior version of the software.
+For instance, while \url{https://github.com/jbloomlab/dms_tools2} provides the latest version of the code, the version used in this study (version 2.2.1) will always be available \url{https://github.com/jbloomlab/dms_tools2/tree/2.2.1}, and it is easy to examine modifications made to this version in any new updates.
+
+While it is impossible to guarantee that GitHub will exist forever, the same could be said for \textit{Nature Press} (which could go out of business) or PubMed (which could be de-funded by the NIH or the Trump administration).
+The best that we can say is that GitHub is considered the most stable and reliable way to archive and track software, as evidenced by its use not only in computational biology but also by major corporations such as Google and Microsoft.j
+
+In addition, all the Jupyter notebooks and major results are provided in supplementary files, which will be available as long as \textit{Nature Press} continues to maintain supporting information.
+}
 
 5) Figure 6: It might be a good idea to quantify the IC50 shifts and - since the neutralization assay was hopefully done at least in triplicates - check what is significant and what not. E.g. the effect of the -8 mutation for FI6 doesn't look real. 
 
@@ -130,10 +175,19 @@ Need to add response.}
 {\color{red}
 Need to add response.}
 
-8) It would be good to have a negative control experiment with a non-binding human or mouse mAb. This is missing but should actually be the 'real' negative control.
+8) It would be good to have a negative control experiment with a non-binding human or mouse mAb. This is missing but should actually be the ``real'' negative control.
 
-{\color{red}
-Need to add response.}
+{\color{black}
+We see the rationale behind this suggestion, but do we not believe it is essential for the current work. 
+Our claim is that we specifically identify mutations that increase resistance to each of the individual monoclonal antibodies.
+With the three broad antibodies tested in this paper (FI6v3, C179, S139/1) and the four narrow antibodies tested by Doud et al (2016), we have now examined seven different antibodies.
+The only overlap between antibodies in the identified resistance mutations comes when those antibodies target similar epitopes (e.g., FI6v3 and C179)---there is no overlap in the mutations identified by antibodies targeting different epitopes.
+This fact indicates that we are identifying bona fide resistance mutations to the specific antibodies used, rather than mutations with some general effect on all IgGs.
+
+Figure~6 provides further data indicating that these are genuine antibody-specific resistance mutations rather than mutations generally selected by any IgG.
+For instance, the mutations that increase resistance to H17-L19 (V135T) or H17-L7 (P80D) do not affect neutralization by FI6v3, demonstrating that they are specific to the antibodies that selected them.
+Finally, we note that there are numerous published papers where the same monoclonal antibody is tested against a wide range of viral variants for the purposes of comparing IC50s across viruses without also including data showing that all viral variants are unaffected by an irrelevant antibody (e.g., Table~1 of \textit{Nature}, 489:526-532; Figure~3 of \textit{Nature Microbiology},; 2:16199).
+}
 
 \subsubsection*{Reviewer \#2 (Remarks to the Author):}
 
