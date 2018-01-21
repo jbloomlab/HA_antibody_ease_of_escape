@@ -2,6 +2,9 @@
 
 \usepackage[margin=1.2in]{geometry}     		
 
+\usepackage{hyperref}
+%\hypersetup{colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue}
+
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 \usepackage{color}
 \usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
@@ -72,25 +75,71 @@ Specific points
 
 1) Multicylce replication might have changed the data somewhat because it would have allowed the virus to acquire additional mutations. 
 
+{\color{red}
+Need to add response.}
+
 2) The virus used, WSN, is highly artificial and does not reflect actual human influenza viruses. It is trypsin independent (human viruses are not) and it is actually neurotropic (which is highly unusual). Also, it is a mouse adapted virus. While this is not necessarily a problem in the context of the presented data this caveat should be extensively discussed and avoided in the future.
+
+{\color{red}
+Need to add response.}
 
 3) Page 2, beginning of second last paragraph: It is unclear if such a vaccine would really enhance the pressure dramatically. This would depend on vaccine coverage and potency. Currently, the drift of influenza viruses is driven by immunity induced by natural infection, not by vaccines (global vaccination rates are extremely low, even in high income countries in Europe the coverage is low).
 
+{\color{red}
+Need to add response.}
+
 4) Data deposition at github: How long will data/software stored on this platform be available? If versions are update, is this tracked/recorded? 
+
+{\color{red}
+Need to add response.}
 
 5) Figure 6: It might be a good idea to quantify the IC50 shifts and - since the neutralization assay was hopefully done at least in triplicates - check what is significant and what not. E.g. the effect of the -8 mutation for FI6 doesn't look real. 
 
+{\color{black}
+This is a good comment that was also made by several other reviewers.
+We therefore now do as suggested by showing full data for triplicate measurements with significance testing.
+
+Specifically, all the neutralization assays with FI6v3 were performed in triplicate on the same day to eliminate batch effects, with each replicate involving independent serial dilution of the antibody in a separate column of a 96-well plate (this is now more fully explained in the Methods).
+In the original manuscript, we only showed the mean and standard deviation in Figure~6A.
+We have now added a supplementary figure (Figure~S9) that shows all the replicates.
+In addition, as explained in the legend to the new Figure~S9, we fit IC50 values to each replicate, and then use the three IC50's to test the null hypothesis that each mutant has an IC50 indistinguishable from wildtype.
+
+The statistical testing results in Figure~S9B support the conclusions in the text. 
+The four mutations that are \emph{not} expected to differ from wildtype with respect to FI6v3 neutralization (K280A, V135T, P80D, and M17L(HA2)) do \emph{not} have IC50s that are significantly different than wildtype.
+The four mutations expected to have the largest increases in neutralization resistance (K280S, G47R(HA2), K280T, and N291S) are all significantly more resistant to FI6v3 than wildtype, with corrected $P$-values ranging from 0.00072 to 0.023.
+The mutation found by our mutational antigenic profiling but that elicited the most skepticism both from us and the reviewers is K(-8)T.
+However, the statistical testing suggests that it really is slightly but significantly more resistant to FI6v3, with a corrected $P$-value of 0.04. 
+But we agree that the effect is very small, and in the revised text we clearly emphasize this fact and advise caution in over-interpreting the result:
+
+\begin{quote}
+\textsl{The most unexpected mutations identified in our mutational antigenic profiling were at site -8 in the signal peptide.
+We tested one of these mutations, K(-8)T, and it did lead to a very slight increase in neutralization resistance (Figure~6A, Figure~S9)---although despite the significance testing in Figure~S9, we remain circumspect about the magnitude of this effect relative to the noise in our neutralization assays.
+}
+\end{quote}
+
+These revisions address this important comment made by several reviewers.
+}
+
 6) It would be important to quantify differences in mAb binding to the different escape mutants shown in Figure 6, e.g. by SPR/BLI. Right now it is unclear which mutant produces a complete loss of binding, if affinity changes result in the loss of neutralization etc. This needs to be explored.
+
+{\color{red}
+Need to add response.}
 
 7) Page 15/first page of discussion: The authors did not find a single-mutant virus with full loss of neutralization by anti-stalk mAbs. It has been noted that it is relatively difficult to make escape mutants against anti-stalk mAbs and the process usually involves serial passaging of virus in the presence of sub-neutralizing mAb concentrations - but usually full escape mutants are then recovered. In most cases these escape mutants have a) more than one mutation and b) have no completely loss of binding (but complete loss of neutralization). But there are also exceptions to this rule. Two papers have so far described escape from stalk-based mAbs in detail (https://www.ncbi.nlm.nih.gov/pubmed/27351973 and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4362269/). It is strongly suggested that the authors consult this papers and include their findings in the discussion.
 
+{\color{red}
+Need to add response.}
+
 8) It would be good to have a negative control experiment with a non-binding human or mouse mAb. This is missing but should actually be the 'real' negative control.
+
+{\color{red}
+Need to add response.}
 
 \subsubsection*{Reviewer \#2 (Remarks to the Author):}
 
 The authors use a previously described method of mutational antigenic profiling, a very clever and elegant approach exploited in previous papers in PLOS Pathogens and CHM. This approach involves generating viral libraries containing all mutations in the protein of interest, selecting these viruses with or without antibody, and deep-sequencing to determine the relative frequencies of each mutation. The full methodology (except for summary statistics described in Equations 10 and 11), as well as all the results for the narrow antibodies, were described in their previous paper (Doud et al., 2017, PLOS Pathogens). Figure 7 seems to be imported from another paper (Doud et al., 2016, Viruses).
 
-In this work, they compare three broad and three narrow antibodies. The broad: FI6v3, binds stalk, neutralizes both group 1 and 2 HAs; C179 binds stalk, neutralizes only some group 1 HAs; S139/1, binds receptor-binding pocket, neutralizes both group 1 and group 2 HAs. The authors compare these in a re-analysis of data from narrow, strain-specific antibodies: H17-L19, H17-L10, and H17-L7, bind the Ca2, Ca1, and Cb antigenic regions on HA’s globular head.
+In this work, they compare three broad and three narrow antibodies. The broad: FI6v3, binds stalk, neutralizes both group 1 and 2 HAs; C179 binds stalk, neutralizes only some group 1 HAs; S139/1, binds receptor-binding pocket, neutralizes both group 1 and group 2 HAs. The authors compare these in a re-analysis of data from narrow, strain-specific antibodies: H17-L19, H17-L10, and H17-L7, bind the Ca2, Ca1, and Cb antigenic regions on HA's globular head.
 
 Using these three broad antibodies and WSN/33 Flu, they selected for escape mutations, and compared them to previous narrow antibody data. They find that escape from narrow or RBS-targeting Ab is relatively easy by single point mutation; while those targeting the stalk are difficult to escape by single point mutation. So breadth of antibody activity per se, is not a predictor of likelihood of escape.
 
@@ -105,29 +154,84 @@ Some questions or comments that come to mind:
 
 1. If the rationale is to ask whether current circulating strains could escape immunity based on broad neutralising antibody elicited by vaccination, could the authors not use circulating strains for their experiments, or at least more lab strains that only WSN?
 
+{\color{red}
+Need to add response.}
+
 2. What difference in terms of viral fitness is there between a mutation present in large proportion (for the narrow antibodies) vs present at low frequency (for the stalk-targeting antibodies). Figure 7 partly answers this question; however, it would be interesting to confirm the fitness of those mutants using more conventional growth curves, binding assays, etc.
+
+{\color{red}
+Need to add response.}
 
 3. Are all changes in amino-acid obtained after one nucleotide change? Are the authors able to detect multiple nucleotide or amino acid changes?
 
+{\color{red}
+Need to add response.}
+
 4. The major caveat of this study is that it only takes into account one mutation. Authors could check a combination of the mutations they obtain with their experiments (especially the ones escaping the stalk-targeting antibodies).
 
-5. Figure 6 confirms some of the findings using neutralisation assays. As the authors state, it is unclear whether some of the observations actually exceed the noise of the assay. In particular, K(-8)T looks as far from WT as does K280A. It could be that (1) all these differences are due to noise or that (2) there is actually a biological difference between WT and K280A. Whether (1) occurs is unclear: “three biological replicates” should perhaps be more detailed in the Materials and Methods section as to what this means: are they three rows of the same plate performed on the same day, on different days, etc.? According to the authors’ previous paper (Doug et al., 2017, PLOS Pathogens), they performed “three replicate dilution columns”. The neutralisation curves seem therefore to have been performed at different days (besides, the WT curves are the same or similar to that of Figure 3, and the neutralisation curves from the narrow antibodies were imported from the
-authors’ previous paper). This can induce a batch effect, which may not be linear, thus the normalisation performed (with no antibody and background noise) may not regress this out. From the standpoint of experimental design, these experiments should be repeated, with all viruses for a given antibody performed in the same batch; the triplicates will then give a more accurate measurement of noise. In general, all neutralisation experiments should be repeated, so as to make sure the findings are reproducible. If this has been done, it was not clear from the figure legend, and could be added for clarity. To address (2), authors should provide details of Fr,a for K280A. If I understood correctly, because Fr,a-excess (defined in Equation 2) hides mutations with lower fitness than average, it is not possible for the reader to assess whether this mutation is “neutral” or it has lower fitness with the antibody under study. 
+{\color{red}
+Need to add response.}
+
+5. Figure 6 confirms some of the findings using neutralisation assays. As the authors state, it is unclear whether some of the observations actually exceed the noise of the assay. In particular, K(-8)T looks as far from WT as does K280A. It could be that (1) all these differences are due to noise or that (2) there is actually a biological difference between WT and K280A. Whether (1) occurs is unclear: ``three biological replicates'' should perhaps be more detailed in the Materials and Methods section as to what this means: are they three rows of the same plate performed on the same day, on different days, etc.? According to the authors' previous paper (Doud et al., 2017, PLOS Pathogens), they performed ``three replicate dilution columns''. The neutralisation curves seem therefore to have been performed at different days (besides, the WT curves are the same or similar to that of Figure 3, and the neutralisation curves from the narrow antibodies were imported from the authors' previous paper). This can induce a batch effect, which may not be linear, thus the normalisation performed (with no antibody and background noise) may not regress this out. From the standpoint of experimental design, these experiments should be repeated, with all viruses for a given antibody performed in the same batch; the triplicates will then give a more accurate measurement of noise. In general, all neutralisation experiments should be repeated, so as to make sure the findings are reproducible. If this has been done, it was not clear from the figure legend, and could be added for clarity. To address (2), authors should provide details of $F_{r,a}$ for K280A. If I understood correctly, because $F_{r,a}^{\rm{excess}}$ (defined in Equation 2) hides mutations with lower fitness than average, it is not possible for the reader to assess whether this mutation is ``neutral'' or it has lower fitness with the antibody under study. 
+
+{\color{black}
+This is a good point, and was also made by several other reviewers.
+
+We have provided a detailed response in answer to question 5 by Reviewer \#1.
+Our revisions include showing the neutralization curves for all replicates and performing statistical testing.
+All the neutralization curves for antibody FI6v3 were performed on the same day.
+This is important because as the reviewer notes, there can be batch effects.
+It was not feasible to perform all assays for all mutants on the same day, but all assays that are being compared are on the same day.
+So for instance, if you look at Figure~6, you will see that the wildtype curves in panels A, B, and C are slightly different since each was performed a different day.
+But each panel is for a single antibody, and all curves with that antibody were performed on the same day---that is, we repeated the wildtype in each batch of assays to avoid any confounding batch effects.
+Therefore, we have already done what the reviewer suggests, we just hadn't clearly shown all the data before. 
+That is remedied by the new Figure~S9.
+
+As described in the response to question 5 by Reviewer \#1, the new statistical analysis finds that the effect for K(-8)T is significant, whereas that for K280A is not.
+We agree that the effect for K(-8)T is somewhat perplexing, and we wish that it would go away since it is not central to any of our claims, and has elicited skepticism from both us and the reviewers.
+In the original manuscript, we conveyed this skepticism by saying, \textsl{``we are not confident that this effect exceeds the noise in our neutralization assays.''}.
+However, the new statistical analysis described in response to question 5 by Reviewer \#1 finds the effect is significant, but we continue to add strong caveats (see the quoted new text in the response to question 5 by Reviewer \#1). 
+So rest assured that we are not trying to exaggerate the effect of K(-8)T; we sincerely wish it would go away as it would simplify the reviewer responses!
+However, this mutation was picked up by our mutational antigenic profiling (which was performed in triplicate), and then again by a totally independent approach (neutralization assays, which were again performed in triplicate). 
+So in good conscience, we feel that we have to present the result with K(-8)T, however perplexing.
+
+The reviewer also points out that it might be interesting to look at the $F_{r,a}$ value for K280A, since it might have reduced neutralization resistance.
+First, we note that the statistical analysis in the new Figure~S9 shows that the difference between K280A and wildtype is \emph{not} statistically significant, so we do not comment on possible increased neutralization sensitivity or the $F_{r,a}$ for this mutation in the paper.
+However, we have added a new supplementary file (File~S6) that gives all the $F_{r,a}$ values in case anyone wants to examine them.
+The value of $F_{r,a}$ for this mutation is 0.00382, which is slightly below the library average of 0.00955.
+}
 
 6. Could the authors detail, in the legend, how the curves of Figure 6 were fitted?
 
+{\color{black}
+For the quantitative analyses of IC50 values, we fit four-parameter logistic curves, although we fixed the top value to one, so there are really only three parameters.
+This is now explained in the legend to the new Figure~S9, which reports the actual IC50 values and shows the curves for individual replicates.
+The exact computer code used to fit the curves is at \url{https://jbloomlab.github.io/dms_tools2/dms_tools2.neutcurve.html}.
+}
+
 \subsubsection*{Reviewer \#3 (Remarks to the Author):}
 
-This paper identifies escape mutations against anti-influenza HA antibodies and quantifies their effects. The authors employed a high-throughput approach known as mutational antigenic profiling, which was developed in their previous study (1). The authors made a minor technical improvement in this study to enable a fairer comparison across profiling results from different antibodies. Two broadly neutralizing antibodies that target the HA stem (mouse C179 and human FI6v3), and one that targets the HA receptor-binding site (S139/1) were examined in this study. Additionally, the authors reanalyzed the results from their previous study (1) on three strain-specific antibodies (H17-L7, H17-L10, and H17-L19). The authors observed strong escape mutations against the strain-specific antibodies and broadly neutralizing antibody S139/1. In contrast, only weak escape mutations were identified against the two stem antibodies. The authors conclude that “breadth is an imperfect indicator of
-the potential for viral escape”. The authors also conclude that broadly neutralizing antibodies targeting the H1 hemagglutinin stalk are “quantifiably harder to escape than the other antibodies tested here”. The last two conclusions are not unexpected and are not particularly novel insights.
+This paper identifies escape mutations against anti-influenza HA antibodies and quantifies their effects. The authors employed a high-throughput approach known as mutational antigenic profiling, which was developed in their previous study (1). The authors made a minor technical improvement in this study to enable a fairer comparison across profiling results from different antibodies. Two broadly neutralizing antibodies that target the HA stem (mouse C179 and human FI6v3), and one that targets the HA receptor-binding site (S139/1) were examined in this study. Additionally, the authors reanalyzed the results from their previous study (1) on three strain-specific antibodies (H17-L7, H17-L10, and H17-L19). The authors observed strong escape mutations against the strain-specific antibodies and broadly neutralizing antibody S139/1. In contrast, only weak escape mutations were identified against the two stem antibodies. The authors conclude that ``breadth is an imperfect indicator of the potential for viral escape''. The authors also conclude that broadly neutralizing antibodies targeting the H1 hemagglutinin stalk are ``quantifiably harder to escape than the other antibodies tested here''. The last two conclusions are not unexpected and are not particularly novel insights.
 
 The study is, however, performed to an extremely high technical standard. Nevertheless, the impact is limited. The improvement in methodology over their previous study (1) is minor. Also, it is known that strong escape mutations against S139/1, one of the broadly neutralizing antibodies tested in this study (although not nearly as broad as FI6v3), can be generated rapidly through passaging the virus in the presence of the antibody (2). In fact, strong escape mutations against some of the stalk antibodies that were not tested in this study, such as CR8020 (3), CR8043 (4), CR6261 (5) and 39.29 (6), have also been generated through single point mutations. Overall, the impact and novelty of the study is not sufficient for publication in Nature Microbiology. 
+
+{\color{red}
+Need to add response.}
 
 Specific comments:
 
 1.  Strong escape mutations to C179 have been identified in the original paper that discovered the antibody (7). But it seems like those mutations were not identified here. Can the authors provide some explanations for such a discrepancy?
 
+{\color{red}
+Need to add response.}
+
 2.  How is the curve fitting performed for the neutralization assay results? I do not seem to see any description for the curve-fitting method. 
+
+{
+\color{black}
+This excellent question was also asked by other reviewers, and we apologize for not providing more details in the original submission.
+We have made extensive revisions to better describe the neutralization curves, show the curves for all individual replicates, calculate IC50s and the statistical significance of their differences from wildtype, and describe the curve fitting procedures.
+These revisions are detailed in response to question 5 of Reviewer \#1 and questions 5 and 6 of Reviewer \#2.}
 
 References
 
@@ -158,7 +262,13 @@ Minor points:
 
 1. How do the concentrations for selecting escape mutants in vitro compare to likely concentrations in vivo? Concentrations may be too high or low in vivo to promote adaptation.
 
+{\color{red}
+Need to add response.}
+
 2. Outside these experiments, how much data is there on the antibodies' neutralization capacities within HA subtypes? i.e., how broad or narrow do we really know them to be? Obviously such data might be complementary. 
+
+{\color{red}
+Need to add response.}
 
 3. Additional suggested references: 
 
@@ -166,7 +276,13 @@ Minor points:
 
 on immune status driving the rate of antigenic evolution -- Wen et al. Proc B 2016
 
+{\color{red}
+Need to add response.}
+
 4. In "...we expect a larger fraction of a library to survive an antibody with many escape mutations..." (and similar phrases), the "many escape mutations" read as though they modify "antibody."
+
+{\color{red}
+Need to add response.}
 
 
 
