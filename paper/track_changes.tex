@@ -1,0 +1,818 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL manuscript_NatureMicrobiology_submission.tex   Sun Jan 21 08:19:49 2018
+%DIF ADD manuscript.tex                                 Sun Jan 21 16:55:44 2018
+
+\documentclass[11pt]{article}
+\usepackage[super,comma]{natbib}
+\usepackage[margin=1.4in]{geometry}
+\usepackage{kpfonts}
+
+\usepackage{seqsplit}
+\usepackage{placeins}
+%DIF 10a10
+\usepackage{booktabs} %DIF > 
+%DIF -------
+
+\usepackage{newfloat}
+\usepackage[labelfont=bf]{caption}
+\usepackage{nameref}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{float}
+
+\setcounter{topnumber}{8}
+\setcounter{bottomnumber}{8}
+\setcounter{totalnumber}{8}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
+
+\usepackage[font=small,labelfont=bf]{caption}
+
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Figure}]{suppfigure}
+\renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
+\DeclareFloatingEnvironment[name={Table}]{supptable}
+\renewcommand{\thesupptable}{S\arabic{supptable}}
+\DeclareFloatingEnvironment[name={File}]{suppfile}
+\renewcommand{\thesuppfile}{S\arabic{suppfile}}
+
+\definecolor{darkblue}{rgb}{0, 0.0, 0.6}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue}
+
+\usepackage{seqsplit}
+
+\usepackage{array}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
+
+\usepackage{setspace}
+
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
+
+\renewcommand{\abstractname}{\large ABSTRACT}
+
+
+\title{Quantifying the effects of single mutations on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin} 
+
+\author
+{Michael B. Doud$^{1,2,3,\dagger}$, Juhye M. Lee$^{1,2,3,\dagger}$, and Jesse D. Bloom$^{1,2,*}$\\
+\\
+\scriptsize{$^1$Basic Sciences and Computational Biology Program, Fred Hutchinson Cancer Research Center}\\
+\scriptsize{$^2$Department of Genome Sciences and $^3$Medical Scientist Training Program, University of Washington} \\
+\scriptsize{Seattle, WA, USA} \\
+\scriptsize{$^{\dagger}$These authors contributed equally} \\
+\scriptsize{$^*$Correspondence: \href{jbloom@fredhutch.org}{jbloom@fredhutch.org}}
+}
+
+\date{}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\maketitle
+\onehalfspacing
+
+\begin{abstract}
+Influenza virus can completely escape most antibodies with single mutations.
+However, rare antibodies broadly neutralize many viral strains.
+It is unclear how easily influenza virus might escape such antibodies if it was under strong pressure to do so.
+Here we map all single amino-acid mutations that increase resistance to broad antibodies targeting an H1 hemagglutinin.
+Crucially, our approach not only identifies antigenic mutations but also quantifies their effect sizes.
+All antibodies select mutations, but the effect sizes vary widely. 
+The virus can escape a broad antibody that targets residues in hemagglutinin's receptor-binding site the same way it escapes narrow strain-specific antibodies: via single mutations with huge effects.   
+In contrast, broad antibodies targeting hemagglutinin's stalk only select mutations with small effects. 
+Therefore, among the antibodies we have examined, breadth is an imperfect indicator of the potential for viral escape via single mutations.
+Broadly neutralizing antibodies targeting the H1 hemagglutinin stalk are quantifiably harder to escape than the other antibodies tested here.
+\end{abstract}
+
+\section*{INTRODUCTION}
+Nearly all viruses show some antigenic variation.
+However, the extent of this variation ranges widely.
+For instance, although both measles virus\cite{birrer1981antigenic,ter1981antigenic} and polio virus\cite{crainic1983natural,diamond1985antigenic,drexler2014robustness} exhibit antigenic variation, the magnitude of this variation is small. 
+Therefore, immunity to these viruses is lifelong\cite{panum1847iagttagelser,salk1984one}.
+In contrast, human influenza virus exhibits much more antigenic variation.
+So although infection with an influenza virus strain provides long-term immunity to that exact strain\cite{fluinboardingschool1978,davies1982christ,yu2008neutralizing}, the virus's rapid antigenic evolution erodes the effectiveness of this immunity to that strain's descendants within \DIFdelbegin \DIFdel{four to seven years\mbox{%DIFAUXCMD
+\cite{couch1983immunity}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{$\sim$5 years\mbox{%DIFAUXCMD
+\cite{couch1983immunity,kucharski2015estimating}}%DIFAUXCMD
+}\DIFaddend .
+
+One possible reason that viruses exhibit different amounts of antigenic variation is that they have disparate evolutionary capacities to escape the immunodominant antibodies generated by natural immune responses\cite{lipsitch2007patterns,cobey2014pathogen,fulton2015mutational}.
+According to this explanation, human influenza virus undergoes rapid antigenic drift because most neutralizing antibodies target epitopes on the viral hemagglutinin (HA) protein that are highly tolerant of mutational change.
+This explanation is supported by classic experiments showing that it is easy to select viral mutants that escape most antibodies\cite{yewdell1979antigenic,webster1980determination}, as well as by the observation that mutations that alter antigenicity arise frequently during influenza's evolution globally\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction} }%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction,wen2016explaining} }%DIFAUXCMD
+}\DIFaddend and within individual humans with long-term infections\cite{xue2017parallel}.
+A corollary of this explanation is that influenza virus's capacity for antigenic drift would be reduced if most antibodies instead targeted epitopes that were less mutationally tolerant.
+
+Verifying this corollary has become of practical importance with the discovery of broadly neutralizing antibodies against influenza virus.
+These antibodies typically target conserved epitopes in HA's stalk\cite{sui2009structural,ekiert2009antibody,corti2011neutralizing} or receptor-binding site\cite{lee2012heterosubtypic,ekiert2012cross,schmidt2015viral}, and neutralize a wide range of viral strains.
+Broad antibodies are usually less abundant in human serum than antibodies to antigenically variable epitopes on the head of HA\cite{ellebedy2014induction,andrews2015immune}.
+However, major efforts are underway to elicit broad antibodies by vaccination or administer them directly as therapeutics\cite{krammer2015advances,corti2017tackling}.
+
+If these efforts succeed, the epitopes of broad antibodies \DIFdelbegin \DIFdel{will be under strong }\DIFdelend \DIFaddbegin \DIFadd{could come under stronger }\DIFaddend antigenic selection in human influenza virus.
+Might such selection then drive antigenic variation in these epitopes?
+There is precedent for the idea that the immune status of the host population can shape influenza virus evolution: the virus undergoes faster antigenic drift in long-lived humans that accumulate immune memory than in short-lived swine that are mostly naive\cite{sheerar1989antigenic,luoh1992hemagglutinin}, and poultry vaccination may accelerate antigenic drift of avian influenza\cite{lee2004effect,cattoli2011antigenic}.
+But alternatively, perhaps broad antibodies are broad because the virus has difficulty escaping them regardless of selection from host immunity.
+
+So far, there is limited data to distinguish between these possibilities.
+Several studies have shown that the head domain of HA is more mutationally tolerant than the stalk domain where many broad antibodies bind\cite{thyagarajan2014inherent,wu2014high,heaton2013genome}.
+However, these studies did not select for antibody escape, so it is difficult to relate their measurements to the virus's evolutionary capacity under immune selection.
+Other work has shown that it is possible to select antigenic mutants with broad antibodies\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{yoshida2009cross,chai2016two,anderson2017natural}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{yoshida2009cross,chai2016two,ekiert2011highly,friesen2014common,dunand2015preexisting,anderson2017natural}}%DIFAUXCMD
+}\DIFaddend , demonstrating that these epitopes are not entirely refractory to change.
+But given that antibodies can select some antigenic variation even in measles virus\cite{birrer1981antigenic,ter1981antigenic} and polio virus\cite{crainic1983natural,diamond1985antigenic}, the existence of selectable mutations does not necessarily imply that influenza virus can escape broad antibodies as easily as it drifts away from narrow strain-specific ones.
+The fundamental problem is that existing studies have not quantified the ease of viral escape in a way that can be compared across antibodies in an apples-to-apples fashion.
+
+Here we systematically quantify the results of selecting all single amino-acid mutations to an H1 HA with several broad and narrow antibodies.
+Critically, our approach quantifies the \emph{magnitude} of the antigenic effect of every mutation in a way that can be directly compared across antibodies.
+We find that even the broadest antibodies select antigenic mutations.
+However, the magnitudes of the antigenic effects vary greatly across antibodies.
+Single mutations make the virus completely resistant to both narrow strain-specific antibodies and a broad antibody that targets residues in HA's receptor-binding site.
+But no single mutation does more than modestly increase the virus's resistance to two broad antibodies against the HA stalk.
+Therefore, broad anti-stalk antibodies are quantifiably more resistant to viral escape via single amino-acid mutations than the other antibodies tested here. 
+
+\section*{RESULTS}
+\label{sec:results}
+
+\subsection*{An approach to quantify the fraction of virions with each mutation that escape antibody neutralization}
+We can visualize the outcome of antibody selection on viral populations containing antigenic mutations as in Figure~\ref{fig:fracsurvive_example}.
+If a mutation strongly escapes neutralization, then all virions with this mutation survive antibody treatment at a concentration where other virions are mostly neutralized (Figure~\ref{fig:fracsurvive_example}A).
+This escape is manifested by a large shift in the neutralization curve for the mutant (Figure~\ref{fig:fracsurvive_example}B).
+If we draw vertical lines through the overlaid neutralization curves, we can calculate the fraction of virions with each mutation that survive neutralization at each antibody concentration.
+These fractions can be represented using logo plots, where the height of each letter is proportional to the fraction of virions with that amino acid at a site that survive (Figure~\ref{fig:fracsurvive_example}C).
+Large letters correspond to strong escape mutations. 
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/fracsurvive_example/fracsurvive_fig.pdf}}
+\caption{\label{fig:fracsurvive_example}
+{\bf Quantifying the fraction of virions with each mutation that escape antibody neutralization.}
+This figure shows hypothetical data for four viral variants.
+(A) Virions with the V1K mutation (orange) completely survive an antibody concentration where most other virions are neutralized.
+(B) This resistance is manifested by a large shift in V1K's neutralization curve.
+(C) For each dotted vertical line drawn through the neutralization curves in (B), we calculate the fraction of virions with that mutation that survive the antibody, and indicate this fraction by the height of the letter corresponding to that amino acid at that site.
+(D-F) Similar data to the first three panels, but now V1K has only a small antigenic effect, and so only modestly increases the fraction of virions that survive antibody treatment.
+}
+\end{figure}
+
+Now consider the case where a mutation has just a small antigenic effect, and so only slightly increases the fraction of virions that survive neutralization (Figure~\ref{fig:fracsurvive_example}D).
+In this scenario, the neutralization curve shifts only slightly (Figure~\ref{fig:fracsurvive_example}E).
+In the logo plot representation, the antigenic mutation is only slightly larger than other amino acids (Figure~\ref{fig:fracsurvive_example}F), since possessing the mutation only modestly increases the chance that a virion survives antibody treatment.
+These logo plots therefore provide a way to both identify antigenic mutations and quantify the magnitudes of their effects in a way that is directly comparable across antibodies.
+
+Our goal is to determine the fraction of mutant virions that survive antibody neutralization for \emph{all} mutations to HA.
+One way to do this would be to measure individual neutralization curves for each of the $19\times565 = 10,735$ single amino-acid mutants of the 565-residue HA protein.
+However, individually creating and assaying that many mutants would be exceedingly time-consuming and expensive.
+Fortunately, we have shown that antibody selection on all viral mutations can be assayed in a single experiment using mutational antigenic profiling\cite{doud2017complete,dingens2017comprehensive}.
+This approach involves generating viral libraries containing all mutations to the protein of interest, selecting these viruses with or without antibody, and using an accurate deep-sequencing method to determine the relative frequencies of each mutation.
+
+These frequencies can be analyzed to calculate the fraction of virions with each mutation that survive antibody treatment.
+Specifically, the deep sequencing determines the frequencies of virions carrying amino-acid $a$ at site $r$ in the antibody-selected and mock-selected conditions, which we denote as $\rho_{r,a}^{\rm{selected}}$ and $\rho_{r,a}^{\rm{mock}}$, respectively.
+We can also measure the total fraction of the viral library that survives the antibody, which we denote as $\gamma$.
+The fraction of variants with amino-acid $a$ at site $r$ that survive antibody selection is then simply 
+\begin{equation}
+\label{eq:fracsurvive}
+F_{r,a} = \gamma \times \frac{\rho_{r,a}^{\rm{selected}}}{\rho_{r,a}^{\rm{mock}}}.
+\end{equation}
+For instance, in Figure~\ref{fig:fracsurvive_example}A, the frequency of virions with the orange mutation is $\rho_{r,a}^{\rm{selected}} = \frac{4}{7}$ in the antibody selection and $\rho_{r,a}^{\rm{mock}} = \frac{4}{16}$ in the mock selection.
+The overall fraction of virions that survive the antibody in Figure~\ref{fig:fracsurvive_example}A is $\gamma = \frac{7}{16}$.
+Therefore, we use Equation~\ref{eq:fracsurvive} to calculate that the fraction of variants with the orange mutation that survive is $F_{r,a} = \frac{7}{16} \times \frac{4/7}{4/16} = 1$.
+Performing the analogous calculation for Figure~\ref{fig:fracsurvive_example}D correctly determines that fraction of virions with the orange mutation that survive the antibody is only 0.5 for the scenario in that figure panel.
+In the analyses of real data below, we will plot the excess fraction surviving \emph{above} the overall library average, which is
+\begin{equation}
+\label{eq:fracsurvive_excess}
+F_{r,a}^{\rm{excess}} = \max\left(0, F_{r,a} - \gamma\right).
+\end{equation}
+\DIFaddbegin \DIFadd{Importantly, Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_excess} correct for effects on viral growth due to normalization by the mock-selected control, and so measure only antigenicity and not viral growth provided that the virus at least grows well enough to be present in the library.
+}\DIFaddend Details of how the calculations are extended to account for sequencing errors and sampling statistics are in the \nameref{sec:methods}.
+Open-source software that performs all steps in the analysis beginning with the deep sequencing data is available at \url{https://jbloomlab.github.io/dms_tools2/}.
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/antibody_summary_fig/Ab_summary.pdf}}
+\caption{\label{fig:antibody_summary}
+{\bf Epitopes and breadth of broad and narrow antibodies targeting HA.}
+(A) Crystal structures of the broad antibodies and sites of escape mutations selected by the narrow ones superimposed on the structure of the HA trimer (PDB 1RVX\cite{gamblin2004structure}). 
+S139/1 (PDB 4GMS\cite{lee2012heterosubtypic}) targets residues in the receptor-binding pocket; C179 (PDB 4HLZ\cite{dreyfus2013structure}) and FI6v3 (PDB 3ZTN\cite{corti2011neutralizing}) target the stalk. 
+The sites of escape mutations for H17-L19, H17-L10, and H17-L7 are those mapped by Doud et al\cite{doud2017complete}. 
+(B) A phylogenetic tree of HA subtypes.
+Circles (broad antibodies) and squares (narrow antibodies) denote reported antibody binding or neutralization activity against that subtype. 
+Not all antibodies have been tested against all subtypes. 
+}
+\end{figure}
+
+\subsection*{Broad and narrow antibodies that neutralize influenza virus}
+We applied this approach to anti-HA antibodies with a range of breadths and epitopes.
+The crystal structures or sites of escape mutations selected by these antibodies are shown in Figure~\ref{fig:antibody_summary}A.
+We chose two broad antibodies, FI6v3 and C179, that target the stalk of HA\cite{corti2011neutralizing, okuno1993common, dreyfus2013structure}. 
+FI6v3 is extremely broad, and neutralizes both group 1 and group 2 HAs (Figure~\ref{fig:antibody_summary}B).
+C179 is less broad, and neutralizes only some group 1 HAs (Figure~\ref{fig:antibody_summary}B).
+We also \DIFdelbegin \DIFdel{selected }\DIFdelend \DIFaddbegin \DIFadd{chose }\DIFaddend a broad antibody, S139/1, that crystallographic studies have shown binds to residues in HA's receptor-binding pocket\cite{lee2012heterosubtypic}, and which can neutralize both group 1 and group 2 HAs\cite{yoshida2009cross, lee2012heterosubtypic}.
+Finally, we re-analyzed deep sequencing data from prior mutational antigenic profiling of three narrow strain-specific antibodies, H17-L19, H17-L10, and H17-L7\cite{doud2017complete}.
+These narrow antibodies bind the Ca2, Ca1, and Cb antigenic regions on HA's globular head\cite{caton1982antigenic}, and only neutralize a narrow slice of H1 viruses.
+
+We performed our experiments using the \DIFaddbegin \DIFadd{lab-adapted }\DIFaddend A/WSN/1933 (H1N1) strain of influenza\DIFdelbegin \DIFdel{, which }\DIFdelend \DIFaddbegin \DIFadd{.
+This strain is derived from an early seasonal H1N1 that was extensively passaged in the lab, where it adapted to become neurotropic and trypsin independent~\mbox{%DIFAUXCMD
+\cite{sun2010modifications}}%DIFAUXCMD
+.
+But despite these unusual properties, the virus }\DIFaddend is neutralized by \DIFdelbegin \DIFdel{all six antibodies }\DIFdelend \DIFaddbegin \DIFadd{most broad antibodies that target other H1 viruses, including those used in this study }\DIFaddend (Figure~\ref{fig:neutcurves}).
+Our experiments utilize fully infectious influenza virus rather than pseudovirus, which is important since the accessibility of some epitopes can vary with HA density, which differs between fully infectious virus and pseudovirus\cite{corti2011neutralizing,joyce2016vaccine}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{figs/neutralization_curves/WT_neutralization_curves.pdf}}
+\caption{\label{fig:neutcurves}
+{\bf Neutralization of wildtype virus by each antibody, and the fraction of mutant library virions surviving at each concentration used in our experiments.}
+The curves show neutralization of the wildtype A/WSN/1933 virus. 
+Each point represents the mean and standard deviation of three measurements. 
+The vertical dotted lines show the concentrations of antibody that were then used in the mutant virus library selections, and the tables give the overall fraction of the mutant virus libraries that survived at each concentration, determined by qRT-PCR.
+As described in the text, the antibody concentrations were chosen to give similar fractions of the mutant virus libraries that survive, rather than to fall at uniform positions on the neutralization curves of the wildtype virus.
+}
+\end{figure}
+
+The wildtype virus is neutralized by all the antibodies, with IC50s between 0.01 and 1 $\mu$g/ml (Figure~\ref{fig:neutcurves}).
+However, our selections are performed on mutant virus libraries, not wildtype virus.
+Because these libraries have different capacities to escape each antibody, the fraction of each library that survives high antibody concentrations will vary among antibodies.
+For instance, at concentrations that neutralize 99\% of the wildtype virus, we expect a larger fraction of a library to survive an antibody \DIFdelbegin \DIFdel{with many }\DIFdelend \DIFaddbegin \DIFadd{for which there are many HA }\DIFaddend escape mutations than an antibody with few \DIFaddbegin \DIFadd{HA }\DIFaddend escape mutations.
+Therefore, rather than using the same concentration for all antibodies, we selected concentrations for each antibody where between 2\% and 0.1\% of the libraries survived in order to strongly select for escape mutations (Figure~\ref{fig:neutcurves}).
+Slight differences among antibodies in the fraction surviving within this range should not strongly affect our results, since Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_excess} account for such differences via the $\gamma$ term.
+However, to confirm the robustness of our results, we used several concentrations of each broad antibody (Figure~\ref{fig:neutcurves}).
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/avgfracsurvive.pdf}}
+\caption{
+\label{fig:avgfracsurvive}
+{\bf Strain-specific and anti-receptor-binding-site antibodies select mutations with large antigenic effects, but anti-stalk antibodies only select small-effect mutations.}
+The excess fraction of virions with a mutation at each site that survive the antibody, averaging across all amino-acid mutations at each site (see Equation~\ref{eq:avgfracsurvive}).
+There are multiple sites of large-effect mutations for H17L19, H17L10, H17L7, and S139/1---but none for FI6v3 and C179.
+Figure~\ref{suppfig:maxfracsurvive} shows the excess fraction surviving for the largest-effect mutation at each site.
+Figures~\ref{suppfig:H17L19logo}, \ref{suppfig:H17L10logo}, \ref{suppfig:H17L7logo}, \ref{suppfig:FI6v3logo}, \ref{suppfig:C179logo}, and \ref{suppfig:S139logo} show all mutations using logo plots.
+Sites are labeled in H3 numbering.
+}
+\end{figure}
+
+\subsection*{Quantifying the antigenic effects of all mutations selected by each antibody}
+We performed mutational antigenic profiling using the three broad antibodies at the concentrations indicated in Figure~\ref{fig:neutcurves}. 
+All experiments were performed in full biological triplicate using three independently generated virus libraries carrying single amino-acid mutations to HA\cite{doud2016accurate}.
+\DIFaddbegin \DIFadd{Importantly, as described previously\mbox{%DIFAUXCMD
+\cite{doud2016accurate}}%DIFAUXCMD
+, these virus libraries were generated by mutagenizing HA at the }\emph{\DIFadd{codon}} \DIFadd{level rather than at the nucleotide level.
+Performing codon mutagenesis is important, because single-nucleotide mutations access only about a third of the possible amino-acid mutations from a given codon, whereas codon mutations access all possible amino-acid mutations.
+}
+
+\DIFaddend The correlations among replicates \DIFaddbegin \DIFadd{of the mutational antigenic profiling in terms of the measured fraction-surviving above average for each possible amino-acid mutations }\DIFaddend are shown in Figure~\ref{suppfig:corr}.
+For the remainder of this paper, we will refer to the median antigenic effect of each mutation across replicates.
+
+It is immediately obvious that the narrow strain-specific antibodies and the antibody targeting residues in HA's receptor-binding pocket (S139/1) select mutations with large antigenic effects.
+For all four of these antibodies, there are multiple sites in HA where mutations enable a substantial fraction of virions to survive high antibody concentrations (Figure~\ref{fig:avgfracsurvive}).
+Specifically, there are mutations that enable over a third of virions to survive at concentrations where virtually all wildtype virions are neutralized (Figure~\ref{suppfig:maxfracsurvive}).
+Therefore, the virus can escape these four antibodies with the sort of large-effect single amino-acid mutations that characterize traditional influenza antigenic drift\cite{yewdell1979antigenic,webster1980determination,koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction}.  
+
+In contrast, the stalk-targeting antibodies C179 and FI6v3 select no strong escape mutants. 
+If we look at the results for these antibodies on the same scale as the other antibodies, we see only a few small bumps in the fraction of virions surviving (Figures~\ref{fig:avgfracsurvive} and \ref{suppfig:maxfracsurvive}).
+Only if we zoom in can we see that there are actually a few sites where mutations slightly increase the fraction of virions surviving C179 and FI6v3 (Figures~\ref{suppfig:H17L19logo}, \ref{suppfig:H17L10logo}, \ref{suppfig:H17L7logo}, \ref{suppfig:FI6v3logo}, \ref{suppfig:C179logo}, and \ref{suppfig:S139logo}).
+But the effect sizes of these antigenic mutations are tiny compared to the other antibodies---especially for FI6v3.
+Therefore, the HA of A/WSN/1933 influenza virus is far less capable of escaping these anti-stalk antibodies by single mutations than it is of escaping the other four antibodies. 
+
+\subsection*{The selected mutations are near the binding footprints of the antibodies}
+Antigenic mutations selected by narrow strain-specific antibodies against HA are thought to occur at residues in or near the physical binding footprint of the antibody\cite{yewdell1979antigenic,webster1980determination,caton1982antigenic}.
+We examined whether this was the case for the broad antibodies used in our experiments.
+Figure~\ref{fig:structures}A shows a zoomed-in view of the sites of mutations selected by each antibody, as well as their locations on HA's structure. 
+It is immediately clear that the selected mutations are nearly all in or close to the antibody-binding footprint.
+
+\begin{figure}[h!]
+\centerline{\includegraphics[width=0.9\textwidth]{figs/logoplots_pymol/logoplots_pymol.pdf}}
+\caption{
+\label{fig:structures}
+{\bf Mutations selected by broad and narrow antibodies.}
+(A) Logo plots show sites where mutations have the largest effect.
+Letter heights are proportional to the excess fraction of virions with that mutation that survive antibody, as indicated by the scale bars.
+Structures are colored white to red by the excess fraction surviving for the largest-effect mutation at each site, with each antibody scaled separately.  
+(B) Sites of selection from anti-stalk antibodies, with the same coloring scale for both antibodies. Selection for serine or threonine at sites 280 and 291 introduces glycosylation sites at 278 and 289, respectively.
+(C) Cladogram of group 1 HA subtypes.
+The amino acid at site 38 is indicated. 
+Colors indicate whether a subtype has been reported in the literature to be bound or neutralized by C179.  
+}
+\end{figure}
+
+For the S139/1 antibody that targets residues in the HA receptor-binding pocket, there are strong escape mutations at sites 156, 158, and 193 (Figure~\ref{fig:structures}A; sites are in H3 numbering). 
+These three sites fall directly in the physical binding footprint of the antibody\cite{lee2012heterosubtypic}, and are the same three sites where previous work has selected escape mutants in H1, H2, and H3 HAs\cite{yoshida2009cross}. 
+Our data show that numerous different amino-acid mutations at each site confer neutralization resistance.
+The mutation with the largest effect, G158N, introduces an N-linked glycosylation motif.
+
+Although the anti-stalk antibodies C179 and FI6v3 only select mutations with small effects, these mutations almost all fall in or near the physical binding footprints of the antibodies (Figure~\ref{fig:structures}A).
+The two antibodies have similar epitopes and angles of approach\cite{dreyfus2013structure}, and they select identical mutations at several sites (Figure~\ref{fig:structures}B). 
+The three largest-effect mutations for FI6v3 (K280S, K280T, and N291S) all introduce glycosylation motifs near the epitope, and all three mutations have similar magnitude antigenic effects in both FI6v3 and C179.
+
+However, C179 selects several mutations that do not have any apparent effect on FI6v3 (Figure~\ref{fig:structures}A, Figure~\ref{suppfig:FI6v3logo}).
+The most notable of these C179-specific mutations are at site 38.
+The additional breadth of FI6v3 over antibodies such as C179 that neutralize only group 1 HAs is because FI6v3 can accommodate a glycan on the asparagine at site 38 that is present in group 2 HAs\cite{corti2011neutralizing,sui2009structural,ekiert2009antibody}. 
+However, the H38S mutation that has the largest effect on C179 resistance in our experiments does not introduce a glycosylation motif, showing that there are also other ways to escape anti-stalk antibodies at this site.
+Interestingly, group 1 HA subtypes that are susceptible to C179 tend to possess a histidine at site 38, but subtypes that are not bound or neutralized by C179 often possess a serine (Figure~\ref{fig:structures}C). 
+%The amino-acid identity at site 111 of HA2 can change the orientation of a conserved Trp21 in HA2, also resulting in group 1 and group 2 differences in the binding ability of stalk-targeting antibodies. An H111T mutation in the A/South Carolina/1/1918 (H1N1) has been reported to abrogate C179 binding\cite{dreyfus2013structure}.
+%However, we did not observe escape mutations at site 111, but this may be due to strain-specific differences.
+
+The FI6v3 antibody also weakly selects several mutations at residue -8, which is part of HA's signal peptide (Figure~\ref{fig:structures}A). 
+This signal peptide is cleaved from the mature HA protein\cite{daniels2003n,burke2014recommended}, although mutations at this site can affect HA's expression level\cite{nordholm2017translational}, which might conceivably affect HA density on virions and subsequently antibody neutralization\cite{corti2011neutralizing,joyce2016vaccine}.
+
+\subsection*{Neutralization assays validate the mutational antigenic profiling}
+Do the mutations identified in our mutational antigenic profiling actually have the expected effect on antibody neutralization?
+We have previously validated many of the large-effect antigenic mutations selected by the narrow antibodies H17-L19, H17-L10, and H17-L7\cite{doud2017complete}.
+However, the mutations selected by the broad anti-stalk antibodies have much smaller effects in our mutational antigenic profiling---especially for the broadest antibody, FI6v3.
+We therefore tested some of these FI6v3-selected mutations using neutralization assays on individual viral mutants.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{figs/FI6v3mutant_neutcurves/FI6v3_mutant_neutcurves.pdf}}
+\caption{
+\label{fig:FI6v3neutcurves}
+{\bf The mutations selected by FI6v3 increase neutralization resistance, but the effects are small.}
+(A) Neutralization curves of individual viral mutants with FI6v3.
+The mutations K280S, K280T, N291S, G47R (HA2), and K(-8)T are all expected to increase neutralization resistance based on the mutational antigenic profiling (Figure~\ref{fig:structures}A)\DIFdelbeginFL \DIFdelFL{. 
+The mutations }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, whereas }\DIFaddendFL K280A, M17L (HA2), P80D, and V135T are \emph{not} expected to affect neutralization \DIFdelbeginFL \DIFdelFL{based on the mutational antigenic profiling }\DIFdelendFL (Figure~\ref{suppfig:FI6v3logo}).
+\DIFaddbeginFL \DIFaddFL{All neutralization curves in this panel were performed in triplicate on the same day.
+This panel shows the average of the replicates; Figure~\ref{suppfig:FI6v3replicates} shows the curves for each replicate individually and performs statistical testing of whether the IC50s for mutants are significantly different than for wildtype.
+}\DIFaddendFL (B), (C) In contrast to FI6v3, mutations selected by narrow antibodies have very large effects on neutralization.
+Shown are neutralization curves for representative escape mutants from H17-L19 and H17-L7 taken from Doud et al\cite{doud2017complete}.
+}
+\end{figure}
+
+Figure~\ref{fig:FI6v3neutcurves} shows that the mutational antigenic profiling is highly predictive of the results of the neutralization assays, even for small-effect mutations.
+As discussed in the previous section, the three mutations most strongly selected by FI6v3 introduce glycosylation motifs at sites 278-280 or 289-291 (Figure~\ref{fig:structures}A,B).
+We created viruses carrying each of these mutations (K280S, K280T, and N291S) and validated that all three modestly \DIFaddbegin \DIFadd{but significantly }\DIFaddend increased resistance to FI6v3 (Figure~\ref{fig:FI6v3neutcurves}A\DIFaddbegin \DIFadd{, Figure~\ref{suppfig:FI6v3replicates}}\DIFaddend ).
+As a control, we also validated that a mutation at one of these sites (K280A) that does \emph{not} have an effect in our mutational antigenic profiling does not \DIFaddbegin \DIFadd{significantly }\DIFaddend shift the neutralization curve (Figure~\ref{fig:FI6v3neutcurves}A\DIFaddbegin \DIFadd{, Figure~\ref{suppfig:FI6v3replicates}}\DIFaddend ).
+
+Our mutational antigenic profiling also identified several non-glycosylation-motif mutations that were selected by FI6v3.
+We validated that one of these mutations, G47R in the HA2 chain, \DIFaddbegin \DIFadd{significantly }\DIFaddend increased neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A\DIFaddbegin \DIFadd{, Figure~\ref{suppfig:FI6v3replicates}}\DIFaddend )---although as predicted by the mutational antigenic profiling, the magnitude of the effect was small.
+The most unexpected mutations identified in our mutational antigenic profiling were at site -8 in the signal peptide.
+We tested one of these mutations, K(-8)T, and it did \DIFdelbegin \DIFdel{appear to }\DIFdelend lead to a very slight increase in neutralization resistance (Figure~\ref{fig:FI6v3neutcurves}A\DIFdelbegin \DIFdel{), although we are not confident that this effect exceeds }\DIFdelend \DIFaddbegin \DIFadd{, Figure~\ref{suppfig:FI6v3replicates})---although despite the significance testing in Figure~\ref{suppfig:FI6v3replicates}, we remain circumspect about the magnitude of this effect relative to }\DIFaddend the noise in our neutralization assays.
+As controls, we also tested three mutations (P80D and V135T, which are escape mutations for H17-L7 and H17-L19, and M17L in HA2) that did \emph{not} have substantial effects in the mutational antigenic profiling, and confirmed that none of them \DIFaddbegin \DIFadd{significantly }\DIFaddend affected neutralization resistance \DIFdelbegin \DIFdel{within the sensitivity of our assays}\DIFdelend \DIFaddbegin \DIFadd{(Figure~\ref{fig:FI6v3neutcurves}A, Figure~\ref{suppfig:FI6v3replicates})}\DIFaddend .
+
+A notable aspect of these validation experiments is the very small effect sizes of the identified mutations on neutralization by FI6v3.
+Antigenic mutations selected by strain-specific antibodies to HA generally increase the concentration of antibody needed to neutralize the virus by orders of magnitude.
+Neutralization curves for such large-effect escape mutants are in Figure~\ref{fig:FI6v3neutcurves}B,C.
+Although there are no such large-effect single mutations that escape FI6v3 or C179, the results in Figure~\ref{fig:FI6v3neutcurves}A show that we can still use mutational antigenic profiling to identify mutations that have small but measurable effects on resistance to these antibodies.
+
+\subsection*{Limited HA mutational tolerance does not fully explain the lack of strong escape mutations from the anti-stalk antibodies}
+Why are there no large-effect escape mutations from the anti-stalk antibodies?
+One possibility is that all HA sites in the antibody-binding footprint are intolerant of mutations, meaning that viruses with mutations at these sites cannot replicate and so are not present in our mutant virus libraries.
+Another possibility is that mutations are tolerated at some HA sites in the antibody footprint, but that the binding energetics are distributed across sites in such a way that none of these tolerated mutations strongly affect neutralization.
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/prefs_fracsurvive/prefs_fracsurvive_logoplots.pdf}}
+\caption{
+\label{fig:muttolerance}
+{\bf Mutational tolerance of HA sites in the antibody-binding footprints.}
+These plots show all HA sites within 4 angstroms of the antibody in the crystal structure, plus any additional sites (marked with a *) where we identified antigenic mutations. 
+The logo plots at bottom show the preference of each HA site for each amino acid under selection for viral replication as measured by Doud and Bloom\cite{doud2016accurate}.
+For instance, site 153 only tolerates tryptophan, so W occupies the entire height of the preference logo stack.
+In contrast, site 156 tolerates many amino acids, all of which contribute to the height of the preference logo stack. 
+Above the preference logo stacks are logo plots showing the excess fraction surviving antibody treatment as measured in the current study.
+Note that scale for these antigenic effects is 10$\times$ smaller for FI6v3 and C179 than for S139/1.
+}
+\end{figure}
+
+We can examine these possibilities using deep mutational scanning data that measures the tolerance of HA for each possible amino-acid mutation.
+Specifically, we have previously selected our A/WSN/1933 virus HA mutant libraries for variants that can replicate in cell culture, and then used deep sequencing to estimate the preference of each site in HA for each possible amino acid\cite{doud2016accurate}.
+Figure~\ref{fig:muttolerance} shows these amino-acid preferences for all sites in HA within 4 angstroms of each broad antibody, with the antigenic effects of the mutations overlaid.
+Although some HA sites in the antibody footprints strongly prefer a single amino acid, for all antibodies there are also footprint sites that tolerate a fairly wide range of amino acids.
+In most cases the mutations selected by the antibodies occur at these mutationally tolerant sites.
+However, there are exceptions---for instance, the H38S mutation selected by C179 is rather disfavored with respect to viral growth, but has a large enough antigenic effect to still be detected in our mutational antigenic profiling.
+
+The data in Figure~\ref{fig:muttolerance} show that the lack of large-effect escape mutants from FI6v3 and C179 is not entirely due to the mutational intolerance of HA sites in the antibody-binding footprints.
+Some HA sites in each antibody footprint are fairly mutationally tolerant, and contain a range of mutations in the viral libraries used in our antibody selections.
+However, our mutational antigenic profiling shows that only a fraction of mutations at a fraction of these sites actually affect antibody neutralization.
+This finding is reminiscent of prior work showing that the binding energetics at protein-protein interfaces can be asymmetrically distributed across sites\cite{jin1992high,cunningham1993comparison,dall1998mutational}.
+The broad anti-stalk antibodies therefore appear to both mostly target mutationally intolerant sites and distribute their binding energetics in such a way that altering the mutationally tolerant HA sites has relatively little effect on neutralization.
+
+\section*{DISCUSSION}
+We have quantified how all single amino-acid mutations to \DIFaddbegin \DIFadd{an H1 }\DIFaddend influenza virus HA affect neutralization by a collection of broad and narrow antibodies.
+Our results show that the virus's inherent evolutionary capacity for escape via point mutations differs across antibodies. 
+Interestingly, antibody breadth is not always an indicator of the difficulty of viral escape. 
+As expected, single amino-acid mutations can make the virus completely resistant to narrow strain-specific antibodies against HA's globular head.
+However, such mutations can also enable the virus to escape the broad S139/1 antibody targeting residues in HA's receptor-binding pocket, despite the fact that this antibody neutralizes multiple subtypes.
+But no single mutation has a comparably large effect on neutralization by two broad antibodies targeting HA's stalk, FI6v3 and C179.
+Therefore, these anti-stalk antibodies are quantifiably more difficult for the virus to escape.
+
+Although there are no large-effect escape mutations from the broad anti-stalk antibodies, there are mutations that more modestly affect neutralization.
+This finding emphasizes the importance of identifying antigenic mutations in a way that accounts for effect sizes.
+The classic approach for selecting escape mutations involves treating a virus stock with antibody at a concentration that completely neutralizes wildtype, and looking for viral mutants that survive this treatment\cite{yewdell1979antigenic,webster1980determination}.
+There are no such single mutations for the \DIFaddbegin \DIFadd{H1 }\DIFaddend HA and broad anti-stalk antibodies tested here, since no mutations shift the neutralization curve enough to enable survival at antibody concentrations that fully neutralize wildtype.
+However, our approach shows that there are mutations that have more modest ($<$10-fold) effects on neutralization by even the broadest antibody. 
+\DIFaddbegin \DIFadd{Interestingly, most previous studies~\mbox{%DIFAUXCMD
+\cite{chai2016two,ekiert2011highly,friesen2014common,dunand2015preexisting} }%DIFAUXCMD
+that have reported selecting single mutations with large effects ($\gg$10-fold) on neutralization by anti-stalk antibodies have used group 2 (e.g., H3 or H7) HAs rather than group 1 HAs like the one used in our work.
+}\DIFaddend When interpreting the magnitude of these effects, it is important to note that our experiments only measure how mutations affect neutralization, and not how they affect Fc-mediated functions that are responsible for much of the \textit{in vivo} protection afforded by anti-stalk antibodies\cite{dilillo2014broadly,dilillo2016broadly}.
+
+Another important caveat is that our experiments examine \emph{single} amino-acid mutations to the HA from one influenza virus strain.
+The protein evolution literature is full of examples of epistatic interactions that enable multiple mutations to access phenotypes not accessible by single mutations\cite{gong2013stability,harms2014historical,starr2017alternative}.
+Such epistasis is relevant to HA's evolution.  
+For instance, work by Das et al\cite{das2013defining} suggests that the sequential accumulation of mutations can shift the spectrum of available antibody-escape mutations.
+Wu et al\cite{wu2017diversity} have used deep mutational scanning to directly demonstrate that rampant epistasis enables HA's receptor-binding pocket to accommodate combinations of individually deleterious mutations, some of which affect sensitivity to antibodies.
+Therefore, our work does not imply any absolute limits on the possibilities for antibody escape when evolution is given sufficient time to explore combinations of mutations.
+However, single mutations are the most accessible form of genetic variation, and much of influenza virus's natural antigenic drift involves individual mutations that reduce sensitivity to immunodominant antibody specificities\cite{yewdell1979antigenic,webster1980determination,koel2013substitutions,chambers2015identification,petrie2016antibodies,neher2016prediction}.
+Quantifying the antigenic effects of all such mutations therefore provides a relevant measure of ease of viral antibody escape. 
+
+A major rationale for studying broadly neutralizing antibodies is that they are hoped to be more resistant to viral evolutionary escape than the antibodies that dominate natural immune responses to influenza virus\cite{krammer2015advances,corti2017tackling}.
+We have used a new approach to quantify the extent to which this is actually true, and shown that neutralization of an H1 virus by broad anti-stalk antibodies is indeed more---although certainly not completely---resistant to erosion by viral point mutations.
+Going forward, we suggest that completely mapping viral escape mutations will be a useful complement to more traditional techniques that simply characterize the breadth of anti-viral antibodies against circulating strains.
+
+\clearpage
+\small
+
+\section*{METHODS}
+\label{sec:methods}
+\subsection*{Antibodies}
+C179 IgG was purchased from Takara Bio Inc (Catalog \#M145).
+FI6v3 was purified from 293F cells transduced with a lentiviral vector encoding a commercially synthesized gene for the IgG form of the antibody, with the heavy and light chains reverse-translated from the protein sequence in the PDB structure 3ZTN\cite{corti2011neutralizing} as described previously\cite{balazs2013broad}.
+Genes encoding S139/1 in IgG form were were reverse-translated from the protein sequence in PDB structure 4GMS\cite{lee2012heterosubtypic}, and used to express and purify protein by the Fred Hutchinson Cancer Research Center protein expression core.
+
+\subsection*{Neutralization assays}
+We performed neutralization assays using influenza viruses that carried GFP in the PB1 segment.
+These PB1flank-eGFP were generated in co-cultures of 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells as described previously\cite{bloom2010permissive}, using the standard bi-directional pHW181-PB2, ..., pHW188-NS reverse-genetics plasmids\cite{hoffmann2000dna} for all genes \emph{except} PB1, plus the pHH-PB1flank-eGFP plasmid\cite{bloom2010permissive}.
+Each mutant was generated by repeating this process using a version of the pHW184-HA plasmid that had been engineered by site-directed mutagenesis to carry the indicated mutation.
+The neutralization assays themselves were performed by using a plate reader to quantify the GFP signal produced by MDCK-SIAT1-CMV-PB1 cells infected by PB1flank-eGFP virus that had been incubated with the indicated antibody concentration as described previously\cite{hooper2013mutant}.
+All neutralization curves \DIFaddbegin \DIFadd{in Figure~\ref{fig:FI6v3neutcurves}A }\DIFaddend represent the mean and standard deviation of three measurements\DIFdelbegin \DIFdel{. 
+}\DIFdelend \DIFaddbegin \DIFadd{, with the individual replicates shown in Figure~\ref{suppfig:FI6v3replicates}.
+All the neutralization assays for FI6v3 were performed on the same day to eliminate batch effects, with each replicate involving independent serial dilution of the antibody in a separate column of a 96-well plate. 
+}
+
+\DIFaddend \subsection*{H3 sequence numbering}
+Unless otherwise indicated, all residues are numbered in the H3 numbering scheme, with the signal peptide in negative numbers, the HA1 subunit as plain numbers, and the HA2 subunit denoted with ``(HA2)''. 
+The conversion between sequential numbering of the A/WSN/1933 HA and the H3 numbering scheme was performed using the Python script available at \url{https://github.com/jbloomlab/HA_numbering}.
+File~\ref{suppfile:HAnumbering} gives the numbering conversion.  
+
+\subsection*{Inference of HA phylogenetic tree}
+To infer the phylogenetic tree in Figure~\ref{fig:antibody_summary}, we downloaded one HA sequence per subtype from the Influenza Research Database\cite{zhang2017influenza}, inferred the phylogenetic tree using RaxML\cite{stamatakis2014raxml} with a GTR model, and visualized the tree using FigTree (\url{http://tree.bio.ed.ac.uk/software/figtree/}). 
+The HA sequences used are in File~\ref{suppfile:HAsubtypes}. 
+In Figure~\ref{fig:antibody_summary}, we indicate which HAs each antibody has been reported to bind or neutralize\cite{yoshida2009cross, lee2012heterosubtypic, okuno1993common, dreyfus2013structure, corti2011neutralizing}. 
+Among broad antibodies, S139/1 has not been tested against H8 and H11; C179 has not been tested against H8 and H11; and no antibodies have been tested against H17 and H18.
+The narrow H17-L19, H17-L10, and H17-L7 antibodies have not been tested against any other subtypes---however, since these antibodies have a very limited range even among H1 HAs\cite{caton1982antigenic}, we assume that they do not bind other subtypes.
+
+For the cladogram in Figure~\ref{fig:structures}C, the amino-acid identities at site 38 are from the strains tested against C179 by by Dreyfus et al\cite{dreyfus2013structure}. 
+For subtypes not tested, the amino-acid identity reported is that in the strain for that subtype in File~\ref{suppfile:HAsubtypes}.
+
+\subsection*{Mutant virus libraries}
+The mutant virus libraries are those described in Doud and Bloom\cite{doud2016accurate}, and were produced in full biological triplicate.
+Briefly, these libraries were generated by using codon mutagenesis\cite{bloom2014experimentally} to introduce random codon mutations into plasmid-encoded HA, and then using a helper-virus strategy that avoids the bottlenecks associated with standard influenza reverse genetics to create the virus libraries.
+Although a helper virus is used to generate the libraries from plasmids, the viruses in the resulting library carry the full complement of genes and are fully infectious and replication-competent\cite{doud2016accurate}.
+This fact is important, since the accessibility of HA epitopes can depend on virion HA density, which is often lower in pseudovirus than in fully infectious virus\cite{corti2011neutralizing,joyce2016vaccine}.
+Full details of the library generation and sequencing statistics that quantify how completely each of the triplicate libraries covers the possible amino-acid mutations have been described previously\cite{doud2016accurate}.
+
+\subsection*{Mutational antigenic profiling}
+The mutational antigenic profiling was performed as described previously\cite{doud2017complete}. 
+Briefly, we diluted each of the virus libraries to a concentration of $10^{6}$ TCID$_{50}$ per ml and incubated the virus dilutions with an equal volume of antibody at the intended concentration at 37$^\circ$C for 1.5 hours.
+The final antibody concentrations in these mixtures are shown in Figure~\ref{fig:neutcurves}.
+We performed three fully independent replicates of each selection using the three replicate mutant virus libraries.
+In addition, we performed technical replicates (independent neutralization experiments on the \emph{same} virus library) in some cases as indicated in Figure~\ref{suppfig:corr}.
+The virus-antibody mixtures were used to infect cells, and viral RNA was extracted, reverse-transcribed, and PCR amplified as described previously\cite{doud2017complete}.
+In order to obtain high accuracy in the Illumina deep sequencing, we used the barcoded-subamplicon sequencing strategy described by Doud and Bloom\cite{doud2016accurate}, which is a slight modification of the strategy of Wu et al\cite{wu2014high}.
+
+We also estimated the overall fraction of virions surviving each antibody selection.
+These fractions are denoted by $\gamma$ in this paper.
+The average of these fractions across libraries are reported in Figure~\ref{fig:neutcurves}, and the values for each individual replicate are in Table~\ref{supptab:fracsurvive}.
+The fractions were estimated using qRT-PCR against the viral NP and canine GAPDH as described previously\cite{doud2017complete}.
+Briefly, we made duplicate 10-fold serial dilutions of each of the virus libraries to use as a standard curve of infectivity.
+We also performed qPCR on the cells infected with the virus-antibody mix.
+To estimate the fractions, we used linear regression to fit a line relating logarithm of the viral infectious dose in the standard curve to the difference in Ct values between NP and GAPDH, and then interpolated the fraction surviving for each selection from this regression.
+
+\subsection*{Analysis of deep sequencing data}
+The deep sequencing data were analyzed using version \DIFdelbegin \DIFdel{2.1.0 }\DIFdelend \DIFaddbegin \DIFadd{2.2.1 }\DIFaddend of the \texttt{dms\_tools2} software package\cite{bloom2015software}, which is available at \url{http://jbloomlab.github.io/dms_tools2}.
+File~\ref{suppfile:analysis_code} contains a Jupyter notebook that performs all steps of the analysis beginning with downloading the FASTQ files from the Sequence Read Archive.
+Detailed statistics about the sequencing depth and error rates are shown in this Jupyter notebook and its HTML rendering in File~\ref{suppfile:analysis_html}.
+
+\subsection*{Calculating the fraction of virions with each mutation that escapes antibody neutralization}
+In prior mutational antigenic profiling work\cite{doud2017complete,dingens2017comprehensive}, we calculated the differential selection on each mutation as the logarithm of its enrichment relative to wildtype in an antibody-selected sample versus a mock-selected control.
+These \emph{mutation differential selection} values are useful for the analysis of individual experiments.
+However, there is no natural way to compare these values across experiments with different antibodies at different concentrations, since the strength of differential selection depends on details of how the pressure is imposed.
+We therefore developed the new approach in this paper to quantify the antigenic effect of a mutation in units that can be compared across antibodies and concentrations.
+
+The general principle of the calculations is illustrated in Figure~\ref{fig:fracsurvive_example} and discussed in the first section of the \nameref{sec:results}.
+Here we provide details on how these calculations are performed.
+The deep sequencing measures the number of times that codon $x$ is observed at site $r$ in both the antibody-selected and mock-selected conditions. 
+Denote these counts as $n_{r,x}^{\rm{selected}}$ and $n_{r,x}^{\rm{mock}}$, respectively.
+We also perform deep sequencing of a control (in this case, plasmid DNA encoding the wildtype HA gene) to estimate the sequencing error rate.
+Denote the counts of codon $x$ at site $r$ in this control as $n_{r,x}^{\rm{err}}$.
+Also denote the total reads at each site $r$ in each sample as
+$N_{r}^{\rm{selected}} = \sum_x n_{r,x}^{\rm{selected}}$,
+$N_{r}^{\rm{mock}} = \sum_x n_{r,x}^{\rm{mock}}$, and
+$N_{r}^{\rm{err}} = \sum_x n_{r,x}^{\rm{err}}$.
+
+We first estimate the rate of sequencing errors at site $r$ as
+\begin{equation}
+\label{eq:epsilonrx}
+\epsilon_{r,x} = \frac{n_{r,x}^{\rm{err}}}{N_{r}^{\rm{err}}}.
+\end{equation}
+For the wildtype identity at site $r$, which we denote as $\operatorname{wt}\left(r\right)$, the value of $\epsilon_{r,\operatorname{wt}\left(r\right)}$ is the fraction of times we correctly observe the wildtype identity $\operatorname{wt}\left(r\right)$ at site $r$ versus observing some spurious mutation. 
+For all mutant identities $x \ne \operatorname{wt}\left(r\right)$ at site $r$, $\epsilon_{r,x}$ is the fraction of times we observe the mutation $x$ at site $r$ when the identity is really wildtype.
+We ignore second-order terms where we incorrectly read one mutation as another, as such errors will be very rare as mutations themselves are rare (most codons are wildtype in most sequences). 
+
+We next adjust all of the deep sequencing codon counts in the antibody-selected and mock-selected conditions by the error control. 
+Specifically, the error-adjusted counts for the antibody-selected sample are
+\begin{equation}
+\label{eq:erroradjust}
+\hat{n}_{r,x} ^{\rm{selected}}= \begin{cases}
+\max\left[N_r^{\rm{selected}} \times \left(\frac{n_{r,x}^{\rm{selected}}}{N_r^{\rm{selected}}} - \epsilon_{r,x}\right), 0\right] & \mbox{if } x \ne \operatorname{wt}\left(r\right) \\
+n_{r,x} / \epsilon_{r,x} & \mbox{if } x = \operatorname{wt}\left(r\right).
+\end{cases}
+\end{equation}
+An equivalent equation is used to calculate $\hat{n}_{r,x} ^{\rm{mock}}$.
+We then sum the error-adjusted codon counts for each amino acid $a$:
+\begin{equation}
+\hat{n}_{r,a}^{\rm{selected}} = \sum\limits_{\left\{x \mid \mathcal{A}\left(x\right) = a\right\}} \hat{n}_{r,x}^{\rm{selected}},
+\end{equation}
+so that $\hat{n}_{r,a}^{\rm{selected}}$ are the error-adjusted counts for the antibody-selected condition summed across all codons $x$ where the encoded amino acid $\mathcal{A}\left(x\right)$ is $a$.
+An equivalent equation is used to calculate $\hat{n}_{r,a} ^{\rm{mock}}$.
+
+Finally, we use these error-adjusted amino-acid counts to estimate the mutation frequencies $\rho_{r,a}^{\rm{selected}}$ and $\rho_{r,a}^{\rm{mock}}$ that are used in Equation~\ref{eq:fracsurvive} to calculate the fraction $F_{r,a}$ of virions with amino acid $a$ at site $r$ that survive the selection.
+When estimating these mutation frequencies, we add a pseudocount of $P = 5$ to the lower-depth sample, and a depth-adjusted pseudocount to the higher depth sample.
+The rationale for adding a pseudocount is to regularize the estimates in the case of low counts.
+Specifically, we estimate the mutation frequencies as
+\begin{eqnarray}
+\rho_{r,x}^{\rm{selected}} &=& \frac{n_{r,x}^{\rm{selected}} + f_{r, \rm{selected}} \times P}{N_r^{\rm{selected}} + f_{r, \rm{selected}} \times P \times A} \\
+\rho_{r,x}^{\rm{mock}} &=& \frac{n_{r,x}^{\rm{mock}} + f_{r, \rm{mock}} \times P}{N_r^{\rm{mock}} + f_{r, \rm{mock}} \times P \times A} 
+\end{eqnarray}
+where $A$ is the number of characters (e.g., 20 for amino acids), $f_{r, \rm{selected}}$ and $f_{r, \rm{mock}}$ are the pseudocount adjustment factors defined as:
+\begin{eqnarray}
+f_{r, \rm{selected}} &=& \max\left(1, \frac{N_{r}^{\rm{selected}}}{N_{r}^{\rm{mock}}}\right) \\
+f_{r, \rm{mock}} &=& \max\left(1, \frac{N_{r}^{\rm{mock}}}{N_{r}^{\rm{selected}}}\right).
+\end{eqnarray}
+The pseudocount adjustment factors ensure that $P$ is added to the counts for the lower depth sample, and a proportionally scaled-up pseudocount is added to the higher depth sample.
+The depth scaling is necessary to avoid systematically biasing towards higher mutation frequencies in the lower depth sample.
+It is these estimated mutation frequencies that are used in conjunction with $\gamma$ (the qPCR estimated overall of virions that survive selection) to compute the fraction surviving ($F_{r,a}$) and excess fraction surviving above the library average ($F_{r,a}^{\rm{excess}}$) via Equations~\ref{eq:fracsurvive} and \ref{eq:fracsurvive_excess}.
+
+In some cases, we need to summarize the excess fraction of mutations surviving into a single number for each site, such as for plotting as a function of the site number or displaying on the crystal structure.
+There are 19 different $F_{r,a}^{\rm{excess}}$ values for non-wildtype amino acids for each site. 
+One summary statistic is the fraction surviving above the library average \emph{averaged} over all 19 amino-acid mutations at site $r$:
+\begin{equation}
+\label{eq:avgfracsurvive}
+\mathcal{F}_r^{avg} = \frac{1}{19} \sum\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}} F_{r,a}^{\rm{excess}}.
+\end{equation}
+Another summary statistic is the \emph{maximum} fraction surviving above average among all 19 amino-acid mutations at site $r$:
+\begin{equation}
+\label{eq:maxfracsurvive}
+\mathcal{F}_r^{max} = \frac{1}{19} \max\limits_{\left\{a \mid a \ne \operatorname{wt}\left(r\right)\right\}}\left( F_{r,a}^{\rm{excess}} \right).
+\end{equation}
+
+In this paper, Figures~\ref{fig:avgfracsurvive} and \ref{suppfig:maxfracsurvive} show the median of excess fraction surviving taken across all biological and technical replicates at a given antibody concentration \DIFaddbegin \DIFadd{(Equation~\ref{eq:fracsurvive_excess})}\DIFaddend .
+The subsequent logo plots show the medians of these values taken across all concentrations for each antibody.
+The numerical values plotted in these logo plots are in File~\DIFaddbegin \DIFadd{\ref{suppfile:fracsurvive_excess}.
+The fraction surviving values }\emph{\DIFadd{not}} \DIFadd{adjusted to be in excess of the library average (Equation~\ref{eq:fracsurvive}) are in File~}\DIFaddend \ref{suppfile:fracsurvive}.
+
+
+Code that performs these fraction surviving analyses has been added to version 2.1.0 of the \texttt{dms\_tools2} software package\cite{bloom2015software} which is available at \url{http://jbloomlab.github.io/dms_tools2}.
+
+\subsection*{Data availability and source code}
+Deep sequencing data are available from the Sequence Read Archive under BioSample accession SAMN05789126.
+Computer code that analyzes these data to generate all the results described in this paper is in File~\ref{suppfile:analysis_code}, and an HTML version of the analysis notebook is in File~\ref{suppfile:analysis_html}.
+
+\subsection*{ACKNOWLEDGMENTS}
+We thank Adam Dingens, Sarah Hilton, Katherine Xue, Lauren Gentles, and Jeremy Roop for helpful comments on the project and manuscript.
+We thank the Fred Hutchinson Cancer Research Center genomics core for performing the Illumina deep sequencing, and the protein expression core for expressing and purifying the S139/1 antibody.
+This work was supported by grant R01AI127893 from the NIAID of the NIH.
+MBD was supported in part by training grant T32AI083203 from the NIAID of the NIH.
+JML was supported in part by the Center for Inference and Dynamics of Infectious Diseases (CIDID), which is funded by grant U54GM111274 from the NIGMS of the NIH.
+The research of JDB is supported in part by a Faculty Scholar Grant from the Howard Hughes Medical Institute and the Simons Foundation.
+The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
+
+\subsection*{AUTHOR CONTRIBUTIONS}
+MBD and JML performed the experiments.
+All three authors designed the project, contributed to the computer code, analyzed the data, and wrote the paper.
+
+\bibliographystyle{naturemag}
+\bibliography{references.bib}
+
+\clearpage
+\normalsize
+
+\section*{Supplementary Material}
+\FloatBarrier
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{S\arabic{page}}
+
+\begin{suppfigure}
+\centerline{\includegraphics[width=0.84\textwidth]{figs/corrs/site_correlations.pdf}}
+\caption{\label{suppfig:corr}
+{\bf Correlations across experimental replicates.} 
+Each point represents one site in HA, and gives the fraction surviving above average across all amino-acid mutations at that site, as calculated using Equation~\ref{eq:avgfracsurvive}.
+The replicates are highly correlated for antibodies with strong escape mutations (S139/1, H17-L19, H17-L10, and H17-L7), and reasonably correlated for antibodies with only weak escape mutations (FI6v3 and C179).
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[width=\textwidth]{figs/maxfracsurvive.pdf}}
+\caption{\label{suppfig:maxfracsurvive}
+{\bf The excess fraction surviving for the single strongest escape mutation at each site.}
+This plot differs from Figure~\ref{fig:avgfracsurvive} in that the height of the line indicates the excess fraction of virions that survive the antibody selection for the single strongest escape mutation at that site, rather than the average across all amino-acid mutations at that site.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L19_fracsurvive.pdf}}
+\caption{\label{suppfig:H17L19logo}
+{\bf The excess fraction surviving selection with antibody H17L19 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L10_fracsurvive.pdf}}
+\caption{\label{suppfig:H17L10logo}
+{\bf The excess fraction surviving selection with antibody H17L10 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/H17L7_fracsurvive.pdf}}
+\caption{\label{suppfig:H17L7logo}
+{\bf The excess fraction surviving selection with antibody H17L7 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/FI6v3_fracsurvive.pdf}}
+\caption{\label{suppfig:FI6v3logo}
+{\bf The excess fraction surviving selection with antibody FI6v3 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/C179_fracsurvive.pdf}}
+\caption{\label{suppfig:C179logo}
+{\bf The excess fraction surviving selection with antibody C179 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
+\centerline{\includegraphics[trim=0.1cm 0.02cm 0.1cm 0.03cm,clip=true,width=\textwidth]{figs/logoplots/S139_fracsurvive.pdf}}
+\caption{\label{suppfig:S139logo}
+{\bf The excess fraction surviving selection with antibody S139/1 for all amino-acid mutations.}
+The excess fraction surviving for each replicate was computed using Equation~\ref{eq:fracsurvive_excess}, then we took the median across all technical and biological replicates for each antibody concentration, and then took the medians of those values across concentrations.
+The height of each letter is proportional to the excess fraction surviving of virions with that mutation.
+The scale bar at the top of the plot relates the letter heights to the actual fractions.
+The sites are labeled using H3 numbering.
+}
+\end{suppfigure}
+
+\DIFaddbegin \begin{suppfigure}
+{\bf \LARGE \DIFadd{A}} \\
+\centerline{\includegraphics[width=\textwidth]{figs/FI6v3_replicate_neutcurves.pdf}} \\
+\vspace{0.1in}
+{\bf \LARGE \DIFadd{B}}
+\begin{center}
+\input{figs/FI6v3_replicate_IC50s}
+\end{center}
+\caption{\label{suppfig:FI6v3replicates}
+{\bf \DIFadd{Replicates of the FI6v3 neutralization curves in Figure~\ref{fig:FI6v3neutcurves}A.}}
+\DIFadd{The neutralization assays were performed in triplicate for all nine mutants and wildtype.
+Figure~\ref{fig:FI6v3neutcurves}A shows the }\emph{\DIFadd{average}} \DIFadd{of those replicates.
+(A) The neutralization data for each replicate shown individually, with IC50 values fit using a four-parameter logistic curve with the top value constrained to one (see }\url{https://jbloomlab.github.io/dms_tools2/dms_tools2.neutcurve.html} \DIFadd{for the code used for the fitting.)
+(B) Table of the IC50 values for each replicate.
+We used an unpaired Student's t-test with unequal variances to test the null hypothesis that each mutant had an IC50 indistinguishable from wildtype.
+We then used Bonferroni's method to correct the $P$-values for multiple testing, and report these corrected values.
+}}
+\end{suppfigure}
+
+\DIFaddend \begin{supptable}
+\centering
+\begin{tabular}{cccc}
+antibody &  concentration ($\mu$g/ml) &  replicate &  fraction surviving \\
+\hline
+FI6v3 &            0.1 &  1a &             0.01662 \\
+ FI6v3 &            0.1 &  1b &             0.01390 \\
+FI6v3 &            0.2 &  1a &             0.00465 \\
+FI6v3 &            0.2 &  1b &             0.00345 \\
+FI6v3 &            0.1 &  2 &             0.02322 \\
+FI6v3 &            0.2 &  2 &             0.00278 \\
+FI6v3 &            0.1 &  3 &             0.00903 \\
+FI6v3 &            0.2 &  3 &             0.00144 \\
+S139/1 &          100.0 &  1 &             0.02490 \\
+S139/1 &          200.0 &  1 &             0.01470 \\
+S139/1 &          300.0 &  1 &             0.01270 \\
+S139/1 &          100.0 &  2 &             0.02190 \\
+S139/1 &          200.0 &  2 &             0.01720 \\
+S139/1 &          300.0 &  2 &             0.00854 \\
+S139/1 &          100.0 &  3 &             0.05180 \\
+S139/1 &          200.0 &  3 &             0.04060 \\
+S139/1 &          300.0 &  3 &             0.03750 \\
+C179 &            1.0 &    1a &             0.00941 \\
+C179 &            1.0 &    1b &             0.00890 \\
+C179 &            1.0 &    1c &             0.00960 \\
+C179 &            2.5 &    1 &             0.00450 \\
+C179 &            1.0 &    2 &             0.00554 \\
+C179 &            2.5 &    2 &             0.00198 \\
+C179 &            1.0 &    3 &             0.00256 \\
+C179 &            2.5 &    3 &             0.00100 \\
+\end{tabular}
+\caption{\label{supptab:fracsurvive}
+{\bf The total fraction of virions surviving each antibody treatment at each concentration as estimated by qPCR.}
+These are the quantities referred to as $\gamma$.
+This table shows the values for the broad antibodies; values for the narrow H17-L17, H17-L10, and H17-L7 antibodies have been reported previously\cite{doud2017complete}.
+}
+\end{supptable}
+\clearpage
+
+\begin{suppfile}
+\caption{\label{suppfile:HAnumbering}
+{\bf Conversion from sequential numbering of the A/WSN/1933 HA to H3 numbering.}
+In this CSV file, the \emph{original} column gives the residue number in sequential (1, 2, ...) numbering of the A/WSN/1933 HA, and the \emph{new} column gives the residue number in H3 numbering.
+}
+\end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:HAsubtypes}
+{\bf Sequences used to infer the tree for all HA subtypes.}
+This FASTA file gives the HA sequences used to infer the tree of subtypes in Figure~\ref{fig:antibody_summary}.
+}
+\end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:analysis_code}
+{\bf Computer code and data for the analysis of the mutational antigenic profiling data.}
+The code in this ZIP file performs the entire computational analysis beginning with downloading the FASTQ files from the Sequence Read Archive.
+The ZIP file contains a \texttt{README} file that explains the contents in detail.
+The actual analysis is performed by the Jupyter notebook \texttt{analysis\_notebook.ipynb}, which includes embedded plots summarizing key statistics and results.
+An HTML version of this notebook is also included as File~\ref{suppfile:analysis_code}.
+}
+\end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:analysis_html}
+{\bf HTML version of the analysis notebook.}
+This file is an HTML rendering of the Jupyter notebook in File~\ref{suppfile:analysis_code}.
+It contains detailed plots for all aspects of the deep sequencing data and its analysis.
+}
+\end{suppfile}
+
+
+\begin{suppfile}
+\caption{\DIFdelbegin %DIFDELCMD < \label{suppfile:fracsurvive}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \label{suppfile:fracsurvive_excess}
+\DIFaddend {\bf The excess fraction surviving for each mutation for each antibody.}
+This file is a ZIP of CSV files giving the numerical values plotted in the logo plots.
+These are median excess fraction surviving taken first across replicates and then across antibody concentrations.
+\DIFaddbegin \DIFadd{See Equation~\ref{eq:fracsurvive_excess}.
+}\DIFaddend }
+\DIFaddbegin \end{suppfile}
+
+\begin{suppfile}
+\caption{\label{suppfile:fracsurvive}
+{\bf \DIFadd{The fraction surviving for each mutation for each antibody.}}
+\DIFadd{This file differs from File~\ref{suppfile:fracsurvive_excess} only in that the values are }\emph{\DIFadd{not}} \DIFadd{adjusted to be in excess of the library average (e.g., they are from Equation~\ref{eq:fracsurvive} rather than Equation~\ref{eq:fracsurvive_excess}).
+}}
+\DIFaddend \end{suppfile}
+
+
+
+\end{document}
