@@ -12,7 +12,7 @@ Briefly, the study maps how all mutations an H1 hemagglutinin (from A/WSN/1933 s
 ## Organization
 This repository is organized into a series of subdirectories as follows:
 
-* [./analysis_code/]([./analysis_code/) contains a Jupyter notebook that performs all of the analyses of the deep sequencing data for the mutational antigenic profiling.
+* [./analysis_code/](./analysis_code/) contains a Jupyter notebook that performs all of the analyses of the deep sequencing data for the mutational antigenic profiling.
 
 * [./paper/](./paper/) contains the paper.
 
