@@ -1,4 +1,4 @@
-# Quantifiying the effects of single mutations on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin
+# How single mutations affect viral escape from broad and narrow antibodies to H1 influenza hemagglutinin
 
 ## Overview
 This repository contains the analysis code, data, and paper for this study.

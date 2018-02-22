@@ -1,4 +1,4 @@
-# Quantifiying the effects of single mutations on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin
+# How single mutations affect viral escape from broad and narrow antibodies to H1 influenza hemagglutinin 
 
 This directory contains the analysis of the mutational antigenic profiling of the A/WSN/1933 (H1N1) influenza virus hemagglutinin against a collection of broad and narrow antibodies.
 
