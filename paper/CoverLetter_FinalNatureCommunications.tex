@@ -1,0 +1,101 @@
+\documentclass[a4paper,11pt]{letter}
+
+% Some of the article customisations are relevant for this class
+
+\name{Jesse D. Bloom} % To be used for the return address on the envelope
+\signature{} % Goes after the closing (ie at the end of the letter, with space for a signature)
+\address{Fred Hutch Cancer Research Center \\ jbloom@fredhutch.org}
+% Alternatively, these may be set on an individual basis within each letter environment.
+
+\usepackage{color}
+
+\makelabels % this command prints envelope labels on the final page of the document
+
+\begin{document}
+\begin{letter}{Sonja Schmid, PhD \\ Associate Editor \\ \textit{Nature Communications} }
+
+\opening{Dear Sonja,} % eg Hello.
+
+Thank you for the rapid review of our manuscript at \textit{Nature Communications}. 
+We have prepared a revised version that addresses the few remaining reviewer requests and your editorial requests.
+
+A description of the changes made in response to the reviewer requests is including in a separate reviewer response letter.
+Here we detail the changes made in response to your queries, and provide other requested information.
+Also, note that we have included a track-changes PDF that shows all the textual changes in the revised version relative to the initial submission.
+
+Regarding the two-sentence editor's summary, you provided the following sentences:
+\begin{quote}
+\textsl{
+Influenza A virus can escape neutralization antibodies (Abs), but it is unclear how ease of escape differs between Ab types. Here, the authors show that neutralization breadth is an imperfect indicator of viral escape, and that Abs targeting the stalk of hemagglutinin are harder to escape from.}
+\end{quote}
+
+Could we instead suggest the following slightly revised version:
+\begin{quote}
+\textsl{
+Influenza A virus can escape antibodies, but it is unclear how the ease of escape depends on the epitope targeted by an antibody. Here, the authors show that neutralization breadth is an imperfect indicator of the ease of viral escape by single mutations, and that antibodies targeting the stalk of hemagglutinin are harder to escape.
+}
+\end{quote}
+
+We have made the following changes to the manuscript in response to these editor comments:
+\begin{itemize}
+
+\item We have shortened the title from ``Quantifying the effects of single mutations on viral escape from broad and narrow antibodies to an H1 influenza hemagglutinin'' (19 words) to ``How single mutations affect viral escape from broad and narrow antibodies to H1 influenza hemagglutinin'' (15 words). 
+
+\item We have provided the full address for each affiliation as requested.
+
+\item We have shortened the abstract from the original length of 160 words to the requested length of 150 words.
+
+\item We have shortened all subheadings in the RESULTS and METHODS to no more than 60 characters.
+
+\item We have provided publication-quality versions of all figures as separate files, and moved the legends to the end of the manuscript. {\color{red}STILL NEEDS TO BE DONE.}
+
+\item The naming of supplementary figures has been changed from ``Figure S1'' to ``Supplementary Fig. 1''. Similar changes have been made for supplementary tables and data as requested.
+
+\item We have clarified that the error bars in Figure 6 represent standard errors.
+
+\item We have added the source of the 293F cells. The 293T-CMV-PB1 and MDCK-SIAT1-CMV-PB1 cells were generated in the cited reference 70, the pHW* series plasmids were generated in the cited reference 71, and the pHH-PB1flank-eGFP plasmid was generated in the cited reference 70.
+
+\item We have expanded the Data Availability section of the METHODS as requested. 
+
+\item We have added a conflict of interest statement under the heading COMPETING INTERESTS. We have no conflicts.
+
+\item We have provided the Supplementary Information as a separate PDF, which the \textit{Nature Communications} author instructions indicate is an acceptable substitute for a Word document. The reason that we are providing it is a PDF rather than a Word document is that it is written in LaTex. {\color{red} Still need to be done.}
+
+\item Here are the legends for the Supplementary Data files as requested:
+
+\begin{itemize}
+
+\item {\bf Supplementary Data 1: Conversion from sequential numbering of the A/WSN/1933 HA to H3 numbering.}
+In this CSV file, the \emph{original} column gives the residue number in sequential (1, 2, ...) numbering of the A/WSN/1933 HA, and the \emph{new} column gives the residue number in H3 numbering.
+
+\item {\bf Supplementary Data 2: Sequences used to infer the tree for all HA subtypes.}
+This FASTA file gives the HA sequences used to infer the tree of subtypes in Figure 2.
+
+\item {\bf Supplementary Data 3: Computer code and data for the analysis of the mutational antigenic profiling data.}
+The code in this ZIP file performs the entire computational analysis beginning with downloading the FASTQ files from the Sequence Read Archive.
+The ZIP file contains a \texttt{README} file that explains the contents in detail.
+The actual analysis is performed by the Jupyter notebook \texttt{analysis\_notebook.ipynb}, which includes embedded plots summarizing key statistics and results.
+An HTML version of this notebook is also included as Supplementary Data 4.
+
+\item {\bf Supplementary Data 4: HTML version of the analysis notebook.}
+This file is an HTML rendering of the Jupyter notebook in Supplementary Data 3.
+It contains detailed plots for all aspects of the deep sequencing data and its analysis.
+
+\item {\bf Supplementary Data 5: The excess fraction surviving for each mutation for each antibody.}
+This file is a ZIP of CSV files giving the numerical values plotted in the logo plots.
+These are median excess fraction surviving taken first across replicates and then across antibody concentrations.
+See Equation 2.
+
+\item {\bf Supplementary Data 6: The fraction surviving for each mutation for each antibody.}
+This file differs from Supplementary Data 5 only in that the values are \emph{not} adjusted to be in excess of the library average (e.g., they are from Equation 1 rather than Equation 2).
+
+\end{itemize}
+\end{itemize}
+
+We have also included all requested files in our submission.
+Please let us know if you have any other comments or questions.
+
+\closing{Sincerely} % eg Regards,
+
+\end{letter}
+\end{document}
