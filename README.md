@@ -2,8 +2,7 @@
 
 ## Overview
 This repository contains the analysis code, data, and paper for this study.
-A pre-print is available on _bioRxiv_ at [DOI 10.1101/210468](https://doi.org/10.1101/210468).
-The final published manuscript will soon be available in _Nature Communications_.
+The final published manuscript is at [_Nature Communications_, 9:1386 (2018)](https://www.nature.com/articles/s41467-018-03665-3).
 
 The study and paper are by Mike Doud, Juhye Lee, and Jesse Bloom in [Bloom lab](https://research.fhcrc.org/bloom/en.html).
 
